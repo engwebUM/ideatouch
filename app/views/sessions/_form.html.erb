@@ -1,0 +1,20 @@
+<%= form_for :session, url: session_path do |form| %>
+  <div class="text-field">
+    <small><%= form.text_field :email, type: 'email',:placeholder=>"Email" %></small>
+  </div>
+
+  <div class="password-field">
+    <small><%= form.password_field :password ,:placeholder=>"Password"%></small>
+  </div>
+    <br>
+
+  <small><%= button_to "submit", sign_out_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %> </small>
+  <br>
+  <div class="other-links">
+    <% if Clearance.configuration.allow_sign_up? %>
+      <small><%= link_to t('.sign_up'), sign_up_path %></small>
+    <% end %>
+    <br>
+    <small><%= link_to t('.forgot_password'), new_password_path %></small>
+  </div>
+<% end %>

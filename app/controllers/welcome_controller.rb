@@ -1,8 +1,10 @@
 class WelcomeController < ApplicationController
+  before_action :require_login
 
-  # GET /welcome
-  def index
+  def index 
+  end
 
+  def show
   end
 
 end

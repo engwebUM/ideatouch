@@ -81,4 +81,6 @@ Rails.application.configure do
   config.serve_static_assets = true
   config.assets.compile = true
   config.assets.digest = true
+  config.assets.precompile += %w( timeline.js )
+
 end

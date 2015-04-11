@@ -19,6 +19,7 @@
             <h2><img src="/assets/img/160.png" alt="logotipo" ></h2>
             <h2><%= t '.title' %></h2>
               <%= form_for @user do |form| %>
+              <h2>ola</h2>
                 <h2><%= render partial: '/users/form', object: form %></h2>
 
                   <h2><small><%= button_to "Sign in", sign_in_path, method: :submit,:type =>type="button",:class=>'btn btn-info' %> </small></h2>

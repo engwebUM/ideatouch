@@ -23,3 +23,8 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: Your_appname_production

@@ -4,12 +4,23 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="login.css">
     <style>.wow:first-child {visibility: hidden;}</style>
-    <title>IdeaTouch</title>
+  	<title>IdeaTouch</title>
   </head>
 
   <body>
 
-    
+    <div id="lbg" class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+      <div id="lsearch-container">
+        <div id="lsearch-bg" class="wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.5s" >
+        </div>
+        <div id="lsearch">
+          <div id="clearance" class="sign-in">
+            <h2><img src="/assets/img/160.png" alt="logotipo" ></h2>
+            <h2><%= t '.title' %></h2>
+			      <h2><%= render partial: '/sessions/form' %></h2>
+		      </div>
+        </div>
+      </div>
 
   </div>
   

@@ -1,3 +1,4 @@
+<div class ="qwe">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Boards</h1>
@@ -17,7 +18,7 @@
       <tr>
         <td><%= board.name %></td>
         <td><%= board.descricao %></td>
-        <td><%= board.dynamic %></td>
+        <td><%= board.dynamic_id %></td>
         <td><%= link_to 'Show', board %></td>
         <td><%= link_to 'Edit', edit_board_path(board) %></td>
         <td><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,3 +30,5 @@
 <br>
 
 <%= link_to 'New Board', new_board_path %>
+
+<div>

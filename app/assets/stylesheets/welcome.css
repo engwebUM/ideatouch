@@ -1,0 +1,773 @@
+html head body {
+    background-color: #333E45;
+}
+/*333E45*/
+
+
+
+h1{
+    background-color: #333E45;
+    color:#ecf0f1;
+}
+
+.topo-esquerda{
+    float: left;
+    width: 45%; 
+    height: 100%; 
+}
+
+.topo-meio{
+    float:left;
+}
+
+.topo-direita{
+    float:right;
+    margin-top: 20px;
+}
+
+.ui-content{
+    background-color: #333E45;
+}
+
+#topo {  
+    background-color: #333E45; 
+    width: 100%; 
+    height: 60px; 
+    font-family: myFirstFont;
+    text-align:center;
+    display: block;
+}
+
+
+#box-2 {
+    background-color: #333E45; 
+    float: left; 
+    width: 20px; 
+    height: 90%; 
+    font-family: myFirstFont;
+    color:#ecf0f1;
+}
+#box-3 {
+    background-color: #333E45; 
+    float: left; width: 95%; 
+    height: 90%;  
+    font-family: myFirstFont;
+    margin:2%;}
+
+#rodape{
+    color:#ecf0f1;
+    margin: 5px;
+    background-color: #333E45; 
+    width: 100%; 
+    height: 40px; 
+    font-family: myFirstFont;
+    text-align:center;
+    display: block;
+}
+
+
+.vertical{
+    font-size:200%;
+    writing-mode:tb-rl;
+    -webkit-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform:rotate(270deg);
+    transform: rotate(270deg);
+    white-space:nowrap;
+    display:block;
+    position: absolute;
+    bottom:40%;
+    width:30px;
+    height:30px;
+}
+
+
+.dynamicAzul{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(135deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+}
+.dynamicAzul:hover{background: linear-gradient(45deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);}
+
+.dynamicLaranja{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(225deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
+}
+.dynamicLaranja:hover{background: linear-gradient(135deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);}
+
+.dynamicRed{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(45deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
+}
+.dynamicRed:hover{background: linear-gradient(135deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
+
+.dynamicAmarelo{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(315deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
+}
+.dynamicAmarelo:hover{background: linear-gradient(225deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);}
+
+.dynamicCinza{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(45deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+}
+.dynamicCinza:hover{
+    background: linear-gradient(135deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+}
+
+.dynamicAzulClaro{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(135deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+}
+.dynamicAzulClaro:hover{
+    background: linear-gradient(225deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+}
+
+.dynamicRoxo{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(315deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+}
+.dynamicRoxo:hover{
+    background: linear-gradient(225deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+}
+
+.dynamicCastanho{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(45deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+}
+.dynamicCastanho:hover{
+    background: linear-gradient(135deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+}
+
+.dynamicVerde{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(315deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+}
+.dynamicVerde:hover{
+    background: linear-gradient(225deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+}
+
+.dynamicMenu{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:100px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#2E383E;
+    height:180px;
+    width:180px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.dynamicMenu:hover{ 
+    background:#43525C;
+}
+
+
+.boardAzul{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+}
+.boardAzul:hover{background: linear-gradient(180deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);}
+
+.boardLaranja{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
+}
+.boardLaranja:hover{background: linear-gradient(180deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);}
+
+.boardRed{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
+}
+.boardRed:hover{background: linear-gradient(180deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
+
+.boardAmarelo{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
+}
+.boardAmarelo:hover{background: linear-gradient(180deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);}
+
+.boardCinza{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+}
+.boardCinza:hover{
+    background: linear-gradient(180deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+}
+
+.boardAzulClaro{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+}
+.boardAzulClaro:hover{
+    background: linear-gradient(180deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+}
+
+.boardRoxo{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+}
+.boardRoxo:hover{
+    background: linear-gradient(180deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+}
+
+.boardCastanho{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+}
+.boardCastanho:hover{
+    background: linear-gradient(180deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+}
+
+.boardVerde{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(0deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+}
+.boardVerde:hover{
+    background: linear-gradient(180deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+}
+
+.boardMenu{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#2E383E;
+    height:180px;
+    width:180px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.boardMenu:hover{ 
+    background:#43525C;
+}
+
+.boardMenuD{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#3C4951;
+    height:180px;
+    width:180px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.boardMenuD:hover{ 
+    background:#43525C;
+}
+
+.notaAzul{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(135deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+}
+.notaAzul:hover{background: linear-gradient(45deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);}
+
+
+
+.notaLaranja{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(225deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
+}
+.notaLaranja:hover{background: linear-gradient(135deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);}
+
+
+.notaRed{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(45deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
+}
+.notaRed:hover{background: linear-gradient(135deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
+
+.notaAmarelo{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(315deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
+}
+.notaAmarelo:hover{background: linear-gradient(225deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);}
+
+.notaCinza{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(45deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+}
+.notaCinza:hover{
+    background: linear-gradient(135deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+}
+
+.notaAzulClaro{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(135deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+}
+.notaAzulClaro:hover{
+    background: linear-gradient(225deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+}
+
+.notaRoxo{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(315deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+}
+.notaRoxo:hover{
+    background: linear-gradient(225deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+}
+
+.notaCastanho{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(45deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+}
+.notaCastanho:hover{
+    background: linear-gradient(135deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+}
+
+.notaVerde{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#4CE2B8;
+    height:180px;
+    width:180px;
+    float:left;
+    background: linear-gradient(315deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+}
+
+.notaVerde:hover::before{
+    float: right;
+    content: "<";
+}
+.notaVerde:hover{
+    background: linear-gradient(225deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+
+}
+
+
+.notaMenu{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#2E383E;
+    height:180px;
+    width:180px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.notaMenu:hover{ 
+    background:#43525C;
+
+}
+
+.notaMenuD{ 
+    overflow:scroll;
+    margin: 4px;
+    border-radius:5px;
+    font-size:20px;
+    color:#ecf0f1;
+    line-height:20px;
+    text-align:center;
+    background:#3C4951;
+    height:180px;
+    width:180px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.notaMenuD:hover{ 
+    background:#43525C;
+
+}
+
+.notaLogotipo{ 
+    margin: 4px;
+    border-radius:100px;
+    line-height:20px;
+    height:180px;
+    width:180px;
+    float:left;
+    background: #D84A3A;
+    display:block;
+    text-decoration:none;
+    background-image: url("./img/lamp2.png");
+    background-size: 41%;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.notaLogotipo:hover{
+    background: #e74c3c;
+    background-image: url("./img/lamp2.png");
+    background-size: 41%;
+    background-repeat:no-repeat;
+    background-position: center;   
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(./fonts/glyphicons-halflings-regular.woff);
+}
+
+/*dobrar o canto*/
+
+.hvr-curl-top-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /*-moz-osx-font-smoothing: grayscale;*/
+  position: relative;
+
+}
+.hvr-curl-top-left:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 4px;
+  left: 4px;
+  /* IE9 */
+  background: linear-gradient(135deg, #333E45 45%, #aaaaaa 50%, #cccccc 50%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#000000');
+  /*For IE7-8-9*/
+  z-index: 1000;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+    border-radius:0.2px;*/
+}
+.hvr-curl-top-left:hover:before, .hvr-curl-top-left:focus:before, .hvr-curl-top-left:active:before {
+  border-radius:1.5px;
+  width: 22px;
+  height:22px;
+}
+
+.hvr-curl-top-left2 {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+/*blur*/
+
+#bg, #search-bg {
+  background-image: url("./img/wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: 1280px auto;
+}
+
+#bg {
+  background-position: center top;
+  padding: 170px 90px 220px 90px;
+}
+
+#search-container {
+  position: relative;
+}
+
+#search-bg {
+  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+  /* Pull the background 70px higher to the same place as #bg's */
+  background-position: center -170px;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQoJPGZpbHRlciBpZD0iYmx1ciI+DQoJCTxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjMiIC8+DQoJPC9maWx0ZXI+DQo8L3N2Zz4=#blur); /* for Firefox */
+}
+
+#search {
+  /* Put this on top of the blurred layer */
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  background: rgb(200,200,200); /* for IE */
+  background: rgba(200,200,200,0.8);
+}
+
+@media (max-width: 600px ) {
+  #bg { padding: 10px; }
+  #search-bg { background-position: center -10px; }
+}
+
+#search h2, #search h5, #search h5 a { text-align: center; color: #fefefe; font-weight: normal; }
+#search h2 { margin-bottom: 50px }
+#search h5 { margin-top: 70px }

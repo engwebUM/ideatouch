@@ -1,3 +1,5 @@
+<div class ="qwe">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,10 +12,20 @@
   <%= @dynamic.descricao %>
 </p>
 
+<p>
+  <strong>Dinamizador:</strong>
+  <%= @dynamic.user.email %>
+</p>
 
+Boards da Dinamica:
 <% for board in @dynamic.boards %>
 	<li> <%=h board.name %> </li>
 <% end %>
 
+<br><br>
+<%= link_to 'Add Board', addBoard_path(@dynamic) %> |
 <%= link_to 'Edit', edit_dynamic_path(@dynamic) %> |
 <%= link_to 'Back', dynamics_path %>
+
+
+</div>

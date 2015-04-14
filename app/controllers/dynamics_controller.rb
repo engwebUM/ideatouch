@@ -1,5 +1,6 @@
 class DynamicsController < ApplicationController
-  before_action :set_dynamic, only: [:show, :edit, :update, :destroy]
+  before_action :set_dynamic, only: [:show, :edit, :update, :destroy, :addBoard]
+  before_action :require_login
 
   # GET /dynamics
   # GET /dynamics.json
@@ -12,11 +13,18 @@ class DynamicsController < ApplicationController
   def show
   end
 
+  def addBoard
+    @board= Board.new
+  end
+
   # GET /dynamics/new
   def new
     @dynamic = Dynamic.new
+    @current_user = current_user
     board = @dynamic.boards.build
   end
+
+
 
   # GET /dynamics/1/edit
  
@@ -71,7 +79,7 @@ class DynamicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dynamic_params
       #params.require(:dynamic).permit(:name, :descricao)
-       params.require(:dynamic).permit(:name, :descricao, boards_attributes: [ :name, :descricao ])
+       params.require(:dynamic).permit(:name, :descricao, :user_id, boards_attributes: [ :name, :descricao ])
 
     end
 end

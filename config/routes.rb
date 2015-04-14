@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :boards
 
   resources :dynamics
+  get '/dynamics/:id/addBoard', to: 'dynamics#addBoard', as: 'addBoard'
+
 
   #get 'welcome/index'
 

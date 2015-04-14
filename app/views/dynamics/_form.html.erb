@@ -11,29 +11,21 @@
     </div>
   <% end %>
 
-  <%= f.fields_for :boards do |board| %>
-    <div class="field">
-     <%= board.label :name %><br>
-     <%= board.text_area :name %><br>
-     <%= board.label :descricao %><br>
-     <%= board.text_area :descricao %>
-    </div>
-  <% end -%>
 
-
+<%= @current_user.id %>
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %> <br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :descricao %><br>
     <%= f.text_area :descricao %>
   </div>
+
+  <%= f.hidden_field :user_id, value: @current_user.id %>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-
-
-
-

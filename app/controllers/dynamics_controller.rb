@@ -20,7 +20,6 @@ class DynamicsController < ApplicationController
   # GET /dynamics/new
   def new
     @dynamic = Dynamic.new
-    @current_user = current_user
     board = @dynamic.boards.build
   end
 

@@ -2,6 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
+<h1>Dynamic: <%=@dynamic.id%></h1>
 <p>
   <strong>Name:</strong>
   <%= @dynamic.name %>
@@ -19,7 +20,9 @@
 
 Boards da Dinamica:
 <% for board in @dynamic.boards %>
-	<li> <%=h board.name %> </li>
+	<li><%= link_to board.name, board %>
+	&nbsp &nbsp &nbsp
+	<%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 <% end %>
 
 <br><br>

@@ -19,17 +19,7 @@
     <%= f.label :descricao %><br>
     <%= f.text_area :descricao %>
   </div>
-  <div class="field">
-    <%= f.label :dynamic_id %><br>
-    <%= f.text_field :dynamic_id %>
-  </div>
 
-  <% f.fields_for :boards do |builder|%>
-    <p>
-      <%= builder.label :name, "Name" %> <br />
-      <%= builder.text_area :name %>
-    </p>
-  <% end %> 
 
 
   <div class="actions">

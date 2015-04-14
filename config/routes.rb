@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :notes
+
   resources :boards
 
   resources :dynamics
   get '/dynamics/:id/addBoard', to: 'dynamics#addBoard', as: 'addBoard'
+  get '/boards/:id/addNote', to: 'boards#addNote', as: 'addNote'
 
 
   #get 'welcome/index'

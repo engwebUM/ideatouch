@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :set_board, only: [:show, :edit, :update, :destroy, :addNote]
   before_action :require_login
 
   # GET /boards
@@ -11,6 +11,10 @@ class BoardsController < ApplicationController
   # GET /boards/1
   # GET /boards/1.json
   def show
+  end
+
+  def addNote
+    @note= Note.new
   end
 
   # GET /boards/new
@@ -70,6 +74,6 @@ class BoardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def board_params
-      params.require(:board).permit(:name, :descricao, :dynamic_id)
+      params.require(:board).permit(:name, :descricao, :dynamic_id,notes_attributes: [ :text ])
     end
 end

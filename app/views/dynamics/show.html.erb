@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dynamic.name %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @dynamic.descricao %>
+</p>
+
+
+<% for board in @dynamic.boards %>
+	<li> <%=h board.name %> </li>
+<% end %>
+
+<%= link_to 'Edit', edit_dynamic_path(@dynamic) %> |
+<%= link_to 'Back', dynamics_path %>

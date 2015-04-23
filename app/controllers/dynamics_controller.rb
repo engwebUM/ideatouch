@@ -8,6 +8,11 @@ class DynamicsController < ApplicationController
     @dynamics = Dynamic.all
   end
 
+  def itdynamics
+    @dynamics = Dynamic.all
+  end
+
+
   # GET /dynamics/1
   # GET /dynamics/1.json
   def show

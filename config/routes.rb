@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'whatis/index'
+
   resources :notes
 
   resources :boards
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
   get '/dynamics/:id/addBoard', to: 'dynamics#addBoard', as: 'addBoard'
   get '/boards/:id/addNote', to: 'boards#addNote', as: 'addNote'
 
+  get '/itdynamics', to: 'dynamics#itdynamics', as: 'itdynamics'
+  get '/itd_index/:id', to: 'dynamics#itd_index', as: 'itd_index'
 
   #get 'welcome/index'
 

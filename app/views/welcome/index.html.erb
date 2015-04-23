@@ -1,63 +1,82 @@
-  <html>
+<html>
   <head>
-    <script src="/assets/wow.js" type="text/javascript"></script>
+
+    <!-- animsition CSS -->
+    <link rel="stylesheet" href="./assets/dist/css/animsition.min.css">
+    <!-- vendor js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- animsition js -->
+    <script src="./assets/dist/js/jquery.animsition.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/hover.css">
     <link rel="stylesheet" href="first.css">
     <style>.wow:first-child {visibility: hidden;}</style>
     <title>IdeaTouch</title>
-
-
   </head>
 
   <body>
+    <div class="animsition">
 
 
     <div id="topo">
-      <div class ="topo-esquerda">
-      </div>
 
-      <div class ="topo-meio">
-       <div class="wow tada" data-wow-duration="0.5s" data-wow-delay="0.5s"> 
-        <h1>IDeaTouch</h1>
-       </div>
+      <div class="topo-Logo wow fadeInRight" data-wow-duration="1.0s" data-wow-delay="1.0s">
+          IDeaTouch
 
       </div>
 
-      <div class="topo-direita wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"> 
-        <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/record.png" width=55% /> </a>
-      </div>
-      <div class="topo-direita wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"> 
-        <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/anonymous_1.png" width=55% /> </a>
-      </div>
-      
-      <div class="topo-direita wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"> 
-        <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/list.png" width=55% /> </a>
+      <a class="animsition-link">
+        <%= link_to sign_out_path, method: :delete  do %>
+        <div class="topo-perfil wow fadeInRight" data-wow-duration="1.1s" data-wow-delay="1.1s">
+          <span class="glyphicon glyphicon-off" aria-hidden="true">
+          </spam>
+        </div>
+        <% end %>
+      </a>
+
+
+
+      <div class="topo-perfil wow fadeInRight" data-wow-duration="1.2s" data-wow-delay="1.2s">
+         <span class="glyphicon glyphicon-user" aria-hidden="true">
+         </spam>
       </div>
 
-      <div class="topo-direita wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s"> 
-        <a href="#" class="hvr-buzz"> <img alt="Rails" src="/assets/img/icons/school_bell.png" width=55% /> </a>
+      <div class="topo-perfil wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="1.3s">
+        <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true">
+        </spam>
       </div>
+
+
+
+
     </div>
+    <br><br><br>
 
 
-    <div id="box-2" class="box wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
-          <div class="vertical"></div>
-    </div>
-    
-    
+
 
 
     <div class="noise"><div id="meio">
         <div id="box-3" class="box">
 
+
           <!--Dynamics -->
-          <div id="rodape"class="wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.7s"> <h3>Dynamics</h3> </div>
 
 
-          <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="dynamicAzul"><div class"thing_you_want_to_filter"> <h2>Dynamic</h2> IDeaTouch</a></div></div></div>
+          <a class="animsition-link" href="./notes.html">
+            <div class = "hvr-curl-top-left2 wow rotateIn" href="./notes.html" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+              <%= link_to './dynamics'  do %>
+              <div class="dynamicAzul"> 
+                <h2>Dynamic</h2> 
+                IDeaTouch
+              </div>
+              <% end %>
+            </div>
+          </a>
 
-          <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="dynamicLaranja"><div class"thing_you_want_to_filter"> <h2>Dynamic</h2> 1</a></div></div></div>
+          <a class="animsition-link" href="./design.html">
+          <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="dynamicLaranja"> <h2>Dynamic</h2> 1</a></div></div></a>
 
           <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="dynamicRed"> <h2>Dynamic</h2>2</a> </div></div>
 
@@ -79,25 +98,36 @@
 
           <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="dynamicRoxo"> <h2>Dynamic</h2>11</a> </div></div>
 
-          <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="dynamicCastanho"> <h2>Dynamic</h2>12</a> </div></div>
-
-          <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="dynamicVerde"> <h2>Dynamic</h2>13</a> </div></div>
-
-          <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"> <h2>Create</h2></a><a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/add.png" width=85%/> </a> </div>
 
 
-          <br><br><br><br><br><br>
+          <br><br>
+          <div class="linee wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s"></div>
+          <br>
+
+          <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+                  <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> New Dynamic</div>
+
+          </div>
+
+
+
+
+
+          <br><br><br>
 
 
           <!--Boards -->
-
-          <div id="rodape"class="wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.7s"> <h3>Boards</h3> </div>
     
-          <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="dynamicRed"> <h2>Dynamic</h2>2</a> </div></div>
+          <a class="animsition-link" href="./dynamics.html">
+          <div class = "hvr-curl-top-left2 wow rotateIn" href="./index.html" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="dynamicAzul"><div class"thing_you_want_to_filter"> <h2>Dynamic</h2> IDeaTouch</a></div></div></div></a>
 
-          <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="boardAzul"><h2>Board</h2> All</a></div></div>
+          <a class="animsition-link" href="./notes.html">
+          <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="boardAzul"><div class"thing_you_want_to_filter"> <h2>Board</h2> Default</a></div></div></div>
+           </a>
 
-          <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="boardLaranja"><h2>Board</h2> 1</a></div></div>
+          <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="boardLaranja"><div class"thing_you_want_to_filter"> <h2>Board</h2> 1</a></div></div></div>
 
           <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="boardRed"> <h2>Board</h2>2</a> </div></div>
 
@@ -112,70 +142,194 @@
           <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="boardCastanho"> <h2>Board</h2>7</a> </div></div>
 
           <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="boardVerde"> <h2>Board</h2>8</a> </div></div>
-          <div class="boardMenu wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s"> <h2>Favorites</h2><a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/shape_star.png" width=85%/> </a> </div>
-          <div class="boardMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"> <h2>Statistics</h2><a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/statistics.png" width=85%/> </a> </div>
-          <div class="boardMenuD wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"> <h2>Invite People</h2></a> <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/envelope_open.png" width=85%/> </a></div>
-          <div class="boardMenuD wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"> <h2>Create Board</h2></a> <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/backgrounds.png" width=85%/> </a></div>
+          
+          <br><br>
+          <div class="linee wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s"></div>
+          <br>
+
+          <div class="boardMenu wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s"> 
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-star" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Favorits</div>
+           </div>
+
+            <div class="boardMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"> 
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-stats" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Statistics</div>
+           </div>
+
+
+          <div class="boardMenu wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"> 
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-th-large" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Create Board</div>
+           </div>
+
+            <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"> 
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-envelope" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Invite People<br>to Dynamic</div>
+           </div>      
+          
+            <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s"> 
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-cog" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Edit Dynamic</div>
+           </div>         
+
+            <div class="dynamicMenu wow fadeInUp" data-wow-duration="1.0s" data-wow-delay="1.0s"> 
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Delete Dynamic</div>
+           </div>
+
+
+
+
+
+
+          <br><br><br>
+
+
+          <!--Dynamics -->
+
+
+
+          <a class="animsition-link" href="./dynamics.html">
+          <div class = "hvr-curl-top-left2 wow rotateIn" href="./index.html" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="dynamicAzul"><div class"thing_you_want_to_filter"> <h2>Dynamic</h2> IDeaTouch</a></div></div></div></a>
+
+         
+          <a class="animsition-link" href="./boards.html">
+          <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.8s" ><div class="boardAzul"> <h2>Board</h2> Default</a></div></div><a>
+
+          <div class = "hvr-curl-top-left  wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="notaAzul"> <div class="hhp">1</div><h4>asd j askdj sajd ksjd here so asd sd ajsd ajsd  ajsd asjd jas djas djas sjdhs djah djh sadjh asdjh shasjd asdasdh ashdj hadhjs adh jashdj ha shjasdh jasdjsadh ajsad jshda a sdjhd sjdh jhdsd!</h4></a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaLaranja"> <h2>title</h2>write here!</a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaRed"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAmarelo"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCinza"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAzulClaro"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaRoxo"> <h2>title</h2>write here!</a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCastanho"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaVerde"> <h2>title</h2>write here! </a> </div></div>
+
+
+
+
+
+          <div class = "hvr-curl-top-left  wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="notaAzul"> <h2>title</h2>write here!</a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaLaranja"> <h2>title</h2>write here!</a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaRed"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAmarelo"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCinza"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAzulClaro"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaRoxo"> <h2>title</h2>write here!</a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCastanho"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaVerde"> <h2>title</h2>write here! </a> </div></div>          <div class = "hvr-curl-top-left  wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="notaAzul"> <h2>title</h2>write here!</a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaLaranja"> <h2>title</h2>write here!</a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaRed"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAmarelo"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCinza"> <h2>title</h2>write here! </a> </div></div>
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAzulClaro"> <h2>title</h2>write here! </a> </div></div>
+
+
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaVerde"> <h2>title</h2>write here! </a> </div></div>          <div class = "hvr-curl-top-left  wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="notaAzul"> <h2>title</h2>write here!</a> </div></div>
+
           
 
-          <br><br><br><br><br><br>
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAmarelo"> <h2>title</h2>write here! </a> </div></div>
 
-          <!--notes -->
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCinza"> <h2>title</h2>write here! </a> </div></div>
 
-          <div id="rodape"class="wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.7s"> <h3>Notes</h3> </div>
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAzulClaro"> <h2>title</h2>write here! </a> </div></div>
 
-          <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="dynamicRed"> <h2>Dynamic</h2>2</a> </div></div>
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaRoxo"> <h2>title</h2>write here!</a> </div></div>
 
-          <div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.8s" ><div class="boardAzul"><h2>Board</h2> All</a></div></div>
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCastanho"> <h2>title</h2>write here! </a> </div></div>
 
-          <div class = "hvr-curl-top-left  wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div class="notaAzul"> <h2>1</h2>IDeaTouch</a> </div></div>
-
-          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaLaranja"> <h2>2</h2>IDeaTouch</a> </div></div>
-
-          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaRed"> <h2>3</h2></a>IDeaTouch</div></div>
-
-          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAmarelo"> <h2>4</h2>IDeaTouch</a> </div></div>
-
-          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCinza"> <h2>5</h2>IDeaTouch</a> </div></div>
-
-          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaAzulClaro"> <h2>6</h2>IDeaTouch</a> </div></div>
-
-          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaRoxo"> <h2>7</h2></a> IDeaTouch</div></div>
-
-          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaCastanho"> <h2>8</h2> IDeaTouch</a> </div></div>
-
-          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaVerde"> <h2>9</h2>IDeaTouch </a> </div></div>
+          <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s"><div class="notaVerde"> <h2>title</h2>write here! </a> </div></div>
 
 
-          <div class="notaMenu wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"><h2>Add</h2></a> <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/edit.png"  width=85%/> </a> </div>
-          <div class="notaMenuD wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"> <h2>Edit</h2> <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/pencil.png"  width=85%/> </a> </div>
-          <div class="notaMenuD wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s"> <h2>Send to Board</h2></a> <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/animation.png"  width=85%/> </a></div>
-          <div class="notaMenuD wow fadeInUp" data-wow-duration="1.0s" data-wow-delay="1.0s"> <h2>Delete</h2></a> <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/trash_can.png"  width=85%/> </a> </div>
-          <div class="notaMenuD wow fadeInUp" data-wow-duration="1.1s" data-wow-delay="1.1s"> <h2>Change Color</h2></a> <a href="#" class="hvr-pulse"> <img alt="Rails" src="/assets/img/icons/color.png"  width=85%/> </a></div>
+          <br>
 
-          <br><br><br><br><br><br>
+          <br><br>
+          <div class="linee wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s"></div>
+          <br>
 
-          <div id="rodape"class="wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.7s"> <h3>Window</h3> </div>
+          <div class="notaMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">                
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-file" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> New Note</div> 
+          </div>
 
-          <div id="bg" class="wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s" ><div id="search-container"><div id="search-bg" class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s" ></div><div id="search"><h2>IDeaTouch is Coming </h2>
+          <div class="notaMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">                
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-eye-open" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> View Note</div> 
+          </div>
+
+          <div class="notaMenu wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+            <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-pencil" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Edit Note</div> 
+          </div>
+          <div class="notaMenu wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"> 
+                        <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-move" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Move to Board</div> 
+           </div>
+          <div class="notaMenu wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s"> 
+                        <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-trash" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Delete Note</div> 
+           </div>
 
 
-          <% if signed_in? %>
-          <!--<h2><%= current_user.email %></h2>-->
-          <h2><img src="/assets/img/160.png" alt="logotipo" ></h2>
+           <div class="boardMenu wow fadeInUp" data-wow-duration="1.0s" data-wow-delay="1.0s"> 
+                        <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-edit" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Edit Board</div> 
+           </div>
 
-          <h2><%= button_to "Sign out", sign_out_path, method: :delete,:type =>type="button",:class=>'btn btn-danger' %></h2>
-          <% else %>
-          <%= link_to "Sign in", sign_in_path %>
-          <% end %>
-        </div></div></div>
+           <div class="boardMenu wow fadeInUp" data-wow-duration="1.0s" data-wow-delay="1.0s"> 
+                        <br>
+                  <div class="hh1"><span class="glyphicon glyphicon-minus" aria-hidden="true" >
+                  </span> </div> <div class="hh2"> Delete Board</div> 
+           </div>
 
-          <div id="rodape"> <br><h4>designed by IDeaTouch</h4> </div>
+
       </div>
+
 
 
     </div>
 
+    </div>
+
+
+
+    <script src="js/wow.js"></script>
     <script>wow = new WOW({animateClass:'animated',offset:100,
       callback:function(box){console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")}});
       wow.init();
@@ -185,7 +339,35 @@
       this.parentNode.insertBefore(section, this);};
     </script>
 
-    <script src="/assets/wow.js" type="text/javascript"></script>
+
+      <script>
+$(document).ready(function() {
+  
+  $(".animsition").animsition({
+  
+    inClass               :   'fade-in-right',
+    outClass              :   'fade-out-left',
+    inDuration            :    200,
+    outDuration           :    150,
+    linkElement           :   '.animsition-link',
+    // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
+    loading               :    true,
+    loadingParentElement  :   'body', //animsition wrapper element
+    loadingClass          :   'animsition-loading',
+    unSupportCss          : [ 'animation-duration',
+                              '-webkit-animation-duration',
+                              '-o-animation-duration'
+                            ],
+    //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    
+    overlay               :   false,
+    
+    overlayClass          :   'animsition-overlay-slide',
+    overlayParentElement  :   'body'
+  });
+});
+  </script>
 
 
 

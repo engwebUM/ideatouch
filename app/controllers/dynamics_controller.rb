@@ -8,10 +8,6 @@ class DynamicsController < ApplicationController
     @dynamics = Dynamic.all
   end
 
-  def itdynamics
-    @dynamics = Dynamic.all
-  end
-
 
   # GET /dynamics/1
   # GET /dynamics/1.json
@@ -41,7 +37,7 @@ class DynamicsController < ApplicationController
 
     respond_to do |format|
       if @dynamic.save
-        format.html { redirect_to @dynamic, notice: 'Dynamic was successfully created.' }
+        format.html { redirect_to @dynamic}
         format.json { render :show, status: :created, location: @dynamic }
       else
         format.html { render :new }
@@ -55,7 +51,7 @@ class DynamicsController < ApplicationController
   def update
     respond_to do |format|
       if @dynamic.update(dynamic_params)
-        format.html { redirect_to @dynamic, notice: 'Dynamic was successfully updated.' }
+        format.html { redirect_to @dynamic}
         format.json { render :show, status: :ok, location: @dynamic }
       else
         format.html { render :edit }
@@ -69,7 +65,7 @@ class DynamicsController < ApplicationController
   def destroy
     @dynamic.destroy
     respond_to do |format|
-      format.html { redirect_to dynamics_url, notice: 'Dynamic was successfully destroyed.' }
+      format.html { redirect_to dynamics_url }
       format.json { head :no_content }
     end
   end

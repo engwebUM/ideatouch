@@ -4,6 +4,9 @@ class WelcomeController < ApplicationController
   def index 
   end
 
+  def box 
+  end
+
   def show
   end
 

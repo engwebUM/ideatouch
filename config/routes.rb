@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'whatis/index'
 
+
   resources :notes
 
   resources :boards
@@ -9,18 +10,20 @@ Rails.application.routes.draw do
   get '/dynamics/:id/addBoard', to: 'dynamics#addBoard', as: 'addBoard'
   get '/boards/:id/addNote', to: 'boards#addNote', as: 'addNote'
 
-  get '/itdynamics', to: 'dynamics#itdynamics', as: 'itdynamics'
-  get '/itd_index/:id', to: 'dynamics#itd_index', as: 'itd_index'
+
 
   #get 'welcome/index'
-
+  get 'box' => 'welcome#box'
   get 'design' => 'welcome#index'
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'dynamics#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

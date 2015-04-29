@@ -13,15 +13,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :text %><br>
-    <%= f.text_field :text %>
+    <br>
+    <div class="input-letter"><%= f.text_field :text,:placeholder=>"Text",:style => 'text-align:center;background-image: url("");'  %></div>
   </div>
 
   <%= f.hidden_field :board_id, value: @board.id %>
+<br>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= button_to "Submit", dynamics_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %> 
   </div>
-
 
 <% end %>

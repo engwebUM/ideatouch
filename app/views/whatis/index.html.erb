@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>.wow:first-child {visibility: hidden;}</style>
+    <title>IDeaTouch</title>
+  </head>
+  <body>
+    <div class= "box-wall2">
+
+      <div class="whatistitle wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"><h3>What is IDeaTouch?</h3>
+      <div class="imageWhatIs wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"></div>
+    	  <div class="boxtext wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s">
+          <p>It is a SaaS platform to help people/companies to collaboratively find creative solutions best suited to their problems.</p>
+          <p>It enables the creation, management and implementation of creative solutions generated collaboratively.</p>
+          <p>It can be used remotely or in person. Synchronously or asynchronously.</p>
+          <p>It lets you define the problem, collect succinctly ideas to the problem, vote on the best ideas and the generation of a short document of implementation.</p>
+  	    </div>
+      </div>
+
+   
+    <div class="boxwhoisintendedto wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+      <div class="whoisintendedtotitle  wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"><h3>Who is IDeaTouch intended to?</h3></div>
+
+      <div class="imageWhoIsIntendedTo wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s"></div>
+
+      <div class="boxtext wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+        <p>The inventors of the idea</p>
+        <p>Collaborators and drivers - Users</p>
+        <p>Small, medium and large companies - future Costumers</p>
+        <p>Teachers, students - other stackholders</p>
+        <p>They all use brainstorming techniques as a way to get ideas</p>
+      </div>
+    </div>
+
+
+    <div class="boxadvantagesofplatform wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+      <div class="advantagesofplatformtitle wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"><h3>What are the advantages of using the platform?</h3></div>
+
+      <div class="imageSession wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s"></div>
+
+      <div class="boxtext wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s">
+        <p>The user can share his ideas remotely or in person</p>
+        <p>The user can see ideas from other employees in a more organized way</p>
+        <p>The user can pre-select an idea and he can also vote on the ideas he considers to be the best</p>
+        <p>Importantly, this application ensures anonymity to users, thus allowing a user suggest a solution to a problem without feeling embarrassed</p>
+      </div>
+    </div>
+
+    <div class="boxhowitworks wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+      <div class="howitworkstitle wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"><h3>How it works?</h3></div>
+
+      <div class="step wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s">
+      	<h4>1. Avatar and nickname</h4>
+      	<p>Choose a pre-defined avatar or upload one.</p>
+        <p>Then write a nickname.</p>
+
+        <div class="minion wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"></div>
+        <p>Bill Gates</p>
+      </div>
+
+      <div class="step wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+      	<h4>2. Create/join Dynamics</h4>
+      	<p>Create and/or join dynamics.</p>
+        <p>Creating a dynamic, you can invite people to collaborate.</p>
+        <p>The dynamic icon is defined by a circle</p>
+
+        <div class="dynamicAzul2 wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"><div class="hhpp">Dynamic</div></div>
+      </div>
+
+      <div class="step wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+        <h4>3. Create/join Boards</h4>
+        <div class="boardRed2 wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"><div class="hhpp">Board</div><a>2</a></div>
+      </div>
+
+      <div class="step wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+        <h4>4. Send Notes</h4>
+        <p>Then you can launch ideas.</p>
+
+        <div class="notaAzulClaro2 wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"><div class="hhpp">1</div>write here! </a></div>
+      </div>
+    </div>
+
+    <div class="joinus wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+      <h3>What are you waiting for? Join us!</h3>
+      <div class="logoicon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"></div>
+      <br>
+    </div>
+<div class="centerr">
+  <%= button_to "Back", dynamics_path, method: :get,:type =>type="button",:class=>'btn btn-success' %> 
+</div>
+
+
+
+   </div>
+   
+  </div>
+  </div>
+
+
+ <script src="js/wow.js"></script>
+    <script>var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    }
+  }
+);
+wow.init();
+    </script>
+
+    <script>
+      $(function() {
+          $(".preload").fadeOut(10, function() {
+              $(".content").fadeIn(10);        
+          });
+      });
+    </script>
+</body>
+</html>

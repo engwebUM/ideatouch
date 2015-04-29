@@ -1,5 +1,90 @@
-<h1>New Board</h1>
 
-<%= render 'formBoard' %>
 
-<%= link_to 'Back', dynamics_path %>
+<html>
+  <head>
+
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <style>.wow:first-child {visibility: hidden;}</style>
+    <title>IdeaTouch</title>
+  </head>
+
+  <body>
+
+    <div class="preload"></div>
+    <div class="content">
+
+    <div class= "wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
+    <div id="topo">
+      <div class="topo-Logo wow fadeIn" data-wow-duration="1.0s" data-wow-delay="1.0s">
+          IDeaTouch
+      </div>
+        <%= link_to sign_out_path, method: :delete  do %>
+        <div class="topo-perfil wow fadeInRight" data-wow-duration="1.1s" data-wow-delay="1.1s">
+          <span class="glyphicon glyphicon-off" aria-hidden="true">
+          </spam>
+        </div>
+        <% end %>
+      <div class="topo-perfil wow fadeInRight" data-wow-duration="1.2s" data-wow-delay="1.2s">
+         <span class="glyphicon glyphicon-user" aria-hidden="true">
+         </spam>
+      </div>
+
+      <div class="topo-perfil wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="1.3s">
+        <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true">
+        </spam>
+      </div>
+      </div>
+    </div>
+    <br><br><br>
+
+
+
+
+
+   <div class="box-wall wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s">   
+      <div class="box-wall-text">
+
+      <h1>New Board</h1>
+
+ 		<div class="hh4"><%= render 'formBoard' %></div>
+
+		<%= link_to 'Back', dynamics_path %>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <script src="js/wow.js"></script>
+    <script>wow = new WOW({animateClass:'animated',offset:100,
+      callback:function(box){console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")}});
+      wow.init();
+      document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);};
+    </script>
+
+    <script>
+      $(function() {
+          $(".preload").fadeOut(10, function() {
+              $(".content").fadeIn(10);        
+          });
+      });
+    </script>
+
+
+    <script>
+    $('.submit_me').click(function() {
+  $('form').submit();
+  return false;
+});
+    </script>
+  </body>
+</html>
+

@@ -1,9 +1,4 @@
 
-body {
-    background-color: #333E45;
-    width: 100%;
-    height: 100%;
-}
 
 @font-face {
     font-family: myFirstFont;
@@ -11,67 +6,23 @@ body {
 }
 
 
-/*blur*/
 
-#lbg, #lsearch-bg {
-  font-family: myFirstFont;
-  background-image: url("./img/wallpaper.jpg");
-  /*background-repeat: no-repeat;*/
-  background-size: 1080px auto;
-  /*background-size:cover;*/
+.box-wall3{
+    background-size: 80%;
+    overflow:scroll;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #3C4951;
+    font-family: myFirstFont;
+    border-radius:0px;
+    width: 90%; 
+    height: 85vh;
+    left: 5%;
+    right: 5%;
+    top: 0%;
+    bottom: 10%;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
-
-
-
-#lbg {
-  font-family: myFirstFont;
-  background-position: center top;
-  padding: 70px 90px 100px 90px;
-}
-
-#lsearch-container {
-
-  font-family: myFirstFont;
-  position: relative;
-}
-
-/*desfocado*/
-#lsearch-bg {
-  font-family: myFirstFont;
-  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: 99;
-  /* Pull the background 70px higher to the same place as #bg's */
-  background-position: center -70px;
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
-  filter: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQoJPGZpbHRlciBpZD0iYmx1ciI+DQoJCTxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjMiIC8+DQoJPC9maWx0ZXI+DQo8L3N2Zz4=#blur); /* for Firefox */
-}
-
-#lsearch {
-  background-size:cover;
-  font-family: myFirstFont;
-  /* Put this on top of the blurred layer */
-  position: relative;
-  z-index: 100;
-  padding: 90px;
-  background: rgb(200,200,200); /* for IE */
-  background: rgba(200,200,200,0.8);
-}
-
-@media (max-width: 600px ) {
-  font-family: myFirstFont;
-  #lbg { padding: 10px; }
-  #lsearch-bg { background-position: center -10px; }
-}
-
-#lsearch h2, #lsearch h5, #lsearch h5 a { text-align: center; color: #fefefe; font-weight: normal; }
-#lsearch h2 { margin-bottom: 50px }
-#lsearch h5 { margin-top: 70px }

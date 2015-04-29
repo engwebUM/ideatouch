@@ -1,48 +1,30 @@
 <html>
   <head>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/login.css">
     <style>.wow:first-child {visibility: hidden;}</style>
     <title>IdeaTouch</title>
   </head>
 
   <body>
+    olaa
+    <div class="box-wall3">    
+      <div id="clearance" class="sign-in">
+                <br>
+                <h2><img src="/assets/img/160.png" alt="logotipo" ></h2>
+                <h2><%= t '.title' %></h2>
+                <%= form_for @user do |form| %>
+                  
+                  <div class="hh4"><%= render partial: '/users/form', object: form %></div>
 
-    <div id="lbg" class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s" >
-      <div id="lsearch-container">
-        <div id="lsearch-bg" class="wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.5s" >
-        </div>
-        <div id="lsearch">
-          <div id="clearance" class="sign-in">
-            <h2><img src="/assets/img/160.png" alt="logotipo" ></h2>
-            <h2><%= t '.title' %></h2>
-              <%= form_for @user do |form| %>
-                <h2><%= render partial: '/users/form', object: form %></h2>
+                    <h2><small><%= button_to "Sign in", sign_in_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %> </small></h2>
 
-                  <h2><small><%= button_to "Sign in", sign_in_path, method: :submit,:type =>type="button",:class=>'btn btn-info' %> </small></h2>
+                  <div class="other-links">
+                    <small><%= link_to t('.sign_in'), sign_in_path %></small>
+                  </div>
 
-    
-
-                <div class="other-links">
-                  <h2><small><%= link_to t('.sign_in'), sign_in_path %></small></h2>
-                </div>
-              <% end %>  
-          </div>
-        </div>
+                <% end %>  
       </div>
     </div>
-
-  </div>
-  
-    <script src="js/wow.js"></script>
-    <script>wow = new WOW({animateClass:'animated',offset:100,
-      callback:function(box){console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")}});
-      wow.init();
-      document.getElementById('moar').onclick = function() {
-      var section = document.createElement('section');
-      section.className = 'section--purple wow fadeInDown';
-      this.parentNode.insertBefore(section, this);};
-    </script>
   </body>
 </html>

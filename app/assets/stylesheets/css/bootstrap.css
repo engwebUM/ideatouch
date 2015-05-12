@@ -2979,7 +2979,7 @@ select[multiple].form-group-lg .form-control {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  border-radius: 4px;
+  border-radius: 0px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3065,8 +3065,9 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  box-shadow: 2px 3px 2px #166D3A;
+  background-color: #18EB70;
+  border-color: #18EB70;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -3075,8 +3076,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
+  box-shadow: 2px 3px 2px #A38C30;
+  background-color: #FFDA4A;
+  border-color: #FFDA4A;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3110,8 +3112,9 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  box-shadow: 1px 3px 1px #801F10;
+  background-color: #FF3D1F;
+  border-color: #FF3D1F;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -3120,8 +3123,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
+  box-shadow: 1px 3px 1px #A38C30;
+  background-color: #FFDA4A;
+  border-color: #FFDA4A;
 }
 .btn-success:active,
 .btn-success.active,
@@ -3323,24 +3327,24 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 10px 16px;
-  font-size: 18px;
+  padding: 7px 56px;
+  font-size: 25px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 0px;
 }
 .btn-sm,
 .btn-group-sm > .btn {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .btn-xs,
 .btn-group-xs > .btn {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .btn-block {
   display: block;

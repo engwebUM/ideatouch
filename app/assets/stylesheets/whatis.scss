@@ -20,6 +20,8 @@ Cinzento:	Vermelho-148	Verde-164	Azul-165
 	margin-right: auto;	
 }
 
+
+
 .box-wall2{
     /*background-image: url("/assets/img/rabisco.png");*/
     font-family: myFirstFont;
@@ -45,6 +47,7 @@ Cinzento:	Vermelho-148	Verde-164	Azul-165
 }
 
 .boardRed2{ 
+    font-family: myFirstFont;
 	margin: 4px;
 	margin-right: auto;
 	margin-left: auto;
@@ -60,6 +63,7 @@ Cinzento:	Vermelho-148	Verde-164	Azul-165
 .boardRed2:hover{background: linear-gradient(180deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
 
 .notaAzulClaro2{ 
+	font-family: myFirstFont;
     margin: 4px;
     margin-right: auto;
 	margin-left: auto;
@@ -79,6 +83,7 @@ Cinzento:	Vermelho-148	Verde-164	Azul-165
 
 
 .dynamicAzul2{ 
+    font-family: myFirstFont;
 	margin: 4px;
 	margin-right: auto;
 	margin-left: auto;
@@ -145,20 +150,21 @@ p {
 
 /*---------------------------------------------------------------------------------------*/
 .boxwhatis {
-	background-color: #3498db;
+	background-color: #FFDF5C;
 }
 
 .whatistitle {
 	margin-top: 0%;
-	background-color: #FAAE4B ;
+	background-color: #FFDF5C ;
 }
 
 .imageWhatIs {
 	margin-left: auto;
     margin-right: auto;
-    margin-top: -20px;
-	background: url("./img/asd.jpg") no-repeat top center;
-	background-size: 100%;
+    margin-top: 0px;
+	background: url("./img/transferir.jpg") no-repeat ;
+	background-attachment: scroll;
+	background-size: 100% 110%;
 	height: 320px;
 }
 
@@ -175,43 +181,44 @@ p {
 	margin-left: auto;
     margin-right: auto;
     margin-top: -20px;
-	background: url("./img/participants-grey.jpg") no-repeat top center;
-	background-size: 100%;
+	background: url("./img/asdd.jpg") no-repeat;
+	background-size: 100% 140%;
 	height: 320px;
 }
 
 /*---------------------------------------------------------------------------------------*/
 .boxadvantagesofplatform {
-	background-color: rgb(29, 199, 110);
+	background-color: #26A9BA;
 }
 
 .advantagesofplatformtitle {
-	background-color: rgb(28, 206, 114);
+	background-color: #26A9BA;
 }
 
 .imageSession {
 	margin-left: auto;
     margin-right: auto;
     margin-top: -20px;
-	background: url("./img/123.jpg") no-repeat top center;
-	background-size: 100%;
+	background: url("./img/mapfs.jpg") no-repeat  ;
+	background-attachment: scroll;
+	background-size: 100% 180%;
 	height: 320px;
 }
 
 /*---------------------------------------------------------------------------------------*/
 .boxhowitworks {
-	background-color: #D36D53;
+	background-color: #E87A5F;
 	display: inline-block;
 }
 
 .howitworkstitle {
-	background-color: #E47458 ;
+	background-color: #FF8566 ;
 }
 
 .step {
 	display: in-line ;
 	float : left;
-	background-color: #E47458 ;
+	background-color: #FF8566 ;
 	width: 100%;
 	height: auto;
 	margin-top: 8px;

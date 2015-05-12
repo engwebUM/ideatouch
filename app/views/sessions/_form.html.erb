@@ -1,26 +1,24 @@
 <%= form_for :session, url: session_path do |form| %>
 
+
+<div class="topCaixa">
+
   <div class="text-field">
-    <small><%= form.text_field :email, type: 'email',:placeholder=>"Email",:style => 'text-align:center;background-image: url("");'   %></small>
+    <small>
+      <%= form.text_field :email, type: 'email',:placeholder=>"Email",:style => 'text-align:center;background-image: url("");'%>
+    </small>
   </div>
 
   <div class="password-field">
     <small><%= form.password_field :password ,:placeholder=>"Password",:style => 'text-align:center;background-image: url("");'  %></small>
   </div>
-    <br>
-
-  <small><%= button_to "Submit", sign_out_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %> </small>
 
 
 
-  <br>
-  <div class="other-links">
-    <% if Clearance.configuration.allow_sign_up? %>
-      <small><%= link_to t('.sign_up'), sign_up_path %></small>
-    <% end %>
-    <br>
-    <small><%= link_to t('.forgot_password'), new_password_path %></small>
-    <br><br><br>
-    <small><%= link_to "What is IDeaTouch?", whatis_index_path %></small>
+  <div class="botaoLogin1">
+  <%= button_to "Login", sign_out_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %>
   </div>
+
+</div>
+
 <% end %>

@@ -1,6 +1,36 @@
 body {
-    background-color: #333E45;
+    background-color: #22313F;
     overflow-x: hidden;
+
+}
+
+
+input[type='checkbox']{
+    display: inline-block;
+    float: right;
+    margin-right: 4px;
+    background-image: red;
+}
+
+
+#topo {  
+    color: white;
+    margin-top: 0;
+    margin: 0;
+    background-color: #FF654E ;  /*E47458*/
+    width: 100%; 
+    height: 50px; 
+    font-family: myFirstFont;
+    display: block;
+}
+
+.topo-Logo{
+    float:left;
+    font-size: 250%;
+    background-color: #FF654E ; 
+    margin-left: 10%;
+    width: 120px; 
+    height: 50px;  
 }
 
 /*Loading*/
@@ -18,6 +48,7 @@ body {
 }
 
 
+
 /*** texto selecionado */
 ::selection {
   background: #52B3D9; /* WebKit/Blink Browsers */
@@ -33,14 +64,14 @@ input:focus, textarea:focus {
 }
 
 :active {
-    outline-color: #52B3D9 !important;
+    outline-color: #FFDA4A !important;
 }
 
 
 /*** scroll */
 ::-webkit-scrollbar {
-    width: 3px;
-    background-color: #333E45;
+    width: 0px;
+    background-color: #22313F;
 }
  
 ::-webkit-scrollbar-track {
@@ -56,30 +87,16 @@ input:focus, textarea:focus {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-    background: #333E45; 
+    background: #FFDA4A; 
 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #52B3D9;
+    background-color: #FFDA4A;
 }
 /* scroll */
 
 
-/*botão input*/
-.button-input{
-    background-color: #E47458;
-    text-align: center;
-    font-size: 120%;
-    width: 65px; 
-    height: 30px;
-    line-height:35px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.button-input:hover{
-    background-color: #52B3D9 ; 
-}
 
 
 h2{
@@ -107,36 +124,30 @@ a:hover{
     color: white;
 }
 
-#topo {  
-    color: white;
-    margin-top: 0;
-    margin: 0;
-    background-color: #E47458 ; 
-    width: 100%; 
-    height: 50px; 
-    font-family: myFirstFont;
-    display: block;
-}
 
-.topo-Logo{
-    float:left;
-    font-size: 250%;
-    background-color: #E47458 ; 
-    margin-left: 10%;
-    width: 120px; 
-    height: 50px;  
-}
 
-.hh1{font-size:2.5em;   
-     margin-top:35px;
+.hh1{
+    font-size:2.5em;   
+    margin-top:45px;
     text-align: center;
 }
+
+  
+
 .hh2{
+    font-family: myFirstFont;
     font-size:1.2em;   
     text-align: center;
-    margin-top: 2px;
-
+    margin-top: 10px;
 }
+
+.hh22{
+    font-family: myFirstFont;
+    font-size:1.2em;   
+    text-align: right;
+    margin-top: 10px;
+}
+
 
 .hh4{
 color: black;
@@ -146,16 +157,16 @@ font-size:1.2em;
 .hhp{
     font-size:1.5em;   
     text-align: center;
-    margin-top: 20px;
-    margin: 10px;
+    margin-top: 15px;
 }
 
 
 .linee{
-    position: relative;
+    display: inline-block;
+    float: center;
     background-color: #3C4951 ; 
-    margin-right: 20%;
-    width: 95%; 
+    margin-left: 60px;
+    width: 80%; 
     height: 3px; 
 }
 
@@ -169,21 +180,212 @@ font-size:1.2em;
     line-height:60px;
 }
 .topo-perfil:hover{
-    background-color: #52B3D9 ; 
+    background-color: #FFDA4A ; 
 }
+
+
+.fora{
+    width: 62px;
+}
+
+.lateral-perfil{
+    display: inline-block;
+    float: left;
+    background: #263747;
+    text-align: center;
+    font-size: 120%;
+    width: 60px; 
+    height: 60px;
+    line-height:60px;
+    border: 2px solid #22303E;
+    color: #50626E;
+}
+.lateral-perfil:hover{
+    background-color: #2F4356 ; 
+    color: white;
+}
+
+.letraTitulo{
+    font-family: myFirstFont;
+    line-height:25px;
+    font-size:1.8em;
+}
+.letraNome{
+    font-family: myFirstFont;
+    line-height:21px;
+    font-size:1.0em;
+}
+
+.letraRelogio{
+    font-family: myFirstFont;
+    line-height:55px;
+    font-size:0.8em;
+}
+
+.caixa-menu{
+    display: inline-block;
+    float: left;
+    background-color: #263747 ; 
+    width: 175px;
+    height: 55px;
+    text-align: center;
+    border: 6px solid #22313F;
+    top:50%;
+    margin-right: 200 px;
+}
+.caixa-menu:hover{
+    background: #2F4356;
+}
+
+.caixa-relogio{
+    display: inline-block;
+    float: right;
+    background-color: #263747 ; 
+    width: 300px;
+    height: 55px;
+    text-align: center;
+    border: 6px solid #22313F;
+    top:50%;
+    font-size:1.5em;
+    margin-right: 200 px;
+    line-height:45px;
+}
+
+.caixa-icon{
+    color: #50626E;
+    display: inline-block;
+    float: left;
+    height: 55px;
+    width: 25px;
+    font-size:1.5em;
+    text-align: center;
+    line-height:60px;
+}
+
+.lateral2-perfil{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size: 120%;
+    width: 120px; 
+    height: 60px;
+    line-height:60px;
+    background-color: #26A65B ; 
+    color: white;
+}
+
+.lateralBoard-perfil{
+    display: inline-block;
+    float: left;
+    background: #263747;
+    text-align: center;
+    font-size: 120%;
+    width: 60px; 
+    height: 60px;
+    line-height:60px;
+    border: 2px solid #22303E;
+    color: #50626E;
+    border-radius:20px;
+}
+.lateralBoard-perfil:hover{
+    background-color: #2F4356 ; 
+    color: white;
+}
+.lateral2Board-perfil{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size: 120%;
+    width: 120px; 
+    height: 60px;
+    line-height:60px;
+    background-color: #1F4788 ; 
+    color: white;
+}
+
+.lateralDynamic-perfil{
+    display: inline-block;
+    float: left;
+    background: #263747;
+    text-align: center;
+    font-size: 120%;
+    width: 60px; 
+    height: 60px;
+    line-height:60px;
+    border: 2px solid #22303E;
+    color: #50626E;
+    border-radius:100px;
+}
+.lateralDynamic-perfil:hover{
+    background-color: #2F4356 ; 
+    color: white;
+}
+.lateral2Dynamic-perfil{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size: 120%;
+    width: 120px; 
+    height: 60px;
+    line-height:60px;
+    background-color: #CF3A24 ; 
+    color: white;
+}
+
+#hover-content {
+    display:none;
+}
+.fora:hover #hover-content {
+    display:block;
+}
+
+.fora:hover{
+    width: 220px;
+}
+
+#box-2{
+    z-index: 100;
+    position: fixed;
+    font-family: myFirstFont;
+    float: left;
+    width: 62px; 
+    height: 65vh;
+}
+#box-2:hover{
+    width:185px
+}
+
 
 .input-letter{
     color:black;
 }
 
-#box-3 {    
-    background-color: #333E45;
-    margin-top: 0px ;
-    margin-left: 60px;
+
+#topo2 {
+    overflow: auto;
+    display: inline-block;
+    float: left;
+    color: white;
+    margin-top: 0;
+    margin: 0;
+    background-color: #22313F ;  /*E47458*/
+    width: 100%; 
+    height: 50px; 
+    display: block;
+}
+
+
+#box-3 {
+    display:inline-block;
+    background-color: #22313F;
+    margin-top: 10px ;
+    margin-left: 70px;
     float: left; 
-    width: 95%; 
+    width: 90%; 
     height: auto;  
-    font-family: myFirstFont;}
+    font-family: myFirstFont;
+}
+
 
 #rodape{
     color:#ecf0f1;
@@ -222,12 +424,15 @@ font-size:1.2em;
 }
 
 
+
+
 .box-wall{
     /*background-image: url("/assets/img/rabisco.png");*/
     overflow:scroll;
     overflow-x: hidden;
     position: absolute;
-    background-color: #2E383E;
+    background-color: #263747;
+    border: 10px solid #22303E;
     font-family: myFirstFont;
     border-radius:0px;
     width: 80%; 
@@ -251,9 +456,8 @@ font-size:1.2em;
 }
 
 
-
 .dynamicAzul{ 
-
+    position: relative;
     margin: 4px;
     border-radius:100px;
     font-size:15px;
@@ -265,8 +469,12 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(135deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+    border: 4px solid #37A485;
 }
-.dynamicAzul:hover{background: linear-gradient(45deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);}
+
+.dynamicAzul:hover{
+    background: linear-gradient(45deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+}
 
 .dynamicLaranja{ 
     margin: 4px;
@@ -280,8 +488,10 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(225deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
+    border: 4px solid #E49F46;
 }
-.dynamicLaranja:hover{background: linear-gradient(135deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);}
+.dynamicLaranja:hover{background: linear-gradient(135deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);    
+}
 
 .dynamicRed{ 
     margin: 4px;
@@ -294,8 +504,12 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(45deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
+    border: 4px solid #B53E30;
 }
-.dynamicRed:hover{background: linear-gradient(135deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
+.dynamicRed:hover{
+    background: linear-gradient(135deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
+
+}
 
 .dynamicAmarelo{ 
     margin: 4px;
@@ -309,8 +523,10 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(315deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
+    border: 4px solid #DBB15C;
 }
-.dynamicAmarelo:hover{background: linear-gradient(225deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);}
+.dynamicAmarelo:hover{background: linear-gradient(225deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
+}
 
 .dynamicCinza{ 
     margin: 4px;
@@ -324,6 +540,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(45deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+    border: 4px solid #808C8D;
 }
 .dynamicCinza:hover{
     background: linear-gradient(135deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
@@ -341,6 +558,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(135deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+    border: 4px solid #2D83BC;
 }
 .dynamicAzulClaro:hover{
     background: linear-gradient(225deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
@@ -358,6 +576,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(315deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+    border: 4px solid #963EB9;
 }
 .dynamicRoxo:hover{
     background: linear-gradient(225deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
@@ -375,6 +594,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(45deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+    border: 4px solid #987648;
 }
 .dynamicCastanho:hover{
     background: linear-gradient(135deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
@@ -392,6 +612,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(315deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+    border: 4px solid #28AF60;
 }
 .dynamicVerde:hover{
     background: linear-gradient(225deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
@@ -401,17 +622,19 @@ font-size:1.2em;
     margin: 4px;
     border-radius:100px;
     font-size:15px;
-    color:#ecf0f1;
+    color:#3D556B;
     line-height:20px;
     text-align:center;
-    background:#2E383E;
+    background:#263747;
     height:150px;
     width:150px;
     display: inline-block;
     vertical-align: middle;
+    border: 4px solid #22303E;
 }
 .dynamicMenu:hover{ 
-    background:#3C4951;
+    background:#2F4356;
+    color: white;
 }
 
 
@@ -427,6 +650,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+    border: 4px solid #37A485;
 }
 .boardAzul:hover{background: linear-gradient(180deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);}
 
@@ -442,6 +666,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
+    border: 4px solid #E49F46;
 }
 .boardLaranja:hover{background: linear-gradient(180deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);}
 
@@ -456,6 +681,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
+    border: 4px solid #B53E30;
 }
 .boardRed:hover{background: linear-gradient(180deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
 
@@ -471,6 +697,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
+    border: 4px solid #DBB15C;
 }
 .boardAmarelo:hover{background: linear-gradient(180deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);}
 
@@ -486,6 +713,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+    border: 4px solid #808C8D;
 }
 .boardCinza:hover{
     background: linear-gradient(180deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
@@ -503,6 +731,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+    border: 4px solid #2D83BC;
 }
 .boardAzulClaro:hover{
     background: linear-gradient(180deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
@@ -520,6 +749,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+    border: 4px solid #963EB9;
 }
 .boardRoxo:hover{
     background: linear-gradient(180deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
@@ -537,10 +767,12 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+    border: 4px solid #987648;
 }
 .boardCastanho:hover{
     background: linear-gradient(180deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
 }
+
 
 .boardVerde{ 
     margin: 4px;
@@ -554,6 +786,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(0deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+    border: 4px solid #28AF60;
 }
 .boardVerde:hover{
     background: linear-gradient(180deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
@@ -563,22 +796,25 @@ font-size:1.2em;
     margin: 4px;
     border-radius:50px;
     font-size:15px;
-    color:#ecf0f1;
+    color:#50626E;
     line-height:20px;
     text-align:center;
-    background:#2E383E;
+    background:#263747;
     height:150px;
     width:150px;
     display: inline-block;
     vertical-align: middle;
+    border: 4px solid #22303E;
 }
 .boardMenu:hover{ 
-    background:#3C4951;
+    background:#2F4356;
+    color: white;
 }
 
 .notaAzul{ 
     overflow:scroll;
     overflow-x: hidden;
+    overflow-y: hidden;
     margin: 4px;
     border-radius:5px;
     font-size:15px;
@@ -590,6 +826,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(135deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+    border: 2px solid #37A485;
 }
 .notaAzul:hover{background: linear-gradient(45deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);}
 
@@ -609,6 +846,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(225deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
+    border: 2px solid #E49F46;
 }
 .notaLaranja:hover{background: linear-gradient(135deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);}
 
@@ -626,6 +864,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(45deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
+    border: 2px solid #B53E30;
 }
 .notaRed:hover{background: linear-gradient(135deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
 
@@ -643,6 +882,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(315deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
+    border: 2px solid #DBB15C;
 }
 .notaAmarelo:hover{background: linear-gradient(225deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);}
 
@@ -660,6 +900,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(45deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+    border: 2px solid #808C8D;
 }
 .notaCinza:hover{
     background: linear-gradient(135deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
@@ -679,6 +920,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(135deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+    border: 2px solid #2D83BC;
 }
 .notaAzulClaro:hover{
     background: linear-gradient(225deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
@@ -698,6 +940,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(315deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+    border: 2px solid #963EB9;
 }
 .notaRoxo:hover{
     background: linear-gradient(225deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
@@ -717,6 +960,7 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(45deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+    border: 2px solid #987648;
 }
 .notaCastanho:hover{
     background: linear-gradient(135deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
@@ -736,10 +980,12 @@ font-size:1.2em;
     width:150px;
     float:left;
     background: linear-gradient(315deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+    border: 2px solid #28AF60;
 }
 
 .notaVerde:hover::before{
     content: "ola";
+    position:relative;
 }
 .notaVerde:hover{
     background: linear-gradient(225deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
@@ -751,19 +997,22 @@ font-size:1.2em;
     margin: 4px;
     border-radius:5px;
     font-size:15px;
-    color:#ecf0f1;
+    color:#50626E;
     line-height:20px;
     text-align:center;
-    background:#2E383E;
+    background:#263747;
     height:150px;
     width:150px;
     display: inline-block;
     vertical-align: middle;
+    border: 4px solid #22303E;
 }
 .notaMenu:hover{ 
-    background:#3C4951;
+    background:#2F4356;
+    color:white;
 
 }
+
 
 .notaLogotipo{ 
     margin: 4;
@@ -813,10 +1062,10 @@ font-size:1.2em;
   content: '';
   height: 0;
   width: 0;
-  top: 4px;
-  left: 4px;
+  top: 3.5px;
+  left: 3.5px;
   /* IE9 */
-  background: linear-gradient(135deg, #333E45 45%, #aaaaaa 50%, #cccccc 50%, white 100%);
+  background: linear-gradient(135deg, #22313F 45%, #aaaaaa 50%, #cccccc 50%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#000000');
   /*For IE7-8-9*/
   z-index: 1000;

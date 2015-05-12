@@ -1,6 +1,5 @@
 <html>
   <head>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <style>.wow:first-child {visibility: hidden;}</style>
     <title>IdeaTouch</title>
@@ -23,33 +22,125 @@
         <% end %>
         
       <div class="topo-perfil wow fadeInRight" data-wow-duration="1.2s" data-wow-delay="1.2s">
-         <span class="glyphicon glyphicon-user" aria-hidden="true"></spam>
+        <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true">
+        </spam>
       </div>
 
       <div class="topo-perfil wow fadeInRight" data-wow-duration="1.3s" data-wow-delay="1.3s">
-        <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true"></spam>
+         <span class="glyphicon glyphicon-user" aria-hidden="true">
+         </spam>
       </div>
+
       </div>
     </div>
-    <br><br><br>
+
+    <div id = "topo2">
+      
+      <div class="caixa-icon wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0.4s">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true" ></span>
+       </div>
+
+       <%= link_to "/dynamics" , method: :get  do %>
+        <div class="caixa-menu wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">
+          <div class="letraTitulo"> 
+            Dynamic 
+          </div>
+          <div class="letraNome"> 
+            <span class="glyphicon glyphicon-king" aria-hidden="true" ></span>
+            <%= @dynamic.name %> 
+          </div>
+         </div>
+        <% end %>
+
+
+       <div class="caixa-relogio wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">
+        <div class="letraRelogio">
+          1 Day 2 Hour 12 Minuts Left
+          <span class="glyphicon glyphicon-time" aria-hidden="true" ></span>
+        </div>
+       </div>
+      
+
+    </div>
+
+  <br><br><br>
+    
+
+      <div id="box-2">
+<br><br>
+
+       <div class="fora">
+          <div class="lateralDynamic-perfil wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></spam>
+          </div>
+          <div id="hover-content">
+               <div class="lateral2Dynamic-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Dynamic Info</div>
+          </div>
+        </div>
+<br><br><br>
+
+       <div class="fora">
+          <div class="lateralDynamic-perfil wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s">
+            <span class="glyphicon glyphicon-star" aria-hidden="true"></spam>
+          </div>
+          <div id="hover-content">
+               <div class="lateral2Dynamic-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Favorite Notes</div>
+          </div>
+        </div>
+<br><br><br>
+
+
+        <div class="fora">
+          <div class="lateralDynamic-perfil wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+            <span class="glyphicon glyphicon-stats" aria-hidden="true"></spam>
+          </div>
+          <div id="hover-content">
+               <div class="lateral2Dynamic-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Dynamic Statistics</div>
+          </div>
+        </div>
+<br><br><br>
+
+        <div class="fora">
+          <div class="lateralDynamic-perfil wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></spam>
+          </div>
+          <div id="hover-content">
+               <div class="lateral2Dynamic-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Invite people</div>
+          </div>
+        </div>
+<br><br><br>
+
+        <div class="fora">
+          <div class="lateralDynamic-perfil wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></spam>
+          </div>
+          <div id="hover-content">
+               <div class="lateral2Dynamic-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Edit Dynamic</div>
+          </div>
+        </div>
+<br><br><br>
+        
+         <%= link_to  @dynamic, method: :delete, data: { confirm: 'Are you sure?' } do %>
+         <div class="fora">
+          <div class="lateralDynamic-perfil wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
+            <span class="glyphicon glyphicon-minus-sign"  aria-hidden="true"></spam>
+          </div>
+          <div id="hover-content">
+               <div class="lateral2Dynamic-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Delete Board</div>
+          </div>
+        </div>
+         <% end %>
+<br><br><br>       
+
+      </div>
 
 
 
 
 
         <div id="box-3" class="box">
-            <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
-              <%= link_to "/dynamics" , method: :get  do %>
-              <div class="dynamicAzul"> 
-                <h2>Dynamic</h2>
-                <span class="glyphicon glyphicon-king" aria-hidden="true" ></span>
-                <%= @dynamic.name %>
-                <br><br><div class="hvr-wobble-horizontal">
-                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></div>
 
-              </div>
-              <% end %>
-            </div>
+            
 
             <% for board in @dynamic.boards %>
             	<div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s" >
@@ -62,66 +153,12 @@
             	</div>
             <% end %>
 
-
-          <br><br>
-          <div class="linee wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s"></div>
-          <br>
-
-
-
            <%= link_to "/dynamics/#{@dynamic.id}/addBoard" , method: :get  do %>
-          <div class="boardMenu wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s"> 
-           <br>
+           <div class="boardMenu wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s"> 
            <div class="hh1"><span class="glyphicon glyphicon-th-large" aria-hidden="true" >
-           </span> </div> <div class="hh2"> Create Board</div>
+           </span> </div> <div class="hh2"> New Board</div>
            </div>
            <% end %>
-
-            <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s"> 
-            <br>
-                  <div class="hh1"><span class="glyphicon glyphicon-time" aria-hidden="true" >
-                  </span> </div> <div class="hh2"> 00-00-00</div>
-           </div>
-
-            <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s"> 
-            <br>
-                  <div class="hh1"><span class="glyphicon glyphicon-info-sign" aria-hidden="true" >
-                  </span> </div> <div class="hh2"> Dynamic<br> Info</div>
-           </div>
-
-            <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s"> 
-            <br>
-                  <div class="hh1"><span class="glyphicon glyphicon-star" aria-hidden="true" >
-                  </span> </div> <div class="hh2"> Favorits</div>
-           </div>
-
-            <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s"> 
-            <br>
-                  <div class="hh1"><span class="glyphicon glyphicon-stats" aria-hidden="true" >
-                  </span> </div> <div class="hh2"> Statistics</div>
-           </div>
-
-
-            <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s"> 
-            <br>
-                  <div class="hh1"><span class="glyphicon glyphicon-envelope" aria-hidden="true" >
-                  </span> </div> <div class="hh2"> Invite People<br>to Dynamic</div>
-           </div>      
-          
-            <div class="dynamicMenu wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s"> 
-            <br>
-                  <div class="hh1"><span class="glyphicon glyphicon-cog" aria-hidden="true" >
-                  </span> </div> <div class="hh2"> Edit Dynamic</div>
-           </div>         
-
-
-           <%= link_to  @dynamic, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <div class="dynamicMenu wow fadeInUp" data-wow-duration="1.0s" data-wow-delay="1.0s"> 
-            <br>
-            <div class="hh1"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true" >
-            </span> </div> <div class="hh2"> Delete Dynamic</div>
-           </div><% end %>
-
 
     </div>
 

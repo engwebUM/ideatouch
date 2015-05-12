@@ -188,26 +188,11 @@ font-size:1.2em;
     width: 62px;
 }
 
-.lateral-perfil{
-    display: inline-block;
-    float: left;
-    background: #263747;
-    text-align: center;
-    font-size: 120%;
-    width: 60px; 
-    height: 60px;
-    line-height:60px;
-    border: 2px solid #22303E;
-    color: #50626E;
-}
-.lateral-perfil:hover{
-    background-color: #2F4356 ; 
-    color: white;
-}
+
 
 .letraTitulo{
     font-family: myFirstFont;
-    line-height:25px;
+    line-height:30px;
     font-size:1.8em;
 }
 .letraNome{
@@ -219,17 +204,19 @@ font-size:1.2em;
 .letraRelogio{
     font-family: myFirstFont;
     line-height:55px;
-    font-size:0.8em;
+    font-size:0.9em;
 }
 
 .caixa-menu{
+    margin-top: 2px;
+    border-radius:4px;
     display: inline-block;
     float: left;
     background-color: #263747 ; 
     width: 175px;
     height: 55px;
     text-align: center;
-    border: 6px solid #22313F;
+    border: 2px solid #50626E;
     top:50%;
     margin-right: 200 px;
 }
@@ -238,13 +225,15 @@ font-size:1.2em;
 }
 
 .caixa-relogio{
+    margin-top: 2px;
+    border-radius:4px;
     display: inline-block;
     float: right;
     background-color: #263747 ; 
     width: 300px;
     height: 55px;
     text-align: center;
-    border: 6px solid #22313F;
+    border: 2px solid #50626E;
     top:50%;
     font-size:1.5em;
     margin-right: 200 px;
@@ -262,7 +251,27 @@ font-size:1.2em;
     line-height:60px;
 }
 
+.lateral-perfil{
+    display: inline-block;
+    float: left;
+    background: #263747;
+    text-align: center;
+    font-size: 120%;
+    width: 60px; 
+    height: 60px;
+    line-height:60px;
+    border: 2px solid #22303E;
+    color: #50626E;
+}
+.lateral-perfil:hover{
+    border: 2px solid #50626E;
+    background-color: #2F4356 ; 
+    color: white;
+}
+
 .lateral2-perfil{
+    border-radius: 4px;
+    border: 2px solid #50626E;
     display: inline-block;
     float: left;
     text-align: center;
@@ -270,7 +279,7 @@ font-size:1.2em;
     width: 120px; 
     height: 60px;
     line-height:60px;
-    background-color: #26A65B ; 
+    background-color: #2F4356 ; 
     color: white;
 }
 
@@ -288,10 +297,14 @@ font-size:1.2em;
     border-radius:20px;
 }
 .lateralBoard-perfil:hover{
-    background-color: #2F4356 ; 
+    border: 2px solid #50626E;
+    background-color: #2F4356; 
     color: white;
 }
 .lateral2Board-perfil{
+    border-radius: 4px;
+    border: 2px solid #50626E;
+    background-color: #2F4356 ; 
     display: inline-block;
     float: left;
     text-align: center;
@@ -299,7 +312,6 @@ font-size:1.2em;
     width: 120px; 
     height: 60px;
     line-height:60px;
-    background-color: #1F4788 ; 
     color: white;
 }
 
@@ -317,10 +329,14 @@ font-size:1.2em;
     border-radius:100px;
 }
 .lateralDynamic-perfil:hover{
-    background-color: #2F4356 ; 
+    border: 2px solid #50626E;
+    background-color: #2F4356; 
     color: white;
 }
 .lateral2Dynamic-perfil{
+    border-radius: 4px;
+    border: 2px solid #50626E;
+    background-color: #2F4356 ; 
     display: inline-block;
     float: left;
     text-align: center;
@@ -328,7 +344,6 @@ font-size:1.2em;
     width: 120px; 
     height: 60px;
     line-height:60px;
-    background-color: #CF3A24 ; 
     color: white;
 }
 
@@ -362,7 +377,6 @@ font-size:1.2em;
 
 
 #topo2 {
-    overflow: auto;
     display: inline-block;
     float: left;
     color: white;
@@ -633,6 +647,7 @@ font-size:1.2em;
     border: 4px solid #22303E;
 }
 .dynamicMenu:hover{ 
+    border: 4px solid #50626E;
     background:#2F4356;
     color: white;
 }
@@ -807,6 +822,7 @@ font-size:1.2em;
     border: 4px solid #22303E;
 }
 .boardMenu:hover{ 
+    border: 4px solid #50626E;
     background:#2F4356;
     color: white;
 }
@@ -1008,9 +1024,9 @@ font-size:1.2em;
     border: 4px solid #22303E;
 }
 .notaMenu:hover{ 
+    border: 4px solid #50626E;
     background:#2F4356;
     color:white;
-
 }
 
 

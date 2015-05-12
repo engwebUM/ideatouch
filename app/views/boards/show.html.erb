@@ -151,7 +151,7 @@
             <% for note in @board.notes %>
                 <div class = "hvr-curl-top-left  wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
                   <!-- <%= link_to "/notes/#{note.id}", method: :get  do %> -->
-                  <div class="notaAmarelo"> 
+                  <div class=<%= note.color %>> 
                    <%= check_box_tag 'notes_ids[]', note.id %>
                    <div class="hhp"><%= note.id%></div>
                    <hh4><%= note.text %></hh4> 

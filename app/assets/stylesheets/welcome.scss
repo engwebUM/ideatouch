@@ -116,12 +116,16 @@ input{
 
 a{
     color: white;
-     text-decoration:none; 
+    text-decoration:none; 
 
 }
 a:hover{
     text-decoration:none; 
     color: white;
+}
+
+a:focus{
+  color:white;
 }
 
 

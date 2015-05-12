@@ -145,7 +145,7 @@
             <% for board in @dynamic.boards %>
             	<div class = "hvr-curl-top-left2 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s" >
             	  <%= link_to board , method: :get  do %>
-             	 <div class="boardRed"> 
+             	 <div class=<%= board.color%>> 
                 <h2>Board</h2> 
                 <%= board.name %>
               	</div>

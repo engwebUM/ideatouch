@@ -47,7 +47,7 @@
           <% @dynamics.each do |dynamic| %>
             <div class = "hvr-curl-top-left2 wow rotateIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
               <%= link_to dynamic , method: :get  do %>
-              <div class="dynamicAzul"> 
+              <div class= <%= dynamic.color %>> 
                 <h2>Dynamic</h2> 
                 <span class="glyphicon glyphicon-king" aria-hidden="true" ></span>
                 <%= dynamic.name %>

@@ -14,9 +14,22 @@
 
   <div class="field">
     <br>
-    <div class="input-letter"><%= f.text_field :text,:placeholder=>"Text",:style => 'text-align:center;background-image: url("");'  %></div>
+    <div class="input-letter"><%= f.text_field :text,:placeholder=>"Text",:style => 'text-align:center;background-image: url("");',:class=>'form-control'   %></div>
   </div>
-
+    <br>
+  <div class="field">
+    <%= select(:note,:color, [
+      ['Gray', "notaCinza"],
+      ['Turquoise', "notaAzul"],
+      ['Orange', "notaLaranja"],
+      ['Red', "notaRed"],
+      ['Yellow', "notaAmarelo"],
+      ['Blue', "notaAzulClaro"],
+      ['Purple', "notaRoxo"],
+      ['Brown', "notaCastanho"],
+      ['Green', "notaVerde"],
+    ])%>
+  </div>
   <%= f.hidden_field :board_id, value: @board.id %>
 <br>
 

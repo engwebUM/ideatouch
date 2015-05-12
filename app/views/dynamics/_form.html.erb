@@ -14,11 +14,26 @@
 
   <div class="field">
     <br><br>
-    <div class="input-letter"><%= f.text_field :name ,:placeholder=>"Name",:style => 'text-align:center;background-image: url("");' %></div>
+    <div class="input-letter"><%= f.text_field :name ,:placeholder=>"Name",:style => 'text-align:center;background-image: url("");',:class=>'form-control' %></div>
   </div>
   <div class="field">
     <br>
-    <div class="input-letter"><%= f.text_area :descricao,:placeholder=>"Challenge",:style => 'text-align:center;background-image: url("");' %></div>
+    <div class="input-letter"><%= f.text_area :descricao,:placeholder=>"Challenge",:style => 'text-align:center;background-image: url("");',:class=>'form-control' %></div>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= select(:dynamic,:color, [
+      ['Gray', "dynamicCinza"],
+      ['Turquoise', "dynamicAzul"],
+      ['Orange', "dynamicLaranja"],
+      ['Red', "dynamicRed"],
+      ['Yellow', "dynamicAmarelo"],
+      ['Blue', "dynamicAzulClaro"],
+      ['Purple', "dynamicRoxo"],
+      ['Brown', "dynamicCastanho"],
+      ['Green', "dynamicVerde"],
+    ])%>
   </div>
 
   <%= f.hidden_field :user_id, value: current_user.id %>

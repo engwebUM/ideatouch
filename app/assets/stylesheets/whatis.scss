@@ -2,19 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*
-Castanho:	Vermelho-179	Verde-137	Azul: 82
-Azul:		Vermelho-56		Verde-150	Azul-219
-Roxo:		Vermelho-155	Verde-81	Azul-180
-Verde:		Vermelho-28		Verde-206	Azul-114
-Azul/Verde:	Vermelho-68		Verde-228	Azul-184
-Laranja:	Vermelho-249	Verde-173	Azul-70
-Vermelho:	Vermelho-231	Verde-69	Azul-53
-Amarelo:	Vermelho-245	Verde-200	Azul-100
-Cinzento:	Vermelho-148	Verde-164	Azul-165 
-*/
-
-
 .center{
 	margin-left: auto;
 	margin-right: auto;	
@@ -47,6 +34,7 @@ Cinzento:	Vermelho-148	Verde-164	Azul-165
 }
 
 .boardRed2{ 
+    border: 4px solid #B53E30;
     font-family: myFirstFont;
 	margin: 4px;
 	margin-right: auto;
@@ -62,7 +50,8 @@ Cinzento:	Vermelho-148	Verde-164	Azul-165
 }
 .boardRed2:hover{background: linear-gradient(180deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
 
-.notaAzulClaro2{ 
+.notaAzulClaro2{
+    border: 2px solid #2D83BC;
 	font-family: myFirstFont;
     margin: 4px;
     margin-right: auto;
@@ -83,6 +72,7 @@ Cinzento:	Vermelho-148	Verde-164	Azul-165
 
 
 .dynamicAzul2{ 
+	border: 4px solid #37A485;
     font-family: myFirstFont;
 	margin: 4px;
 	margin-right: auto;
@@ -132,6 +122,20 @@ p {
 
 }
 
+.tituloFont{
+	font-family: myFirstFont;
+	color: white;
+	text-align: center;
+	font-size: 55px;	
+}
+
+.phraseFont{
+	font-family: myFirstFont;
+	color: white;
+	text-align: center;
+	font-size: 21px;		
+}
+
 
 .boxtext {
 	margin-top: auto;
@@ -155,7 +159,7 @@ p {
 
 .whatistitle {
 	margin-top: 0%;
-	background-color: #FFDF5C ;
+	background-color: #F0D050;
 }
 
 .imageWhatIs {
@@ -216,12 +220,21 @@ p {
 }
 
 .step {
-	display: in-line ;
+	display: inline-block;
 	float : left;
-	background-color: #FF8566 ;
-	width: 100%;
+	background-color: #FF8566;
+	width: 25%;
+	min-width: 315px;
 	height: auto;
+	min-height: 430px;
 	margin-top: 8px;
+	border: 4px solid #E87A5F;
+}
+
+.stepsBox{
+	display: inline-block;
+	width: 100%;
+	min-height: 450px;
 }
 
 .minion {

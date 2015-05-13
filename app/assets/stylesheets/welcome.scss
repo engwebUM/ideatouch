@@ -1,5 +1,5 @@
 body {
-    background-color: #2B3041;
+    background-color: #282D3C;
     overflow-x: hidden;
 }
 
@@ -21,12 +21,12 @@ input[type='checkbox']{
     margin: 0;
     background-color: #FF5333   ;  /*E47458*/
     width: 100%; 
-    height: 54px; 
+    height: 56px; 
     font-family: myFirstFont;
     display: block;
-    border: 2px solid #EF8E7D;
-    border-bottom: 2px solid #FF3714;
-    border-top: 2px solid #FF3714;
+    border: 4px solid #EF8E7D;
+    border-bottom: 4px solid #FF3714;
+    border-top: 4px solid #FF3714;
 }
 
 .topo-Logo{
@@ -231,17 +231,19 @@ font-size:1.2em;
     border-radius:4px;
     display: inline-block;
     float: left;
+    color: #A2B2E1;
     background-color: #394361 ; 
     width: 173px;
     height: 55px;
     text-align: center;
     top:50%;
     margin-right: 200 px;
-    border: 2px solid #495679;
-    border-bottom: 2px solid #363F5B;
-    border-top: 2px solid #363F5B;
+    border: 4px solid #495679;
+    border-bottom: 4px solid #363F5B;
+    border-top: 4px solid #363F5B;
 }
 .caixa-menuD:hover{
+    color: white;
     background-color: #404B6D;
 }
 
@@ -252,17 +254,19 @@ font-size:1.2em;
     border-radius:4px;
     display: inline-block;
     float: left;
+    color: #A2B2E1;
     background-color: #394361 ; 
     width: 173px;
     height: 55px;
     text-align: center;
     top:50%;
     margin-right: 200 px;
-    border: 2px solid #495679;
-    border-bottom: 2px solid #363F5B;
-    border-top: 2px solid #363F5B;
+    border: 4px solid #495679;
+    border-bottom: 4px solid #363F5B;
+    border-top: 4px solid #363F5B;
 }
 .caixa-menu:hover{
+    color: white;
     background-color: #404B6D;
 }
 
@@ -273,6 +277,7 @@ font-size:1.2em;
     border-radius:4px;
     display: inline-block;
     float: right;
+    color: #A2B2E1;
     background-color: #394361 ; 
     width: 300px;
     height: 55px;
@@ -281,15 +286,15 @@ font-size:1.2em;
     font-size:1.5em;
     margin-right: 200 px;
     line-height:45px;
-    border: 2px solid #495679;
-    border-bottom: 2px solid #363F5B;
-    border-top: 2px solid #363F5B;
+    border: 4px solid #495679;
+    border-bottom: 4px solid #363F5B;
+    border-top: 4px solid #363F5B;
 }
 
 
 
 .caixa-icon{
-    color: white;
+    color: #495679;
     display: inline-block;
     float: left;
     height: 55px;
@@ -308,19 +313,23 @@ font-size:1.2em;
     width: 60px; 
     height: 60px;
     line-height:60px;
-    color: white;
-    border: 2px solid #495679;
-    border-bottom: 2px solid #363F5B;
-    border-top: 2px solid #363F5B;
+    color: #A2B2E1;
+    border: 4px solid #495679;
+    border-bottom: 4px solid #363F5B;
+    border-top: 4px solid #363F5B;
 }
 .lateral-perfil:hover{
     background-color: #404B6D ; 
+    color: white;
 }
 
 
 .lateral2-perfil{
     border-radius: 4px;
-    border-bottom: 4px solid #363F5B;
+    border: 2px solid #3B4662;
+    border-bottom: 2px solid #363F5B;
+    border-top: 2px solid #363F5B;
+    background-color: #404B6D ; 
     display: inline-block;
     float: left;
     text-align: center;
@@ -328,9 +337,10 @@ font-size:1.2em;
     width: 120px; 
     height: 60px;
     line-height:60px;
-    background-color: #404B6D ; 
     color: white;
 }
+
+
 
 .lateralBoard-perfil{
     display: inline-block;
@@ -341,13 +351,14 @@ font-size:1.2em;
     width: 60px; 
     height: 60px;
     line-height:60px;
-    color: white;
+    color: #A2B2E1;
     border-radius:20px;
     border: 2px solid #363F5B;
     border-right: 2px solid #495679;
     border-top: 2px solid #495679;
 }
 .lateralBoard-perfil:hover{
+    color: white;
     background-color: #404B6D ; 
 }
 
@@ -355,8 +366,10 @@ font-size:1.2em;
 
 .lateral2Board-perfil{
     border-radius: 4px;
-    border-bottom: 4px solid #363F5B;
-    background-color: #404B6D ; 
+    border: 2px solid #3B4662;
+    border-bottom: 2px solid #363F5B;
+    border-top: 2px solid #363F5B;
+    background-color: #404B6D ;  
     display: inline-block;
     float: left;
     text-align: center;
@@ -376,19 +389,22 @@ font-size:1.2em;
     width: 60px; 
     height: 60px;
     line-height:60px;
-    color: white;
+    color: #A2B2E1;
     border-radius:100px;
     border: 2px solid #293046;
     border-right: 2px solid #303952;
     border-top: 2px solid #303952;
 }
 .lateralDynamic-perfil:hover{
+    color: white;
     background-color: #404B6D;
 }
 
 .lateral2Dynamic-perfil{
     border-radius: 4px;
-    border-bottom: 4px solid #363F5B;
+    border: 2px solid #3B4662;
+    border-bottom: 2px solid #363F5B;
+    border-top: 2px solid #363F5B;
     background-color: #404B6D ; 
     display: inline-block;
     float: left;
@@ -738,7 +754,7 @@ font-size:1.2em;
     margin: 4px;
     border-radius:100px;
     font-size:15px;
-    color:white;
+    color:#A2B2E1;
     line-height:20px;
     text-align:center;
     background:#394361;
@@ -751,6 +767,7 @@ font-size:1.2em;
     border-top: 4px solid #303952;
 }
 .dynamicMenu:hover{ 
+    color: white;
     background:#404B6D;
 }
 
@@ -967,7 +984,7 @@ font-size:1.2em;
     margin: 4px;
     border-radius:50px;
     font-size:15px;
-    color:white;
+    color:#A2B2E1;
     line-height:20px;
     text-align:center;
     background:#394361;
@@ -981,6 +998,7 @@ font-size:1.2em;
 }
 
 .boardMenu:hover{ 
+    color: white;
     background:#404B6D;
 }
 
@@ -1176,7 +1194,7 @@ font-size:1.2em;
     margin: 4px;
     border-radius:5px;
     font-size:15px;
-    color:white;
+    color:#A2B2E1;
     line-height:20px;
     text-align:center;
     background:#394361;
@@ -1189,6 +1207,7 @@ font-size:1.2em;
     border-top: 2px solid #363F5B;
 }
 .notaMenu:hover{ 
+    color: white;
     background:#404B6D;
 }
 
@@ -1244,7 +1263,7 @@ font-size:1.2em;
   top: 3.5px;
   left: 3.5px;
   /* IE9 */
-  background: linear-gradient(135deg, #2B3041 45%, #aaaaaa 50%, #cccccc 50%, white 100%);
+  background: linear-gradient(135deg, #282D3C 45%, #aaaaaa 50%, #cccccc 50%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#000000');
   /*For IE7-8-9*/
   z-index: 1000;

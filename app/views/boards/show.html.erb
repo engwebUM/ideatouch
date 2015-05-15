@@ -23,7 +23,45 @@
        </div>
 
        <%= link_to "/dynamics" , method: :get  do %>
-        <div class="caixa-menuD wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">
+       <div class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">
+        <div class="hvr-float">
+        
+        <% if @board.dynamic.color=="dynamicCinza" %>
+          <div class="caixa-menu cinza lifted">
+        <% end %>   
+        
+        <% if @board.dynamic.color=="dynamicAzul" %>
+          <div class="caixa-menu azul lifted">
+        <% end %>   
+
+        <% if @board.dynamic.color=="dynamicLaranja" %>
+          <div class="caixa-menu laranja lifted">
+        <% end %>   
+
+        <% if @board.dynamic.color=="dynamicAmarelo" %>
+          <div class="caixa-menu amarelo lifted">
+        <% end %>
+
+        <% if @board.dynamic.color=="dynamicRed" %>
+          <div class="caixa-menu red lifted">
+        <% end %>   
+
+        <% if @board.dynamic.color=="dynamicAzulClaro" %>
+          <div class="caixa-menu azulClaro lifted">
+        <% end %>   
+
+        <% if @board.dynamic.color=="dynamicRoxo" %>
+          <div class="caixa-menu roxo lifted">
+        <% end %>   
+
+        <% if @board.dynamic.color=="dynamicCastanho" %>
+          <div class="caixa-menu castanho lifted">
+        <% end %>   
+
+        <% if @board.dynamic.color=="dynamicVerde" %>
+          <div class="caixa-menu verde lifted">
+        <% end %>   
+
           <div class="letraTitulo"> 
             Dynamic 
           </div>
@@ -31,7 +69,7 @@
             <span class="glyphicon glyphicon-king" aria-hidden="true" ></span>
             <%= @board.dynamic.name %> 
           </div>
-         </div>
+         </div></div></div>
         <% end %>
 
        <div class="caixa-icon wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay="0.6s">
@@ -39,19 +77,58 @@
        </div>
 
        <%= link_to "/dynamics/#{@board.dynamic.id}", method: :get  do %>
-          <div class="caixa-menu wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.7s">
-            <div class="letraTitulo"> Board </div>
-            <div class="letraNome"> <%= @board.name %> </div>
-           </div>
+          <div class="wow fadeInLeft" data-wow-duration="0.6s" data-wow-delay="0.6s">
+          <div class="hvr-float">
+
+        <% if @board.color=="boardCinza" %>
+          <div class="caixa-menuB cinza lifted">
+        <% end %>   
+        
+        <% if @board.color=="boardAzul" %>
+          <div class="caixa-menuB azul lifted">
+        <% end %>   
+
+        <% if @board.color=="boardLaranja" %>
+          <div class="caixa-menuB laranja lifted">
+        <% end %>   
+
+        <% if @board.color=="boardAmarelo" %>
+          <div class="caixa-menuB amarelo lifted">
         <% end %>
 
+        <% if @board.color=="boardRed" %>
+          <div class="caixa-menuB red lifted">
+        <% end %>   
 
-       <div class="caixa-relogio wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">
-        <div class="letraRelogio">
+        <% if @board.color=="boardAzulClaro" %>
+          <div class="caixa-menuB azulClaro lifted">
+        <% end %>   
+
+        <% if @board.color=="boardRoxo" %>
+          <div class="caixa-menuB roxo lifted">
+        <% end %>   
+
+        <% if @board.color=="boardCastanho" %>
+          <div class="caixa-menuB castanho lifted">
+        <% end %>   
+
+        <% if @board.color=="boardVerde" %>
+          <div class="caixa-menuB verde lifted">
+        <% end %>   
+
+            <div class="letraTitulo"> Board </div>
+            <div class="letraNome"> <%= @board.name %> </div>
+           </div></div></div>
+        <% end %>
+
+      <div class="wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
+       <div class="caixa-relogio lifted" >
+        <div class="letraRelogio ">
           1 Day 2 Hour 12 Minuts Left
           <span class="glyphicon glyphicon-time" aria-hidden="true" ></span>
         </div>
        </div>
+      </div>
       
 
     </div>
@@ -62,58 +139,73 @@
       <div id="box-2">
 <br><br>
         <div class="fora">
+          <div class="hvr-bob">
           <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></spam>
-          </div>
+          </div></div>
           <div id="hover-content">
-               <div class="lateral2-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">View Note</div>
+              <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+               <div class="lateral2-perfil lifted">View Note</div>
+              </div>
           </div>
         </div>
 <br><br><br>
          <div class="fora">
+          <div class="hvr-bob">
           <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></spam>
-          </div>
+          </div></div>
           <div id="hover-content">
-               <div class="lateral2-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Edit Note</div>
+            <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+               <div class="lateral2-perfil lifted">Edit Note</div>
+            </div>
           </div>
         </div>
 <br><br><br>
         <div class="fora">
+          <div class="hvr-bob">
           <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
             <span class="glyphicon glyphicon-move" aria-hidden="true"></spam>
-          </div>
+          </div></div>
           <div id="hover-content">
-               <div class="lateral2-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Move to Board</div>
+            <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+               <div class="lateral2-perfil lifted">Move to Board</div></div>
           </div>
         </div>
 <br><br><br>  
         <div class="fora">
+          <div class="hvr-bob">
           <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
             <span class="glyphicon glyphicon-trash" aria-hidden="true"></spam>
-          </div>
+          </div></div>
           <div id="hover-content">
-               <div class="lateral2-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Delete Note</div>
+            <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+               <div class="lateral2-perfil lifted">Delete Note</div></div>
           </div>
         </div>
 <br><br><br>  
         <div class="fora">
-          <div class="lateralBoard-perfil wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s">
+          <div class="hvr-bob">
+          <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s">
             <span class="glyphicon glyphicon-edit" aria-hidden="true"></spam>
-          </div>
+          </div></div>
           <div id="hover-content">
-               <div class="lateral2Board-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Edit Board</div>
+              <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+               <div class="lateral2-perfil lifted">Edit Board</div></div>
           </div>
         </div>
 <br><br><br>
         
          <%= link_to  @board, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          
          <div class="fora">
-          <div class="lateralBoard-perfil wow fadeInUp" data-wow-duration="1.0s" data-wow-delay="1.0s">
+          <div class="hvr-bob">
+          <div class="lateral-perfil wow fadeInUp" data-wow-duration="1.0s" data-wow-delay="1.0s">
             <span class="glyphicon glyphicon-minus"  aria-hidden="true"></spam>
-          </div>
+          </div> </div>
           <div id="hover-content">
-               <div class="lateral2Board-perfil wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">Delete Board</div>
+              <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+               <div class="lateral2-perfil lifted">Delete Board</div></div>
           </div>
         </div>
          <% end %>
@@ -123,22 +215,24 @@
 
         <div id="box-3">
             <% for note in @board.notes %>
-                <div class = "hvr-curl-top-left  wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+            <div class="hvr-float">
+                <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
                   <!-- <%= link_to "/notes/#{note.id}", method: :get  do %> -->
-                  <div class=<%= note.color %>> 
+                  <div class="<%= note.color %>">
                    <%= check_box_tag 'notes_ids[]', note.id %>
                    <div class="hhp"><%= note.id%></div>
                    <hh4><%= note.text %></hh4> 
                 </div>
-                </div>
+                </div></div>
               <!--  <% end %>-->
             <% end %>
 
           <%= link_to addNote_path(@board) , method: :get  do %>
+          <div class="hvr-float">
           <div class="notaMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">                
                   <div class="hh1"><span class="glyphicon glyphicon-file" aria-hidden="true" >
                   </span> </div> <div class="hh2"> New Note</div> 
-          </div>
+          </div></div>
           <% end %>
 
     </div>

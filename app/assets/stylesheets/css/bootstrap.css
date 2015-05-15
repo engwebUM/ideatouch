@@ -2544,6 +2544,7 @@ output {
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  box-shadow: 2px 3px 8px #1C2231;
 }
 .form-control:focus {
   border-color: #66afe9;
@@ -3065,9 +3066,11 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  box-shadow: 2px 3px 2px #166D3A;
+  border: 3px solid #2ADC74;
+  border-right: 3px solid #13C15C;
+  border-top: 3px solid #13C15C;
   background-color: #18EB70;
-  border-color: #18EB70;
+  box-shadow: 2px 3px 6px #1C242B;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -3076,9 +3079,11 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  box-shadow: 2px 3px 2px #A38C30;
-  background-color: #FFDA4A;
-  border-color: #FFDA4A;
+  border: 3px solid #F0D461;
+  border-right: 3px solid #D5B638;
+  border-top: 3px solid #D5B638;
+  background-color: #DFC041;
+  box-shadow: 2px 3px 6px #1C242B;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3112,9 +3117,11 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  box-shadow: 1px 3px 1px #801F10;
-  background-color: #FF3D1F;
-  border-color: #FF3D1F;
+  border: 2px solid #991F1D;
+  border-bottom: 2px solid #D72B28;
+  border-top: 2px solid #D72B28;
+  background-color: #F8302C;
+    box-shadow: 2px 3px 10px #1C242B;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -3122,10 +3129,12 @@ fieldset[disabled] .btn-primary.active {
 .btn-success:active,
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
+    box-shadow: 2px 3px 10px #1C242B;
   color: #ffffff;
-  box-shadow: 1px 3px 1px #A38C30;
-  background-color: #FFDA4A;
-  border-color: #FFDA4A;
+  border: 2px solid #F0D461;
+  border-right: 2px solid #D5B638;
+  border-top: 2px solid #D5B638;
+  background-color: #DFC041;
 }
 .btn-success:active,
 .btn-success.active,

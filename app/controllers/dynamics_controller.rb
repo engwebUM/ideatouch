@@ -6,12 +6,15 @@ class DynamicsController < ApplicationController
   # GET /dynamics.json
   def index
     @dynamics = Dynamic.all
+    @notifications =   Notification.where(user_id:1).all.size
   end
+
 
 
   # GET /dynamics/1
   # GET /dynamics/1.json
   def show
+    @notifications =  Notification.where(user_id:1).all.size
   end
 
   def addBoard
@@ -20,8 +23,7 @@ class DynamicsController < ApplicationController
 
   # GET /dynamics/new
   def new
-    @dynamic = Dynamic.new
-    board = @dynamic.boards.build
+    @dynamic = Dynamic.new    
   end
 
 
@@ -34,7 +36,6 @@ class DynamicsController < ApplicationController
   # POST /dynamics.json
   def create
     @dynamic = Dynamic.new(dynamic_params)
-
     respond_to do |format|
       if @dynamic.save
         format.html { redirect_to @dynamic}
@@ -44,6 +45,7 @@ class DynamicsController < ApplicationController
         format.json { render json: @dynamic.errors, status: :unprocessable_entity }
       end
     end
+    Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "default"
   end
 
   # PATCH/PUT /dynamics/1
@@ -71,6 +73,11 @@ class DynamicsController < ApplicationController
   end
 
   private
+
+    def adiciona_Board_Default
+
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_dynamic
       @dynamic = Dynamic.find(params[:id])
@@ -80,6 +87,5 @@ class DynamicsController < ApplicationController
     def dynamic_params
       #params.require(:dynamic).permit(:name, :descricao)
        params.require(:dynamic).permit(:name, :descricao, :user_id,:color, boards_attributes: [ :name, :descricao ])
-
     end
 end

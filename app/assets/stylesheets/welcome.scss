@@ -1,9 +1,7 @@
 body {
-    background-color: #282D3C;
+    background-color: #313841;
     overflow-x: hidden;
 }
-
-
 
 
 input[type='checkbox']{
@@ -14,29 +12,31 @@ input[type='checkbox']{
 }
 
 
-#topo {  
+#topo {
     overflow: hidden;
     color: white;
     margin-top: 0;
     margin: 0;
-    background-color: #FF5333   ;  /*E47458*/
+    background-color: #F34541   ;  /*E47458*/
     width: 100%; 
     height: 56px; 
     font-family: myFirstFont;
     display: block;
-    border: 4px solid #EF8E7D;
-    border-bottom: 4px solid #FF3714;
-    border-top: 4px solid #FF3714;
+    box-shadow: 2px 3px 4px #1C242B;
+    text-shadow: 1px 1px #F34541; 
 }
+
+
 
 .topo-Logo{
     line-height:60px;
     float:left;
-    font-size: 250%;
-    background-color: #FF5333 ; 
+    font-size: 260%;
+    background-color: #F34541 ; 
     margin-left: 10%;
     width: 120px; 
-    height: 50px;  
+    height: 56px; 
+    text-shadow: 1px 1px #702827;
 }
 
 /*Loading*/
@@ -101,7 +101,6 @@ input:focus, textarea:focus {
     background-color: #FFDA4A;
 }
 /* scroll */
-
 
 
 
@@ -185,13 +184,30 @@ font-size:1.2em;
     text-align: center;
     float:right;
     font-size: 120%;
-    width: 50px; 
-    height: 50px;
-    line-height:60px;
+    width: 56px; 
+    height: 56px;
+    line-height:63px;
+    text-shadow: 1px 1px #702827;
 }
 .topo-perfil:hover{
     background-color: #FFDA4A ; 
 }
+
+
+.topo-perfil2{
+    color:#46FDFF;
+    text-align: center;
+    float:right;
+    font-size: 120%;
+    width: 56px; 
+    height: 56px;
+    line-height:63px;
+    text-shadow: 1px 1px #072B2B;
+    background-color: #4A71FF ; 
+}
+
+
+
 .topo-nome{
     text-align: center;
     float:right;
@@ -199,6 +215,7 @@ font-size:1.2em;
     width: 140px; 
     height: 50px;
     line-height:60px;
+    text-shadow: 1px 1px #702827;
 }
 
 
@@ -216,35 +233,14 @@ font-size:1.2em;
 .letraNome{
     font-family: myFirstFont;
     line-height:21px;
-    font-size:1.0em;
+    font-size:1.2em;
 }
 
 .letraRelogio{
     font-family: myFirstFont;
     line-height:55px;
-    font-size:0.9em;
-}
-
-.caixa-menuD{
-    margin-right: 2px;
-    margin-top: 2px;
-    border-radius:4px;
-    display: inline-block;
-    float: left;
-    color: #A2B2E1;
-    background-color: #394361 ; 
-    width: 173px;
-    height: 55px;
-    text-align: center;
-    top:50%;
-    margin-right: 200 px;
-    border: 4px solid #495679;
-    border-bottom: 4px solid #363F5B;
-    border-top: 4px solid #363F5B;
-}
-.caixa-menuD:hover{
-    color: white;
-    background-color: #404B6D;
+    font-size:1.0em;
+    text-shadow: 1px 1px #93211F;
 }
 
 
@@ -254,47 +250,146 @@ font-size:1.2em;
     border-radius:4px;
     display: inline-block;
     float: left;
-    color: #A2B2E1;
-    background-color: #394361 ; 
+    color:white;
     width: 173px;
     height: 55px;
     text-align: center;
     top:50%;
     margin-right: 200 px;
-    border: 4px solid #495679;
-    border-bottom: 4px solid #363F5B;
-    border-top: 4px solid #363F5B;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.caixa-menu:hover{
-    color: white;
-    background-color: #404B6D;
+.caixa-menu:before,
+.caixa-menu:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
 }
 
+.cinza{
+    text-shadow: 1px 1px #0C2C3A;
+    background-color: #95a5a6 ; 
+}
+.azul{
+    text-shadow: 1px 1px #145C48;
+    background-color: #4CE2B8 ; 
+}
+.laranja{
+    text-shadow: 1px 1px #7C4E1D;
+    background-color: #FFAC52 ;    
+}
+.amarelo{
+    text-shadow: 1px 1px #756529;
+    background-color: #F8D450 ;    
+}
+
+.amarelo2{
+    color: #F3E741 ;    
+}
+
+
+.red{
+    text-shadow: 1px 1px #0C2C3A;
+    background-color: #e74c3c ; 
+}
+.azulClaro{
+    text-shadow: 1px 1px #0C2C3A;
+    background-color: #3498db ; 
+}
+.roxo{
+    text-shadow: 1px 1px #0C2C3A;
+    background-color: #9b59b6;
+}
+
+.castanho{
+    text-shadow: 1px 1px #0C2C3A;
+    background-color: #AE8652;
+}
+
+.verde{
+    text-shadow: 1px 1px #0C2C3A;
+    background-color: #2ecc71; 
+}
+
+.caixa-menuB{
+    margin-right: 2px;
+    margin-top: 2px;
+    border-radius:4px;
+    display: inline-block;
+    float: left;
+    color:white;
+    width: 173px;
+    height: 55px;
+    text-align: center;
+    top:50%;
+    margin-right: 200 px;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.caixa-menuB:before,
+.caixa-menuB:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
 
 
 .caixa-relogio{
+    margin-right: 2px;
     margin-top: 2px;
     border-radius:4px;
     display: inline-block;
     float: right;
-    color: #A2B2E1;
-    background-color: #394361 ; 
+    color: white;
     width: 300px;
     height: 55px;
     text-align: center;
-    top:50%;
     font-size:1.5em;
-    margin-right: 200 px;
     line-height:45px;
-    border: 4px solid #495679;
-    border-bottom: 4px solid #363F5B;
-    border-top: 4px solid #363F5B;
+    background-color: #FA6360 ; 
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.caixa-relogio:before,
+.caixa-relogio:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+
+.caixa-logo{
+    margin-right: 2px;
+    margin-top: 0px;
+    border-radius:4px;
+    display: inline-block;
+    float: center;
+    color: white;
+    width: 320px;
+    height: 280px;
+    text-align: center;
+    font-size:1.5em;
+    line-height:5px;
+    background-color: #F5D76E ; 
+    position:relative;
+}
+.caixa-logo:before,
+.caixa-logo:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
 }
 
 
 
 .caixa-icon{
-    color: #495679;
+    color:white;
     display: inline-block;
     float: left;
     height: 55px;
@@ -305,71 +400,81 @@ font-size:1.2em;
 }
 
 .lateral-perfil{
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px #1C2231;
     display: inline-block;
     float: left;
-    background: #394361;
     text-align: center;
     font-size: 120%;
     width: 60px; 
     height: 60px;
     line-height:60px;
-    color: #A2B2E1;
-    border: 4px solid #495679;
-    border-bottom: 4px solid #363F5B;
-    border-top: 4px solid #363F5B;
+    color:white;
+    text-shadow: 1px 1px #22272E;
+    background-color: #3F4854 ; 
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.lateral-perfil:hover{
-    background-color: #404B6D ; 
-    color: white;
+.lateral-perfil:before,
+.lateral-perfil:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
 }
+
+
 
 
 .lateral2-perfil{
-    border-radius: 4px;
-    border: 2px solid #3B4662;
-    border-bottom: 2px solid #363F5B;
-    border-top: 2px solid #363F5B;
-    background-color: #404B6D ; 
+    background-color: #FA6360 ; 
+    text-shadow: 1px 1px #93211F;
     display: inline-block;
     float: left;
     text-align: center;
-    font-size: 120%;
+    font-size:1.4em;
     width: 120px; 
     height: 60px;
     line-height:60px;
     color: white;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.lateral2-perfil:before,
+.lateral2-perfil:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
 }
 
 
 
 .lateralBoard-perfil{
+    border-radius:0px;
+    box-shadow: 2px 3px 3px #1C2231;
     display: inline-block;
     float: left;
-    background: #394361;
     text-align: center;
     font-size: 120%;
     width: 60px; 
     height: 60px;
-    line-height:60px;
-    color: #A2B2E1;
-    border-radius:20px;
-    border: 2px solid #363F5B;
-    border-right: 2px solid #495679;
-    border-top: 2px solid #495679;
+    line-height:65px;
+    color:white;
+    background-color: #313841 ; 
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .lateralBoard-perfil:hover{
-    color: white;
-    background-color: #404B6D ; 
+    background: #FFDA4A;
 }
-
 
 
 .lateral2Board-perfil{
-    border-radius: 4px;
-    border: 2px solid #3B4662;
-    border-bottom: 2px solid #363F5B;
-    border-top: 2px solid #363F5B;
-    background-color: #404B6D ;  
+    box-shadow: 2px 3px 20px #143450;
+    background-color: #313841 ; 
+    box-shadow: 2px 3px 6px #1C242B;
     display: inline-block;
     float: left;
     text-align: center;
@@ -381,31 +486,29 @@ font-size:1.2em;
 }
 
 .lateralDynamic-perfil{
+    border-radius:0px;
+    box-shadow: 2px 3px 3px #1C2231;
     display: inline-block;
     float: left;
-    background: #394361;
     text-align: center;
     font-size: 120%;
     width: 60px; 
     height: 60px;
-    line-height:60px;
-    color: #A2B2E1;
-    border-radius:100px;
-    border: 2px solid #293046;
-    border-right: 2px solid #303952;
-    border-top: 2px solid #303952;
-}
-.lateralDynamic-perfil:hover{
-    color: white;
-    background-color: #404B6D;
+    line-height:67px;
+    color:white;
+    background-color: #313841 ; 
+    box-shadow: 2px 3px 6px #1C242B;
 }
 
+.lateralDynamic-perfil:hover{
+    background: #FFDA4A;
+}
+
+
 .lateral2Dynamic-perfil{
-    border-radius: 4px;
-    border: 2px solid #3B4662;
-    border-bottom: 2px solid #363F5B;
-    border-top: 2px solid #363F5B;
-    background-color: #404B6D ; 
+    box-shadow: 2px 3px 20px #143450;
+    background-color: #313841 ; 
+    box-shadow: 2px 3px 6px #1C242B;
     display: inline-block;
     float: left;
     text-align: center;
@@ -514,7 +617,7 @@ font-size:1.2em;
     overflow:scroll;
     overflow-x: hidden;
     position: absolute;
-    background-color: #2E364F;
+    background:#313841;
     font-family: myFirstFont;
     border-radius:0px;
     width: 80%; 
@@ -526,9 +629,10 @@ font-size:1.2em;
     color: white;
     text-align: center;
     margin-top: 35px;
-    border: 5px solid #495679;
-    border-bottom: 5px solid #363F5B;
-    border-top: 5px solid #363F5B;  
+    border: 7px solid #2E343C;
+    border-top: 7px solid #384049;
+    border-bottom: 7px solid #384049;
+    box-shadow: 2px 3px 20px #1C242B;
 }
 
 
@@ -540,12 +644,13 @@ font-size:1.2em;
     right: 40%;
 }
 
-
-.dynamicAzul{ 
+/****************************dynamics ********/
+.dynamicAzul{
+    text-shadow: 1px 1px #145C48;
     position: relative;
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:25px;
     text-align:center;
@@ -553,23 +658,25 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(225deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+    background: linear-gradient(225deg, #44CAA4 50%,#42C19D 1%, #42C19D 100%);
     border: 4px solid #329277;
     border-right: 4px solid #37A485;
     border-top: 4px solid #37A485;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 
 .dynamicAzul:hover{
-    background: linear-gradient(135deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+    background: linear-gradient(135deg, #44CAA4 50%,#42C19D 1%, #42C19D 100%);
     border: 4px solid #329277;
     border-left: 4px solid #37A485;
     border-top: 4px solid #37A485;
 }
 
 .dynamicLaranja{ 
+    text-shadow: 1px 1px #7C4E1D;
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -577,22 +684,24 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(225deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
-    border: 4px solid #CE903E;
-    border-right: 4px solid #E49F46;
-    border-top: 4px solid #E49F46;
+    background: linear-gradient(225deg, #FBA64B 50%,#F29E44  1%,#F29E44  100%);
+    border: 4px solid #D58937;
+    border-right: 4px solid #DF8F39;
+    border-top: 4px solid #DF8F39;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .dynamicLaranja:hover{
-    background: linear-gradient(135deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
-    border: 4px solid #CE903E;
-    border-left: 4px solid #E49F46;
-    border-top: 4px solid #E49F46;
+    background: linear-gradient(135deg, #FBA64B 50%,#F29E44  1%,#F29E44  100%);
+    border: 4px solid #D58937;
+    border-left: 4px solid #DF8F39;
+    border-top: 4px solid #DF8F39;
 }
 
 .dynamicRed{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -603,6 +712,7 @@ font-size:1.2em;
     border: 4px solid #9A3529;
     border-right: 4px solid #B53E30;
     border-top: 4px solid #B53E30;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .dynamicRed:hover{
     background: linear-gradient(135deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
@@ -611,10 +721,11 @@ font-size:1.2em;
     border-top: 4px solid #B53E30;
 }
 
-.dynamicAmarelo{ 
+.dynamicAmarelo{
+    text-shadow: 1px 1px #756529; 
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -622,22 +733,24 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(225deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
-    border: 4px solid #C69E4E;
-    border-right: 4px solid #DBB15C;
-    border-top: 4px solid #DBB15C;
+    background: linear-gradient(225deg, #F8D450 50%,#F2CF4D  1%,#F2CF4D  100%);
+    border: 4px solid #C8AB41;
+    border-right: 4px solid #D7B848;
+    border-top: 4px solid #D7B848;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .dynamicAmarelo:hover{
-    background: linear-gradient(135deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
-    border: 4px solid #C69E4E;
-    border-left: 4px solid #DBB15C;
-    border-top: 4px solid #DBB15C;
+    background: linear-gradient(135deg, #F8D450 50%,#F2CF4D  1%,#F2CF4D  100%);
+    border: 4px solid #C8AB41;
+    border-left: 4px solid #D7B848;
+    border-top: 4px solid #D7B848;
 }
 
 .dynamicCinza{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -649,18 +762,20 @@ font-size:1.2em;
     border: 4px solid #717B7C;
     border-right: 4px solid #808C8D;
     border-top: 4px solid #808C8D;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .dynamicCinza:hover{
-    background: linear-gradient(135deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+    background: linear-gradient(125deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
     border: 4px solid #717B7C;
     border-left: 4px solid #808C8D;
     border-top: 4px solid #808C8D;
 }
 
 .dynamicAzulClaro{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -672,6 +787,7 @@ font-size:1.2em;
     border: 4px solid #2775A9;
     border-right: 4px solid #2D83BC;
     border-top: 4px solid #2D83BC;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .dynamicAzulClaro:hover{
     background: linear-gradient(135deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
@@ -681,9 +797,10 @@ font-size:1.2em;
 }
 
 .dynamicRoxo{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -695,6 +812,7 @@ font-size:1.2em;
     border: 4px solid #8538A4;
     border-right: 4px solid #963EB9;
     border-top: 4px solid #963EB9;
+    box-shadow: 2px 3px 6px #1C242B;
 
 }
 .dynamicRoxo:hover{
@@ -705,9 +823,10 @@ font-size:1.2em;
 }
 
 .dynamicCastanho{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -715,22 +834,24 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+    background: linear-gradient(45deg, #A6804E 50%,#AE8652  1%,#B48A54  100%);
     border: 4px solid #87693F;
     border-right: 4px solid #987648;
     border-top: 4px solid #987648;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .dynamicCastanho:hover{
-    background: linear-gradient(135deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+    background: linear-gradient(135deg, #A6804E 50%,#AE8652  1%,#B48A54  100%);
     border: 4px solid #87693F;
     border-left: 4px solid #987648;
-    border-top: 4px solid #987648;
+    border-top: 4px solid #987648
 }
 
 .dynamicVerde{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -738,68 +859,76 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+    background: linear-gradient(45deg, #2EC56D 50%,#2ecc71  1%,#2ecc71  100%);
     border: 4px solid #249B55;
     border-right: 4px solid #28AF60;
     border-top: 4px solid #28AF60;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .dynamicVerde:hover{
-    background: linear-gradient(135deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+    background: linear-gradient(135deg, #2EC56D 50%,#2ecc71  1%,#2ecc71  100%);
     border: 4px solid #249B55;
-    border-left:4px solid #28AF60;
+    border-left: 4px solid #28AF60;
     border-top: 4px solid #28AF60;
 }
 
 .dynamicMenu{ 
+    text-shadow: 1px 1px #191E25;
     margin: 4px;
     border-radius:100px;
     font-size:15px;
-    color:#A2B2E1;
     line-height:20px;
     text-align:center;
-    background:#394361;
     height:150px;
     width:150px;
     display: inline-block;
     vertical-align: middle;
-    border: 4px solid #2D354D;
-    border-right: 4px solid #303952;
-    border-top: 4px solid #303952;
+    background: #313841 ;
+    color:white;
+    border: 4px solid #353C45;
+    border-right:4px solid #384049;
+    border-top: 4px solid #384049;
+    box-shadow: 2px 3px 6px #1C242B;
 }
-.dynamicMenu:hover{ 
-    color: white;
-    background:#404B6D;
+.dynamicMenu:hover{
+    background: #313841 ;
 }
 
 
+/****************************BOARDS ********/
 
-.boardAzul{ 
+.boardAzul{
+    text-shadow: 1px 1px #145C48;
+    position: relative;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
-    line-height:20px;
+    line-height:25px;
     text-align:center;
     background:#4CE2B8;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+    background: linear-gradient(225deg, #44CAA4 50%,#42C19D 1%, #42C19D 100%);
     border: 4px solid #329277;
     border-right: 4px solid #37A485;
     border-top: 4px solid #37A485;
+    box-shadow: 2px 3px 6px #1C242B;
 }
+
 .boardAzul:hover{
-    background: linear-gradient(135deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
+    background: linear-gradient(135deg, #44CAA4 50%,#42C19D 1%, #42C19D 100%);
     border: 4px solid #329277;
     border-left: 4px solid #37A485;
     border-top: 4px solid #37A485;
 }
 
 .boardLaranja{ 
+    text-shadow: 1px 1px #7C4E1D;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -807,32 +936,35 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
-    border: 4px solid #CE903E;
-    border-right: 4px solid #E49F46;
-    border-top: 4px solid #E49F46;
+    background: linear-gradient(225deg, #FBA64B 50%,#F29E44  1%,#F29E44  100%);
+    border: 4px solid #D58937;
+    border-right: 4px solid #DF8F39;
+    border-top: 4px solid #DF8F39;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .boardLaranja:hover{
-    background: linear-gradient(135deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
-    border: 4px solid #CE903E;
-    border-left: 4px solid #E49F46;
-    border-top: 4px solid #E49F46;
+    background: linear-gradient(135deg, #FBA64B 50%,#F29E44  1%,#F29E44  100%);
+    border: 4px solid #D58937;
+    border-left: 4px solid #DF8F39;
+    border-top: 4px solid #DF8F39;
 }
 
-.boardRed{ 
+.boardRed{
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
+    background: linear-gradient(225deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
     border: 4px solid #9A3529;
     border-right: 4px solid #B53E30;
     border-top: 4px solid #B53E30;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .boardRed:hover{
     background: linear-gradient(135deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
@@ -842,32 +974,34 @@ font-size:1.2em;
 }
 
 .boardAmarelo{ 
+    text-shadow: 1px 1px #756529;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
-    background:#4CE2B8;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
-    border: 4px solid #C69E4E;
-    border-right: 4px solid #DBB15C;
-    border-top: 4px solid #DBB15C;
+    background: linear-gradient(225deg, #F8D450 50%,#F2CF4D  1%,#F2CF4D  100%);
+    border: 4px solid #C8AB41;
+    border-right: 4px solid #D7B848;
+    border-top: 4px solid #D7B848;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .boardAmarelo:hover{
-    background: linear-gradient(135deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
-    border: 4px solid #C69E4E;
-    border-left: 4px solid #DBB15C;
-    border-top: 4px solid #DBB15C;
+    background: linear-gradient(135deg, #F8D450 50%,#F2CF4D  1%,#F2CF4D  100%);
+    border: 4px solid #C8AB41;
+    border-left: 4px solid #D7B848;
+    border-top: 4px solid #D7B848;
 }
 
 .boardCinza{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -875,22 +1009,24 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+    background: linear-gradient(225deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
     border: 4px solid #717B7C;
     border-right: 4px solid #808C8D;
     border-top: 4px solid #808C8D;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .boardCinza:hover{
-    background: linear-gradient(135deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
+    background: linear-gradient(125deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
     border: 4px solid #717B7C;
     border-left: 4px solid #808C8D;
     border-top: 4px solid #808C8D;
 }
 
 .boardAzulClaro{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -898,10 +1034,11 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
+    background: linear-gradient(225deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
     border: 4px solid #2775A9;
     border-right: 4px solid #2D83BC;
     border-top: 4px solid #2D83BC;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .boardAzulClaro:hover{
     background: linear-gradient(135deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
@@ -911,9 +1048,10 @@ font-size:1.2em;
 }
 
 .boardRoxo{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -921,10 +1059,12 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
+    background: linear-gradient(225deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
     border: 4px solid #8538A4;
     border-right: 4px solid #963EB9;
     border-top: 4px solid #963EB9;
+    box-shadow: 2px 3px 6px #1C242B;
+
 }
 .boardRoxo:hover{
     background: linear-gradient(135deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
@@ -934,9 +1074,10 @@ font-size:1.2em;
 }
 
 .boardCastanho{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -944,23 +1085,24 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+    background: linear-gradient(45deg, #A6804E 50%,#AE8652  1%,#B48A54  100%);
     border: 4px solid #87693F;
     border-right: 4px solid #987648;
     border-top: 4px solid #987648;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .boardCastanho:hover{
-    background: linear-gradient(135deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
+    background: linear-gradient(135deg, #A6804E 50%,#AE8652  1%,#B48A54  100%);
     border: 4px solid #87693F;
     border-left: 4px solid #987648;
-    border-top: 4px solid #987648;
+    border-top: 4px solid #987648
 }
 
-
 .boardVerde{ 
+    text-shadow: 1px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
-    font-size:15px;
+    font-size:1.2em;
     color:#ecf0f1;
     line-height:20px;
     text-align:center;
@@ -968,272 +1110,273 @@ font-size:1.2em;
     height:150px;
     width:150px;
     float:left;
-    background: linear-gradient(45deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+    background: linear-gradient(45deg, #2EC56D 50%,#2ecc71  1%,#2ecc71  100%);
     border: 4px solid #249B55;
     border-right: 4px solid #28AF60;
     border-top: 4px solid #28AF60;
+    box-shadow: 2px 3px 6px #1C242B;
 }
 .boardVerde:hover{
-    background: linear-gradient(135deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+    background: linear-gradient(135deg, #2EC56D 50%,#2ecc71  1%,#2ecc71  100%);
     border: 4px solid #249B55;
     border-left: 4px solid #28AF60;
     border-top: 4px solid #28AF60;
 }
 
 .boardMenu{ 
+    text-shadow: 1px 1px #191E25;
     margin: 4px;
     border-radius:50px;
     font-size:15px;
-    color:#A2B2E1;
     line-height:20px;
     text-align:center;
-    background:#394361;
     height:150px;
     width:150px;
     display: inline-block;
     vertical-align: middle;
-    border: 4px solid #2D354D;
-    border-right: 4px solid #303952;
-    border-top: 4px solid #303952;
+    background: #313841 ;
+    color:white;
+    border: 4px solid #353C45;
+    border-right:4px solid #384049;
+    border-top: 4px solid #384049;
+    box-shadow: 2px 3px 6px #1C242B;
+}
+.boardMenu:hover{
+    background: #313841 ;
 }
 
-.boardMenu:hover{ 
-    color: white;
-    background:#404B6D;
-}
 
 
+/****************************NOTAS ********/
 
-.notaAzul{ 
-    overflow:scroll;
-    overflow-x: hidden;
-    overflow-y: hidden;
+.notaAzul2{
+    text-shadow: 1px 1px #145C48;
     margin: 4px;
     border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
-    line-height:20px;
-    text-align:center;
-    background:#4CE2B8;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
     height:150px;
     width:150px;
-    float:left;
-    background: linear-gradient(135deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);
-    border: 2px solid #37A485;
-}
-.notaAzul:hover{background: linear-gradient(45deg, #4CE2B8 50%,#4BDCB3 1%, #4BDCB3 100%);}
-
-
-
-.notaLaranja{ 
-    background-size: 100%;
-    overflow:scroll;
-    overflow-x: hidden;
-    margin: 4px;
-    border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
+    text-align: center;
+    font-size:1.2em;
     line-height:20px;
-    text-align:center;
-    background:#4CE2B8;
-    height:150px;
-    width:150px;
-    float:left;
-    background: linear-gradient(225deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);
-    border: 2px solid #E49F46;
-    border-bottom: 2px solid #D89031;
-    border-top: 2px solid #D89031;
-}
-.notaLaranja:hover{background: linear-gradient(135deg, #FAAE4B 50%,#FBA64B  1%,#FBA64B  100%);}
-
-
-.notaRed{ 
-    overflow:scroll;
-    overflow-x: hidden;
-    margin: 4px;
-    border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
-    line-height:20px;
-    text-align:center;
-    height:150px;
-    width:150px;
-    float:left;
-    background: linear-gradient(45deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);
-    border: 2px solid #B53E30;
-}
-.notaRed:hover{background: linear-gradient(135deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
-
-.notaAmarelo{ 
-    overflow:scroll;
-    overflow-x: hidden;
-    margin: 4px;
-    border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
-    line-height:20px;
-    text-align:center;
-    background:#4CE2B8;
-    height:150px;
-    width:150px;
-    float:left;
-    background: linear-gradient(315deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);
-    border: 2px solid #DBB15C;
-}
-.notaAmarelo:hover{background: linear-gradient(225deg, #F7C867 50%,#FAC355  1%,#FAC355  100%);}
-
-.notaCinza{ 
-    overflow:scroll;
-    overflow-x: hidden;
-    margin: 4px;
-    border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
-    line-height:20px;
-    text-align:center;
-    background:#4CE2B8;
-    height:150px;
-    width:150px;
-    float:left;
-    background: linear-gradient(45deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
-    border: 2px solid #808C8D;
-}
-.notaCinza:hover{
-    background: linear-gradient(135deg, #95a5a6 50%,#909FA0  1%,#909FA0  100%);
-}
-
-.notaAzulClaro{ 
-    overflow:scroll;
-    overflow-x: hidden;
-    margin: 4px;
-    border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
-    line-height:20px;
-    text-align:center;
-    background:#4CE2B8;
-    height:150px;
-    width:150px;
-    float:left;
-    background: linear-gradient(135deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
-    border: 2px solid #2D83BC;
-}
-.notaAzulClaro:hover{
-    background: linear-gradient(225deg, #3498db 50%,#3394D5  1%,#3394D5  100%);
-}
-
-.notaRoxo{ 
-    overflow:scroll;
-    overflow-x: hidden;
-    margin: 4px;
-    border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
-    line-height:20px;
-    text-align:center;
-    background:#4CE2B8;
-    height:150px;
-    width:150px;
-    float:left;
-    background: linear-gradient(315deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
-    border: 2px solid #963EB9;
-}
-.notaRoxo:hover{
-    background: linear-gradient(225deg, #9b59b6 50%,#9556AE  1%,#9556AE  100%);
-}
-
-.notaCastanho{ 
-    overflow:scroll;
-    overflow-x: hidden;
-    margin: 4px;
-    border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
-    line-height:20px;
-    text-align:center;
-    background:#4CE2B8;
-    height:150px;
-    width:150px;
-    float:left;
-    background: linear-gradient(45deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
-    border: 2px solid #987648;
-}
-.notaCastanho:hover{
-    background: linear-gradient(135deg, #B48A54 50%,#AE8652  1%,#AE8652  100%);
-}
-
-.notaVerde{ 
-    overflow:scroll;
-    overflow-x: hidden;
-    margin: 4px;
-    border-radius:5px;
-    font-size:15px;
-    color:#ecf0f1;
-    line-height:20px;
-    text-align:center;
-    background:#4CE2B8;
-    height:150px;
-    width:150px;
-    float:left;
-    background: linear-gradient(315deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
-    border: 2px solid #28AF60;
-
-}
-
-.notaVerde:hover::before{
-    content: none;
+    background: #44CAA4 50%;
     position:relative;
 }
-.notaVerde:hover{
-    background: linear-gradient(225deg, #2ecc71 50%,#2EC56D  1%,#2EC56D  100%);
+.notaAzul2:before,
+.notaAzul2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
 
+.notaLaranja2{
+    text-shadow: 1px 1px #7C4E1D;
+    margin: 4px;
+    border-radius:5px;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:1.2em;
+    line-height:20px;
+    background: #FBA64B 50%;
+    position:relative;
+}
+.notaLaranja2:before,
+.notaLaranja2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
 }
 
 
+
+
+.notaRed2{
+    text-shadow: 1px 1px #0C2C3A;
+    margin: 4px;
+    border-radius:5px;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:1.2em;
+    line-height:20px;
+    background: #e74c3c 50%;
+    position:relative;
+}
+.notaRed2:before,
+.notaRed2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+.notaAmarelo2{
+    text-shadow: 1px 1px #756529;
+    margin: 4px;
+    border-radius:5px;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:1.2em;
+    line-height:20px;
+    background: #F8D450 50%;
+    position:relative;
+}
+.notaAmarelo2:before,
+.notaAmarelo2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+
+.notaCinza2{
+    text-shadow: 1px 1px #0C2C3A;
+    margin: 4px;
+    border-radius:5px;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:1.2em;
+    line-height:20px;
+    background: #95a5a6 50%;
+    position:relative;
+}
+.notaCinza2:before,
+.notaCinza2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+.notaAzulClaro3{
+    text-shadow: 1px 1px #0C2C3A;
+    margin: 4px;
+    border-radius:5px;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:1.2em;
+    line-height:20px;
+    background: #3498db 50%;
+    position:relative;
+}
+.notaAzulClaro3:before,
+.notaAzulClaro3:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+.notaRoxo2{
+    text-shadow: 1px 1px #0C2C3A;
+    margin: 4px;
+    border-radius:5px;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:1.2em;
+    line-height:20px;
+    background: #9b59b6 50%;
+    position:relative;
+}
+.notaRoxo2:before,
+.notaRoxo2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+
+.notaCastanho2{
+    text-shadow: 1px 1px #0C2C3A;
+    margin: 4px;
+    border-radius:5px;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:1.2em;
+    line-height:20px;
+    background: #A6804E 50%;
+    position:relative;
+}
+.notaCastanho2:before,
+.notaCastanho2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
+
+.notaVerde2{
+    text-shadow: 1px 1px #0C2C3A;
+    margin: 4px;
+    border-radius:5px;
+    display: inline-block;
+    float: left;
+    color: #ecf0f1;
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:1.2em;
+    line-height:20px;
+    background: #2EC56D 50%;
+    position:relative;
+}
+.notaVerde2:before,
+.notaVerde2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
 .notaMenu{ 
+    text-shadow: 1px 1px #191E25;
     margin: 4px;
     border-radius:5px;
     font-size:15px;
-    color:#A2B2E1;
     line-height:20px;
     text-align:center;
-    background:#394361;
     height:150px;
     width:150px;
     display: inline-block;
     vertical-align: middle;
-    border: 2px solid #495679;
-    border-bottom: 2px solid #363F5B;
-    border-top: 2px solid #363F5B;
+    background: #313841 ;
+    color:white;
+    border: 4px solid #353C45;
+    border-right:4px solid #384049;
+    border-top: 4px solid #384049;
+    box-shadow: 2px 3px 6px #1C242B;
 }
-.notaMenu:hover{ 
-    color: white;
-    background:#404B6D;
+.notaMenu:hover{
+    background: #313841 ;
 }
 
 
-.notaLogotipo{ 
-    margin: 4;
-    border-radius:100px;
-    line-height:20px;
-    height:180px;
-    width:180px;
-    float:left;
-    background: #D84A3A;
-    display:block;
-    text-decoration:none;
-    background-image: url("./img/lamp2.png");
-    background-size: 41%;
-    background-repeat:no-repeat;
-    background-position: center;
-}
-.notaLogotipo:hover{
-    background: #e74c3c;
-    background-image: url("./img/lamp2.png");
-    background-size: 41%;
-    background-repeat:no-repeat;
-    background-position: center;   
-}
+/******** FIM DAS NOTAS ****/
 
 @font-face {
     font-family: myFirstFont;
@@ -1263,7 +1406,7 @@ font-size:1.2em;
   top: 3.5px;
   left: 3.5px;
   /* IE9 */
-  background: linear-gradient(135deg, #282D3C 45%, #aaaaaa 50%, #cccccc 50%, white 100%);
+  background: linear-gradient(135deg, #313841 45%, #aaaaaa 50%, #cccccc 50%, white 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#000000');
   /*For IE7-8-9*/
   z-index: 1000;
@@ -1284,4 +1427,45 @@ font-size:1.2em;
   display: inline-block;
   vertical-align: middle;
   position: relative;
+}
+
+/* TESTES */
+
+
+/* some presentation styles */
+
+
+
+/* Lifted corners */
+
+.lifted {
+    -moz-border-radius:4px; 
+         border-radius:4px;
+}
+
+.lifted:before,
+.lifted:after { 
+    bottom:15px;
+    left:10px;
+    width:50%;
+    height:20%;
+    max-width:300px;
+    -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);   
+       -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform:rotate(-3deg);    
+       -moz-transform:rotate(-3deg);   
+        -ms-transform:rotate(-3deg);   
+         -o-transform:rotate(-3deg);
+            transform:rotate(-3deg);
+}
+
+.lifted:after {
+    right:10px; 
+    left:auto;
+    -webkit-transform:rotate(3deg);   
+       -moz-transform:rotate(3deg);  
+        -ms-transform:rotate(3deg);  
+         -o-transform:rotate(3deg);
+            transform:rotate(3deg);
 }

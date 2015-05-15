@@ -1,4 +1,3 @@
-    <div class= "wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
     <div id="topo">
       <div class="topo-Logo wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
           IDeaTouch
@@ -13,10 +12,24 @@
         <% end %>
       </a>
 
-      <div class="topo-perfil wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
-        <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true">
-        </spam>
+      <!-- sino notificaçoes -->
+      <% if @notifications==0 %>
+      <%= link_to notifications_path , method: :get  do %>
+      <div class="hvr-buzz-out">
+      <div class="topo-perfil2 wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
+         <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true"></spam>
+      </div>  
       </div>
+      <% end %>
+      <% else %>
+
+      <%= link_to notifications_path , method: :get  do %>
+      <div class="topo-perfil wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
+         <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true"></spam>
+      </div>
+      <% end %>
+      <!-- -->
+      <% end %>
 
       <div class="topo-perfil wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.8s">
          <span class="glyphicon glyphicon-user" aria-hidden="true">
@@ -33,4 +46,3 @@
       </div>
 
       </div>
-    </div>

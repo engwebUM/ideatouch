@@ -338,6 +338,7 @@
 /* Float */
 .hvr-float {
   display: inline-block;
+  float:left;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -353,8 +354,8 @@
   transition-timing-function: ease-out;
 }
 .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
-  -webkit-transform: translateY(-8px);
-  transform: translateY(-8px);
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 /* Sink */
@@ -382,53 +383,54 @@
 /* Bob */
 @-webkit-keyframes hvr-bob {
   0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-
-  50% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
   }
 
+  50% {
+    -webkit-transform: translateY(-0px);
+    transform: translateY(-0px);
+  }
+
   100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
 }
 
 @keyframes hvr-bob {
   0% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-
-  50% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
   }
 
+  50% {
+    -webkit-transform: translateY(-0px);
+    transform: translateY(-0px);
+  }
+
   100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
 }
 
 @-webkit-keyframes hvr-bob-float {
   100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
 }
 
 @keyframes hvr-bob-float {
   100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
 }
 
 .hvr-bob {
+  float: left;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -1353,6 +1355,7 @@
 }
 
 .hvr-buzz-out {
+  float: right;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);

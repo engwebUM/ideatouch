@@ -15,7 +15,7 @@ class UsersController < Clearance::UsersController
     password = user_params.delete(:password)
     nome = user_params.delete(:nome)
 
-    clearance_configuration(email, password, nome)
+    clearance_configuration(email, password, nome,notifications_attributes)
   end
 
   def set_user

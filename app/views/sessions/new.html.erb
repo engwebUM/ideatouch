@@ -28,7 +28,7 @@
             <div class = "hvr-curl-top-left5">
           <div class="caixa-logo lifted">
             <h2>
-              <img src="/assets/img/160.png" width="100" alt="logotipo" >
+              <img src="/assets/img/161.png" width="100" alt="logotipo" >
             </h2>
             <div class="tituloFont">&nbspIDeaTouch</div>
           </div> </div> </div> </div></div>
@@ -159,5 +159,32 @@ wow.init();
               $(".content").fadeIn(10);        
           });
       });
-    </script>  </body>
+    </script>  
+
+
+      <script>
+        $(window).resize(setDivVisibility);
+    function setDivVisibility(){
+         if (($(window).width()) < '1260'){  
+         $('.step').css('width','100%');  
+         } 
+         else {  
+         $('.step').css('width','25%');  
+         } 
+     }
+     </script>
+
+        <script>
+        $(window).load(setDivVisibility);
+    function setDivVisibility(){
+         if (($(window).width()) < '1260'){  
+         $('.step').css('width','100%');  
+         } 
+         else {  
+         $('.step').css('width','25%');  
+         } 
+     }
+     </script>
+
+  </body>
 </html>

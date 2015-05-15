@@ -226,6 +226,18 @@
      }
      </script>
 
+    <script>
+        $(window).load(setDivVisibility);
+    function setDivVisibility(){
+         if (($(window).width()) < '700'){  
+         $('#topo2').css('height','100px');  
+         } else {  
+         $('#topo2').css('height','50px');  
+         } 
+     }
+     </script>
+
+
   </body>
 </html>
 

@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 
-
 #Heroku
 group :production do
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'

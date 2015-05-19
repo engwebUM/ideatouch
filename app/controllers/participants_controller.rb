@@ -30,12 +30,15 @@ class ParticipantsController < ApplicationController
 
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to @participant, notice: '' }
+        format.html { redirect_to "/dynamics/#{@participant.dynamic.id}", notice: '' }
         format.json { render :show, status: :created, location: @participant }
       else
         format.html { render :new }
         format.json { render json: @participant.errors, status: :unprocessable_entity }
       end
+      if(User.all.where(email:"user@ideatouch.pt").last.id!=nil)
+        Notification.create :user_id => User.all.where(email:@participant.email).last.id , :text => "you have been added to dynamic #{@participant.dynamic.name}", :estado => false
+      end 
     end
   end
 

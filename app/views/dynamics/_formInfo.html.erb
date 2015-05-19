@@ -14,6 +14,13 @@
  <div class= "letrasInfo">
   Name - <%= @dynamic.name %><br>
   Founder - <%= @participants.where(email:@dynamic.user.email,dynamic:@dynamic.id).last.name %> <br>
+  Status - 
+            <% if Time.now < @dynamic.final %>
+              <%= distance_of_time_in_words_to_now(@dynamic.final)  %> to the end
+            <% else %> 
+              finished
+            <% end %>
+            <br>
   Challenge - <%= @dynamic.descricao %>
   <br><br><br>
   Avatars of participants <br>

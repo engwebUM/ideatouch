@@ -109,6 +109,6 @@ class DynamicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dynamic_params
       #params.require(:dynamic).permit(:name, :descricao)
-       params.require(:dynamic).permit(:name, :descricao, :user_id,:color, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ])
+       params.require(:dynamic).permit(:name, :descricao, :user_id,:color,:final, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ], notes_attributes: [ :text ])
     end
 end

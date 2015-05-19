@@ -457,6 +457,87 @@
   animation-direction: normal, alternate;
 }
 
+
+
+
+/* Bob2 */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-0px);
+    transform: translateY(-0px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-0px);
+    transform: translateY(-0px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+}
+
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+}
+
+.hvr-bob2 {
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-bob2:hover, .hvr-bob2:focus, .hvr-bob2:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+
+
+
 /* Hang */
 @-webkit-keyframes hvr-hang {
   0% {
@@ -532,6 +613,7 @@
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
+
 
 /* Skew */
 .hvr-skew {
@@ -3472,7 +3554,7 @@
   padding-right: 2.2em;
 }
 .hvr-icon-drop:before {
-  content: "\f041";
+  content: "\f017";
   position: absolute;
   right: 1em;
   opacity: 1;
@@ -3568,7 +3650,7 @@
   padding-right: 2.2em;
 }
 .hvr-icon-float-away:before, .hvr-icon-float-away:after {
-  content: "\f055";
+  content: "\f017";
   position: absolute;
   right: 1em;
   padding: 0 1px;
@@ -4231,7 +4313,7 @@
   transition-duration: 0.3s;
 }
 .hvr-icon-bob:before {
-  content: "\f077";
+  content: "\f017";
   position: absolute;
   right: 1em;
   padding: 0 1px;

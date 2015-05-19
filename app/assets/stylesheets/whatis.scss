@@ -9,8 +9,6 @@
 
 
 
-
-
 .box-wall2{
     /*background-image: url("/assets/img/rabisco.png");*/
     font-family: myFirstFont;
@@ -39,9 +37,9 @@
     box-shadow: 2px 3px 30px #1C242B;
     border: 4px solid #B53E30;
     font-family: myFirstFont;
-	margin: 4px;
-	margin-right: auto;
-	margin-left: auto;
+  	margin: 4px;
+  	margin-right: auto;
+  	margin-left: auto;
     border-radius:50px;
     font-size:15px;
     color:#ecf0f1;
@@ -188,6 +186,19 @@ p {
     z-index:-2;
 }
 
+
+.whatistitle2 {
+  text-align: center;
+  margin-top: 0%;
+  background-color: #3D4551;
+}
+.whatistitle2:before,
+.whatistitle2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
 .imageWhatIs {
 	margin-left: auto;
     margin-right: auto;
@@ -220,7 +231,7 @@ p {
 
 /*---------------------------------------------------------------------------------------*/
 .boxadvantagesofplatform {
-	background-color: #26A9BA;
+	background-color: #3498db;
 }
 .boxadvantagesofplatform:before,
 .boxadvantagesofplatform:after {
@@ -230,7 +241,7 @@ p {
 }
 
 .advantagesofplatformtitle {
-	background-color: #26A9BA;
+	background-color: #3498db;
 }
 
 .imageSession {
@@ -246,7 +257,8 @@ p {
 
 /*---------------------------------------------------------------------------------------*/
 .boxhowitworks {
-	background-color: #E87A5F;
+  width: 100%;
+	background-color: #E96151;
 	display: inline-block;
 }
 .boxhowitworks:before,
@@ -257,20 +269,19 @@ p {
 }
 
 .howitworkstitle {
-	background-color: #E87A5F ;
+	background-color: #E96151 ;
 }
 
 .step {
-  position: relative;
   float: left;
 	display: inline-block;
-	background-color: #FF8566;
+	background-color: #E96151;
 	width: 25%;
 	min-width: 315px;
 	height: auto;
 	min-height: 430px;
 	margin-top: 8px;
-	border: 4px solid #E87A5F;
+	border: 4px solid #CB5143;
   box-shadow: 2px 3px 10px #1C242B;
 }
 .step:before,
@@ -304,10 +315,10 @@ p {
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
-	background-size: 90%;
-	height: 150px;
-	width: 110px;
-	background-image: url("./img/160.png");
+	 background-size: 90%;
+	 height: 180px;
+	 width: 130px;
+	background-image: url("./img/161.png");
 }
 
 
@@ -336,7 +347,7 @@ p {
   top: 0px;
   left: 0px;
   /* IE9 */
-  background: linear-gradient(135deg, #313841 45%, #aaaaaa 50%, #cccccc 50%, white 100%);
+  background: linear-gradient(135deg, #313841 45%, #FDEFBC 50%, #FDEFBC 50%, #FDEFBC 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#000000');
   /*For IE7-8-9*/
   z-index: 1000;
@@ -349,7 +360,10 @@ p {
 }
 .hvr-curl-top-left5:hover:before, .hvr-curl-top-left5:focus:before, .hvr-curl-top-left5:active:before {
   border-radius:1.5px;
-  width: 33px;
-  height:33px;
+  width: 40px;
+  height:40px;
 }
+
+
+
 

@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  resources :notes do
+    collection do
+      delete 'destroy_multiple'
+    end
+  end
+
+
+
+
+  resources :participants
+
   resources :notifications
 
   Rails.application.routes.draw do
@@ -15,6 +26,8 @@ Rails.application.routes.draw do
   resources :boards
 
   resources :dynamics
+  get '/dynamics/:id/info', to: 'dynamics#info', as: 'info'
+  get '/dynamics/:id/addParticipant', to: 'dynamics#addParticipant', as: 'addParticipant'
   get '/dynamics/:id/addBoard', to: 'dynamics#addBoard', as: 'addBoard'
   get '/boards/:id/addNote', to: 'boards#addNote', as: 'addNote'
 

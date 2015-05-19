@@ -1,23 +1,24 @@
     <div id="topo">
+      <%= link_to dynamics_path , method: :get  do %>
       <div class="topo-Logo wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s">
           IDeaTouch
       </div>
-
+      <% end %>
       
-      <a class="animsition-link">
-        <%= link_to sign_out_path, method: :delete  do %>
-        <div class="topo-perfil wow fadeInRight" data-wow-duration="0.6s" data-wow-delay="0.6s">
-          <span class="glyphicon glyphicon-off" aria-hidden="true"></spam>
-        </div>
-        <% end %>
-      </a>
+      
+      <%= link_to sign_out_path, method: :delete  do %>
+      <div class="topo-perfil wow fadeInRight" data-wow-duration="0.6s" data-wow-delay="0.6s">
+        <i class="fa fa-power-off"></i>
+      </div>
+      <% end %>
+      
 
       <!-- sino notificaçoes -->
-      <% if @notifications==0 %>
+      <% if @notificationss!=0 %>
       <%= link_to notifications_path , method: :get  do %>
       <div class="hvr-buzz-out">
       <div class="topo-perfil2 wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
-         <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true"></spam>
+         <i class="fa fa-bell"></i>
       </div>  
       </div>
       <% end %>
@@ -25,21 +26,16 @@
 
       <%= link_to notifications_path , method: :get  do %>
       <div class="topo-perfil wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
-         <span class="glyphicon glyphicon glyphicon-bell" aria-hidden="true"></spam>
+         <i class="fa fa-bell-o"></i>
       </div>
       <% end %>
       <!-- -->
       <% end %>
 
       <div class="topo-perfil wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.8s">
-         <span class="glyphicon glyphicon-user" aria-hidden="true">
-         </spam>
+         <i class="fa fa-user"></i>
       </div>
 
-      <div class="topo-perfil wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.8s">
-         <span class="glyphicon glyphicon-picture" aria-hidden="true">
-         </spam>
-      </div>
 
       <div class="topo-nome wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.9s">
          <%=current_user.nome%>

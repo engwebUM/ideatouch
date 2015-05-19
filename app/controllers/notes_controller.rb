@@ -29,7 +29,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
-        format.html { redirect_to @note }
+        format.html { redirect_to "/boards/#{@note.board_id}" }
         format.json { render :show, status: :created, location: @note }
       else
         format.html { render :new }
@@ -62,6 +62,17 @@ class NotesController < ApplicationController
     end
   end
 
+  def destroy_multiple
+    @i = Note.last
+    Note.destroy(params[:notes])
+      respond_to do |format|
+        format.html { redirect_to "/boards/#{@i.board_id}" }
+        format.json { head :no_content }
+      end
+  end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
@@ -70,6 +81,6 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:board_id, :text,:color)
+      params.require(:note).permit(:board_id, :text,:color,:email)
     end
 end

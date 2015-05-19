@@ -1,28 +1,44 @@
 class DynamicsController < ApplicationController
-  before_action :set_dynamic, only: [:show, :edit, :update, :destroy, :addBoard]
+  before_action :set_dynamic, only: [:show, :edit, :update, :destroy, :addBoard, :addParticipant, :info]
   before_action :require_login
 
   # GET /dynamics
   # GET /dynamics.json
   def index
     @dynamics = Dynamic.all
-    @notifications =   Notification.where(user_id:1).all.size
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
   end
 
+  def info 
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
+  end 
 
 
   # GET /dynamics/1
   # GET /dynamics/1.json
   def show
-    @notifications =  Notification.where(user_id:1).all.size
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
   end
 
   def addBoard
     @board= Board.new
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
+  end
+
+
+  def addParticipant
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participant = Participant.new
+    @participants = Participant.all
   end
 
   # GET /dynamics/new
   def new
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
     @dynamic = Dynamic.new    
   end
 
@@ -46,6 +62,8 @@ class DynamicsController < ApplicationController
       end
     end
     Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "default"
+    Participant.create :dynamic_id => @dynamic.id , :email=>current_user.email
+    Notification.create :user_id => current_user.id , text: 'You have created dynamic #{@dynamic.name}', :estado => false
   end
 
   # PATCH/PUT /dynamics/1
@@ -70,13 +88,18 @@ class DynamicsController < ApplicationController
       format.html { redirect_to dynamics_url }
       format.json { head :no_content }
     end
+    Notification.create :user_id => current_user.id , :text => "You have destroyed dynamic #{@dynamic.name}" , :estado => false
   end
+
+
+
+
+
+
 
   private
 
-    def adiciona_Board_Default
 
-    end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_dynamic
@@ -86,6 +109,6 @@ class DynamicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dynamic_params
       #params.require(:dynamic).permit(:name, :descricao)
-       params.require(:dynamic).permit(:name, :descricao, :user_id,:color, boards_attributes: [ :name, :descricao ])
+       params.require(:dynamic).permit(:name, :descricao, :user_id,:color, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ])
     end
 end

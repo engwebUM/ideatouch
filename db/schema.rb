@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515040105) do
+ActiveRecord::Schema.define(version: 20150518000528) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20150515040105) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "color"
+    t.string   "email"
   end
 
   add_index "notes", ["board_id"], name: "index_notes_on_board_id"
@@ -54,6 +55,20 @@ ActiveRecord::Schema.define(version: 20150515040105) do
   end
 
   add_index "notifications", ["user_id"], name: "index_notifications_on_user_id"
+
+  create_table "participants", force: :cascade do |t|
+    t.string   "email"
+    t.integer  "dynamic_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "name"
+  end
+
+  add_index "participants", ["dynamic_id"], name: "index_participants_on_dynamic_id"
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",                     null: false

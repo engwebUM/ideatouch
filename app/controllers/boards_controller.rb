@@ -11,16 +11,20 @@ class BoardsController < ApplicationController
   # GET /boards/1
   # GET /boards/1.json
   def show
-    @notifications =  Notification.where(user_id:1).all.size
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
   end
 
   def addNote
     @note= Note.new
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
   end
 
   # GET /boards/new
   def new
     @board = Board.new
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
   end
 
   # GET /boards/1/edit
@@ -33,12 +37,12 @@ class BoardsController < ApplicationController
     @board = Board.new(board_params)
 
     respond_to do |format|
-      if @board.save
+      if @board.name!="default" and @board.save 
         format.html { redirect_to @board}
         format.json { render :show, status: :created, location: @board }
       else
-        format.html { render :new }
-        format.json { render json: @board.errors, status: :unprocessable_entity }
+        format.html { redirect_to "/dynamics/#{@board.dynamic_id}" }
+        format.json { render :show, status: :created, location: @board }
       end
     end
   end

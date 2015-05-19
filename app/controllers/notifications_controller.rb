@@ -5,6 +5,10 @@ class NotificationsController < ApplicationController
   # GET /notifications.json
   def index
     @notifications = Notification.all
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    Thread.new do
+      limpa
+    end 
   end
 
   # GET /notifications/1
@@ -28,7 +32,7 @@ class NotificationsController < ApplicationController
 
     respond_to do |format|
       if @notification.save
-        format.html { redirect_to @notification, notice: 'Notification was successfully created.' }
+        format.html { redirect_to @notification, notice: '' }
         format.json { render :show, status: :created, location: @notification }
       else
         format.html { render :new }
@@ -42,7 +46,7 @@ class NotificationsController < ApplicationController
   def update
     respond_to do |format|
       if @notification.update(notification_params)
-        format.html { redirect_to @notification, notice: 'Notification was successfully updated.' }
+        format.html { redirect_to @notification, notice: '' }
         format.json { render :show, status: :ok, location: @notification }
       else
         format.html { render :edit }
@@ -56,8 +60,16 @@ class NotificationsController < ApplicationController
   def destroy
     @notification.destroy
     respond_to do |format|
-      format.html { redirect_to notifications_url, notice: 'Notification was successfully destroyed.' }
+      format.html { redirect_to notifications_url, notice: '' }
       format.json { head :no_content }
+    end
+  end
+
+  def limpa
+    sleep(3.0)
+    Notification.where(user:current_user.id).each do |notification|
+      notification.estado=true
+      notification.save
     end
   end
 

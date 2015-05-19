@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 
+gem "paperclip", "~> 4.2"
+
+gem "font-awesome-rails"
 
 #Heroku
 group :production do

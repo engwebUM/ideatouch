@@ -63,7 +63,7 @@ class DynamicsController < ApplicationController
     end
     Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "default"
     Participant.create :dynamic_id => @dynamic.id , :email=>current_user.email
-    Notification.create :user_id => current_user.id , text: 'You have created dynamic #{@dynamic.name}', :estado => false
+    Notification.create :user_id => current_user.id , :text => "You have created dynamic #{@dynamic.name}", :estado => false
   end
 
   # PATCH/PUT /dynamics/1

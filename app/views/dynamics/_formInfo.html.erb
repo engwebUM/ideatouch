@@ -14,7 +14,7 @@
  <div class= "letrasInfo">
   Name - <%= @dynamic.name %><br>
   Founder - <%= @participants.where(email:@dynamic.user.email,dynamic:@dynamic.id).last.name %> <br>
-  Challenge - <% @dynamic.descricao%>
+  Challenge - <%= @dynamic.descricao %>
   <br><br><br>
   Avatars of participants <br>
   <div class= "linha"></div>
@@ -42,7 +42,7 @@
       <br><br>
       <div class= "hh3">
       <%= link_to  "/dynamics/#{@dynamic.id}" , method: :get , :class => "hvr-icon-back" do %> 
-        Back to Dynamics
+        Back to Dynamic
       <% end %>
       </div>
       <br><br>

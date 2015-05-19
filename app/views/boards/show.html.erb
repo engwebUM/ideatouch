@@ -138,8 +138,12 @@
       <div class="wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
        <div class="caixa-relogio lifted" >
         <div class="letraRelogio ">
-            1 Day 2 Hour 12 Minuts Left
-            <span class="glyphicon glyphicon-time" aria-hidden="true"></spam>
+            <% if Time.now < @board.dynamic.final %>
+              <%= distance_of_time_in_words_to_now(@board.dynamic.final)  %> to the end
+              <span class="glyphicon glyphicon-time" aria-hidden="true"></spam>
+            <% else %> 
+              finished
+            <% end %>   
         </div>
         </div>
       </div>
@@ -279,9 +283,7 @@
           <%end%>
 
 
-
-
-      <% if @board.name=="default" %>  
+      <% if @board.name=="default" and Time.now < @board.dynamic.final and @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.avatar_file_name!= nil and @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.name %>  
           <%= link_to addNote_path(@board) , method: :get  do %>
           <div class="hvr-float">
           <div class="notaMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">                

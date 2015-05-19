@@ -52,6 +52,15 @@ class DynamicsController < ApplicationController
   # POST /dynamics.json
   def create
     @dynamic = Dynamic.new(dynamic_params)
+      if @dynamic.name==""
+        @dynamic.name="undefined"
+      end
+      if @dynamic.descricao==""
+        @dynamic.descricao="undefined"
+      end
+      if @dynamic.final==nil
+        @dynamic.final = DateTime.now + 24.hour
+      end
     respond_to do |format|
       if @dynamic.save
         format.html { redirect_to @dynamic}
@@ -63,7 +72,7 @@ class DynamicsController < ApplicationController
     end
     Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "default"
     Participant.create :dynamic_id => @dynamic.id , :email=>current_user.email
-    Notification.create :user_id => current_user.id , text: 'You have created dynamic #{@dynamic.name}', :estado => false
+    Notification.create :user_id => current_user.id , :text => "You have created dynamic #{@dynamic.name}", :estado => false
   end
 
   # PATCH/PUT /dynamics/1
@@ -109,6 +118,6 @@ class DynamicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dynamic_params
       #params.require(:dynamic).permit(:name, :descricao)
-       params.require(:dynamic).permit(:name, :descricao, :user_id,:color, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ])
+       params.require(:dynamic).permit(:name, :descricao, :user_id,:color,:final, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ], notes_attributes: [ :text ])
     end
 end

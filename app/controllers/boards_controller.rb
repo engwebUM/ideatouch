@@ -35,7 +35,9 @@ class BoardsController < ApplicationController
   # POST /boards.json
   def create
     @board = Board.new(board_params)
-
+      if @board.name==""
+        @board.name="undefined"
+      end
     respond_to do |format|
       if @board.name!="default" and @board.save 
         format.html { redirect_to @board}

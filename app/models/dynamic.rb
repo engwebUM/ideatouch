@@ -3,4 +3,5 @@ class Dynamic < ActiveRecord::Base
   has_many :boards
   accepts_nested_attributes_for :boards
   has_many :participants
+  has_many :notes
 end

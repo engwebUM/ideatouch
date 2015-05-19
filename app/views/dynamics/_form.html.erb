@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :user_id, value: current_user.id %>
 
   <div class="field">
     <br><br>
@@ -20,7 +21,9 @@
     <br>
     <div class="input-letter"><%= f.text_area :descricao,:placeholder=>"Challenge",:style => 'text-align:center;background-image: url("");',:class=>'form-control' %></div>
   </div>
-
+  <br>
+    <div class="input-letter-arial"><%= datetime_local_field(:dynamic, :final) %></div>
+  </div>
   <br>
   <div class="field">
     <%= select(:dynamic,:color, [
@@ -36,7 +39,7 @@
     ])%>
   </div>
 
-  <%= f.hidden_field :user_id, value: current_user.id %>
+  
 
 
 <br>

@@ -37,7 +37,7 @@ class ParticipantsController < ApplicationController
         format.json { render json: @participant.errors, status: :unprocessable_entity }
       end
       if(User.all.where(email:"user@ideatouch.pt").last.id!=nil)
-        Notification.create :user_id => User.all.where(email:@participant.email).last.id , :text => "you have been added to dynamic #{@participant.dynamic.name}", :estado => false
+        Notification.create :user_id => User.all.where(email:@participant.email).last.id , :text => "you were added to dynamic #{@participant.dynamic.name}", :estado => false
       end 
     end
   end

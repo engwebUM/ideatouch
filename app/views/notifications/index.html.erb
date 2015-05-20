@@ -17,8 +17,7 @@
     <%= render './dynamics/formTopBar' %>
 
     <br><br><br>
-      <div class="cloud x4"></div> 
-    <div class="cloud x3"></div>
+
 
    <div class="box-wall">   
 
@@ -43,14 +42,14 @@
         <td>
           <i class="fa fa-check"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           <%= notification.text %></td>
-          <td> <%= time_ago_in_words(notification.created_at)%> </td>
+          <td> <%= time_ago_in_words(notification.created_at, include_seconds: true)%> </td>
         <td><%= link_to 'x', notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% else %>
       <tr class="danger">
         <td> <i class="fa fa-bullhorn"></i> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           <%= notification.text %>  </td>
-        <td> <%=time_ago_in_words(notification.created_at)%> </td>
+        <td> <%=time_ago_in_words(notification.created_at, include_seconds: true)%> </td>
         <td><%= link_to 'x', notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <%end%>
@@ -63,7 +62,7 @@
 
       <br><br>
       <div class= "hh4">
-      <%= link_to dynamics_path , method: :get , :class => "hvr-icon-back" do %> 
+      <%= link_to "/dynamics" , method: :get , :class => "hvr-icon-back" do %> 
         Back
       <% end %>
       </div>

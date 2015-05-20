@@ -45,6 +45,10 @@ class BoardsController < ApplicationController
         format.json { render :show, status: :created, location: @board }
       end
     end
+      if @board.name==""
+        @board.name="undefined"
+        @board.save
+      end
   end
 
   # PATCH/PUT /boards/1

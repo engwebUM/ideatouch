@@ -8,6 +8,11 @@ body {
     font-size: 25px;
 }
 
+.letrasInfo2{
+    color:white;
+    font-size: 18px;
+}
+
 .linha{
     display: inline-block;
     width: 90%;
@@ -24,6 +29,14 @@ body {
 .linha:hover{
     box-shadow: 0px 1px 4px #152029;
 }
+
+input[type="datetime-local"] {
+    border-radius: 3px;
+    text-align: center;
+    font-family: arial;
+    color:grey;  
+    width: 100%;
+    font-size: 12px;}
 
 .user{
     width: 150px;
@@ -698,12 +711,6 @@ font-size:1.2em;
 
 .input-letter{
     color:black;
-}
-
-.input-letter-arial{
-    font-family: arial;
-    color:grey;  
-    font-size: 14px;
 }
 
 
@@ -1536,6 +1543,30 @@ font-size:1.2em;
 }
 
 
+.notaMenuA{ 
+    text-shadow: 1px 1px #191E25;
+    margin: 4px;
+    border-radius:5px;
+    font-size:15px;
+    line-height:20px;
+    text-align:center;
+    height:150px;
+    width:150px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #EB423F ;
+    color:white;
+    border: 4px solid #FFFFFF;
+    box-shadow: 5px 3px 10px #343131;
+    border-right: 4px solid #9A9A9A;
+    border-bottom: 4px solid #9A9A9A;
+    border-radius: 10px;
+}
+.notaMenuA:hover{
+    background: #EB423F ;
+}
+
+
 /******** FIM DAS NOTAS ****/
 
 @font-face {
@@ -1684,7 +1715,7 @@ font-size:1.2em;
 
 
 
-.cloud {
+.cloud2 {
     width: 200px; height: 60px;
     background: #fff;
     
@@ -1695,7 +1726,7 @@ font-size:1.2em;
     position: absolute; 
 }
 
-.cloud:before, .cloud:after {
+.cloud2:before, .cloud2:after {
     content: '';
     position: absolute; 
     background: #fff;
@@ -1711,54 +1742,16 @@ font-size:1.2em;
     -moz-transform: rotate(30deg);
 }
 
-.cloud:after {
+.cloud2:after {
     width: 120px; height: 120px;
     top: -55px; left: auto; right: 15px;
 }
 
 
-.twelve-point-star {
-   height: 20px;
-   width: 20px;
-   background: #fff;
-   position: absolute;
-}
-.twelve-point-star:before {
-   height: 20px;
-   width: 20px;
-   background: #fff;
-   content:"";
-   position: absolute;
-   /* Rotate */
-   -moz-transform: rotate(30deg);
-   -webkit-transform: rotate(30deg);
-   -ms-transform: rotate(30deg);
-   -o-transform: rotate(30deg);
-   transform: rotate(30deg);
-}
-.twelve-point-star:after {
-   height: 20px;
-   width: 20px;
-   background: #fff;
-   content:"";
-   position: absolute;
-   /* Rotate */
-   -moz-transform: rotate(-30deg);
-   -webkit-transform: rotate(-30deg);
-   -ms-transform: rotate(-30deg);
-   -o-transform: rotate(-30deg);
-   transform: rotate(-30deg);
-}
 
 
-.circle {
-    width: 60px;
-    height:60px;
-    background: #fff;
-    -moz-border-radius: 60px;
-    -webkit-border-radius: 60px;
-    border-radius: 100px;
-    position: absolute; 
+.cloud {
+
 }
 
 .c1{

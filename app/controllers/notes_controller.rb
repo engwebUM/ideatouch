@@ -36,6 +36,9 @@ class NotesController < ApplicationController
         format.json { render json: @note.errors, status: :unprocessable_entity }
       end
     end
+    @dynamic = Dynamic.where(id:@note.dynamic_id).last
+    @dynamic.numerodenotas = @dynamic.numerodenotas + 1 
+    @dynamic.save
   end
 
   # PATCH/PUT /notes/1
@@ -81,6 +84,6 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:board_id, :text,:color,:email,:dynamic_id)
+      params.require(:note).permit(:board_id, :text,:color,:email,:dynamic_id,:numerodanota)
     end
 end

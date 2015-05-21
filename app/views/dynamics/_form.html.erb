@@ -12,6 +12,7 @@
   <% end %>
 
   <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :numerodenotas, value: 0 %>
 
   <div class="field">
     <br><br>
@@ -22,6 +23,7 @@
     <div class="input-letter"><%= f.text_area :descricao,:placeholder=>"Challenge",:style => 'text-align:center;background-image: url("");',:class=>'form-control' %></div>
   </div>
   <br>
+    <div class="letrasInfo2">Define the time of the dynamic </div>
     <div class="input-letter-arial"><%= datetime_local_field(:dynamic, :final) %></div>
   </div>
   <br>

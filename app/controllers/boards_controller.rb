@@ -16,6 +16,7 @@ class BoardsController < ApplicationController
   end
 
   def addNote
+    @dynamics = Dynamic.all
     @note= Note.new
     @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
     @participants = Participant.all
@@ -35,9 +36,7 @@ class BoardsController < ApplicationController
   # POST /boards.json
   def create
     @board = Board.new(board_params)
-      if @board.name==""
-        @board.name="undefined"
-      end
+
     respond_to do |format|
       if @board.name!="default" and @board.save 
         format.html { redirect_to @board}
@@ -47,6 +46,10 @@ class BoardsController < ApplicationController
         format.json { render :show, status: :created, location: @board }
       end
     end
+      if @board.name==""
+        @board.name="undefined"
+        @board.save
+      end
   end
 
   # PATCH/PUT /boards/1

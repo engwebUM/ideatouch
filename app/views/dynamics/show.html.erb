@@ -80,16 +80,17 @@
       <div class="wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
        <div class="caixa-relogio lifted" >
         <div class="letraRelogio ">
-            <% if Time.now < @dynamic.final %>
-              <%= distance_of_time_in_words_to_now(@dynamic.final)  %> to the end
+            <% if  (@dynamic.final.to_time - 1.hours) > Time.now %>
+               <%= distance_of_time_in_words(Time.now, (@dynamic.final.to_time - 1.hours) , include_seconds: true) %> to the end
               <span class="glyphicon glyphicon-time" aria-hidden="true"></spam>
             <% else %> 
               finished
+              <span class="glyphicon glyphicon-record" aria-hidden="true"></spam>
             <% end %>
         </div>
         </div>
       </div>
-      
+
 
     </div>
 
@@ -112,18 +113,22 @@
         <%end %>
 <br><br><br>
 
+<!--- Restriçoes de funcionalidades -->
+
+  <% if current_user.id == @dynamic.user_id %>
+      <% if  (@dynamic.final.to_time - 1.hours) < Time.now %>
        <div class="fora">
         <div class="hvr-bob">
           <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s">
-            <i class="fa fa-star"></i>
+            <i class="fa fa-archive"></i>
           </div></div>
           <div id="hover-content">
             <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
-               <div class="lateral2-perfil lifted">Favorite Notes</div></div>
+               <div class="lateral2-perfil lifted">Voting Results</div></div>
           </div>
         </div>
 <br><br><br>
-
+      <%end %>
 
         <div class="fora">
           <div class="hvr-bob">
@@ -138,9 +143,8 @@
 <br><br><br>
 
 
-<!--- Restriçoes de funcionalidades -->
 
-    <% if current_user.id == @dynamic.user_id %>
+
     
         <%= link_to addParticipant_path , method: :get  do %>
         <div class="fora">

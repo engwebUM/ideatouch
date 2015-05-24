@@ -23,13 +23,13 @@
 
 
 
-
-
+            <div class= "letrasInfo">
+              Choose the board
               <div class="field">
                  <%= select(:note,:board_id, (Board.where.not(name:'all notes')& Board.where.not(name:'without board') & Board.where(dynamic_id:@board.dynamic_id)).map { |board| [board.name, board.id] })%>
               </div>
 
-
+            </div>
 
 
             <% end %>
@@ -51,6 +51,6 @@
                 Back to Board
               <% end %>
               </div>
-              <br><br>
+              <br>
 
 <% end %>

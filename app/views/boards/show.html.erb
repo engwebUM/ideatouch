@@ -245,7 +245,7 @@
 
                 <!--delete-->
                 <% if current_user.id == @board.dynamic.user_id %>
-                <% if @board.name!="default" %>  
+                <% if @board.name!="all notes" and @board.name!="without board"%>  
                 <%= link_to  @board, method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <div class="fora">
                 <div class="hvr-bob">
@@ -273,10 +273,11 @@
                 <div class="hvr-float">
                 <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
                 <div class="<%= note.color %>">
+                <div class="textoo">
                 <%= check_box_tag "notes[]", note.id %>
                 <div class="hhp"><%= note.numerodanota%></div>
                 <hh4><%= note.text %></hh4> 
-                </div>
+                </div></div>
               
               </div></div>
                 <% end %>
@@ -284,7 +285,7 @@
           <%end%>
 
 
-      <% if @board.name=="default" and (@board.dynamic.final.to_time - 1.hours) > Time.now%>  
+      <% if @board.name=="all notes" and (@board.dynamic.final.to_time - 1.hours) > Time.now%>  
         <% if @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.avatar_file_name!= nil and @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.name %>
           <%= link_to addNote_path(@board) , method: :get  do %>
           <div class="hvr-float">

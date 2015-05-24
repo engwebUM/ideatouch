@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :notes do
     collection do
       delete 'destroy_multiple'
+      put 'update_multiple'
     end
   end
 
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
   get '/dynamics/:id/addBoard', to: 'dynamics#addBoard', as: 'addBoard'
   get '/boards/:id/addNote', to: 'boards#addNote', as: 'addNote'
 
+  get '/boards/:id/moveNotes', to: 'boards#moveNotes', as: 'moveNotes'
 
 
   #get 'welcome/index'

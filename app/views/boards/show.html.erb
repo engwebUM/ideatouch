@@ -190,7 +190,7 @@
                 <% end %>
 
                 <!--Move to Board-->
-                <% if current_user.id == @board.dynamic.user_id %>
+                <% if current_user.id == @board.dynamic.user_id and @board.name != "all notes" %>
                 <%= link_to "/boards/#{@board.id}/moveNotes", method: :get do %>
                 <div class="fora">
                 <div class="hvr-bob">

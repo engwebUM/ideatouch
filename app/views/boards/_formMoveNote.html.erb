@@ -1,7 +1,8 @@
         <div class="linha"></div>
 
 <%= form_tag update_multiple_notes_path, method: :put do %>
-
+            
+            <% if @board.name != "without board"%>
               <% for note in @board.notes %>
               <div class="hvr-float">
               <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
@@ -13,6 +14,21 @@
               </div></div> 
               </div></div>
               <% end %>
+            <% end %>
+
+             <% if @board.name == "without board" %>
+              <% for note in Note.where(board_id:(Board.where(dynamic_id: @board.dynamic,name:'all notes').last.id)) %>
+              <div class="hvr-float">
+              <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+              <div class="<%= note.color %>">
+              <div class="textoo">
+              <%= check_box_tag "notes[]", note.id %>
+              <div class="hhp"><%= note.numerodanota%></div>
+              <hh4><%= note.text %></hh4> 
+              </div></div> 
+              </div></div>
+              <% end %>
+            <% end %>
 
 
 

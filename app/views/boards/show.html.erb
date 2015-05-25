@@ -190,7 +190,7 @@
                 <% end %>
 
                 <!--Move to Board-->
-                <% if current_user.id == @board.dynamic.user_id %>
+                <% if current_user.id == @board.dynamic.user_id and @board.name != "all notes" %>
                 <%= link_to "/boards/#{@board.id}/moveNotes", method: :get do %>
                 <div class="fora">
                 <div class="hvr-bob">
@@ -276,7 +276,9 @@
                   <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
                   <div class="<%= note.color %>">
                   <div class="textoo">
-                  <%= check_box_tag "notes[]", note.id %>
+                   <% if current_user.id == @board.dynamic.user_id %>
+                      <%= check_box_tag "notes[]", note.id %>
+                    <% end %>
                   <div class="hhp"><%= note.numerodanota%></div>
                   <hh4><%= note.text %></hh4> 
                   </div></div>
@@ -289,7 +291,9 @@
                   <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
                   <div class="<%= note.color %>">
                   <div class="textoo">
-                  <%= check_box_tag "notes[]", note.id %>
+                   <% if current_user.id == @board.dynamic.user_id %>
+                      <%= check_box_tag "notes[]", note.id %>
+                    <% end %>
                   <div class="hhp"><%= note.numerodanota%></div>
                   <hh4><%= note.text %></hh4> 
                   </div></div>
@@ -303,7 +307,9 @@
                   <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
                   <div class="<%= note.color %>">
                   <div class="textoo">
-                  <%= check_box_tag "notes[]", note.id %>
+                    <% if current_user.id == @board.dynamic.user_id %>
+                      <%= check_box_tag "notes[]", note.id %>
+                    <% end %>
                   <div class="hhp"><%= note.numerodanota%></div>
                   <hh4><%= note.text %></hh4> 
                   </div></div>

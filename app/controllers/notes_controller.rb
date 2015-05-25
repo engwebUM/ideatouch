@@ -36,6 +36,9 @@ class NotesController < ApplicationController
         format.json { render json: @note.errors, status: :unprocessable_entity }
       end
     end
+    @dynamic = Dynamic.where(id:@note.dynamic_id).last
+    @dynamic.numerodenotas = @dynamic.numerodenotas + 1 
+    @dynamic.save
   end
 
   # PATCH/PUT /notes/1
@@ -66,12 +69,20 @@ class NotesController < ApplicationController
     @i = Note.last
     Note.destroy(params[:notes])
       respond_to do |format|
-        format.html { redirect_to "/boards/#{@i.board_id}" }
+        format.html { redirect_to "/dynamics/#{@i.dynamic_id}" }
         format.json { head :no_content }
       end
   end
 
-
+  def update_multiple
+    @board = params[:note][:board_id]
+    @notes = Note.find(params[:notes])
+    @notes.reject! do |note|
+      note.update_attributes(:board_id => @board )
+    end
+    redirect_to "/dynamics/#{Board.where(id:@board).last.dynamic_id}"
+  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -81,6 +92,6 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:board_id, :text,:color,:email,:dynamic_id)
+      params.require(:note).permit(:board_id, :text,:color,:email,:dynamic_id,:numerodanota)
     end
 end

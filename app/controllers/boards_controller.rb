@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :edit, :update, :destroy, :addNote]
+  before_action :set_board, only: [:show, :edit, :update, :destroy, :addNote,:moveNotes]
   before_action :require_login
 
   # GET /boards
@@ -16,10 +16,20 @@ class BoardsController < ApplicationController
   end
 
   def addNote
+    @dynamics = Dynamic.all
     @note= Note.new
     @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
     @participants = Participant.all
   end
+
+
+
+  def moveNotes
+    @dynamics = Dynamic.all
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
+  end
+
 
   # GET /boards/new
   def new
@@ -37,14 +47,18 @@ class BoardsController < ApplicationController
     @board = Board.new(board_params)
 
     respond_to do |format|
-      if @board.name!="default" and @board.save 
-        format.html { redirect_to @board}
+      if @board.name!="all notes" and @board.name!="without board" and @board.save 
+        format.html { redirect_to "/dynamics/#{@board.dynamic_id}"}
         format.json { render :show, status: :created, location: @board }
       else
         format.html { redirect_to "/dynamics/#{@board.dynamic_id}" }
         format.json { render :show, status: :created, location: @board }
       end
     end
+      if @board.name==""
+        @board.name="undefined"
+        @board.save
+      end
   end
 
   # PATCH/PUT /boards/1
@@ -66,7 +80,7 @@ class BoardsController < ApplicationController
   def destroy
     @board.destroy
     respond_to do |format|
-      format.html { redirect_to boards_url }
+      format.html { redirect_to "/dynamics/#{@board.dynamic_id}" }
       format.json { head :no_content }
     end
   end

@@ -138,12 +138,13 @@
       <div class="wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
        <div class="caixa-relogio lifted" >
         <div class="letraRelogio ">
-            <% if Time.now < @board.dynamic.final %>
-              <%= distance_of_time_in_words_to_now(@board.dynamic.final)  %> to the end
+            <% if  (@board.dynamic.final.to_time - 1.hours) > Time.now %>
+               <%= distance_of_time_in_words(Time.now, (@board.dynamic.final.to_time - 1.hours) , include_seconds: true) %> to the end
               <span class="glyphicon glyphicon-time" aria-hidden="true"></spam>
             <% else %> 
               finished
-            <% end %>   
+              <span class="glyphicon glyphicon-record" aria-hidden="true"></spam>
+            <% end %> 
         </div>
         </div>
       </div>
@@ -157,20 +158,20 @@
       <div id="box-2">
 <br><br>
 
-
+      <% if  (@board.dynamic.final.to_time - 1.hours) < Time.now %>
         <div class="fora">
           <div class="hvr-bob">
           <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">
-            <i class="fa fa-star-o"></i>
+            <i class="fa fa-archive"></i>
           </div></div>
           <div id="hover-content">
               <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
-               <div class="lateral2-perfil lifted">Add to Favorits</div>
+               <div class="lateral2-perfil lifted">Voting</div>
               </div>
           </div>
         </div>
 <br><br><br>
-
+      <% end %> 
           
                 <!--edit to note-->
                 <% if current_user.id == @board.dynamic.user_id %>
@@ -190,6 +191,7 @@
 
                 <!--Move to Board-->
                 <% if current_user.id == @board.dynamic.user_id %>
+                <%= link_to "/boards/#{@board.id}/moveNotes", method: :get do %>
                 <div class="fora">
                 <div class="hvr-bob">
                 <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
@@ -197,10 +199,11 @@
                 </div></div>
                 <div id="hover-content">
                 <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
-                <div class="lateral2-perfil lifted">Move to Board</div></div>
+                <div class="lateral2-perfil lifted">Move Note</div></div>
                 </div>
                 </div>
                 <br><br><br>  
+                <% end %>
                 <% end %>
             
                 <!--Delete Note-->
@@ -244,7 +247,7 @@
 
                 <!--delete-->
                 <% if current_user.id == @board.dynamic.user_id %>
-                <% if @board.name!="default" %>  
+                <% if @board.name!="all notes" and @board.name!="without board"%>  
                 <%= link_to  @board, method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <div class="fora">
                 <div class="hvr-bob">
@@ -267,23 +270,58 @@
 
         <div id="box-3">
 
-          
-                <% for note in @board.notes %>
-                <div class="hvr-float">
-                <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
-                <div class="<%= note.color %>">
-                <%= check_box_tag "notes[]", note.id %>
-                <div class="hhp"><%= note.id%></div>
-                <hh4><%= note.text %></hh4> 
-                </div>
-              
-              </div></div>
-                <% end %>
+              <% if @board.name == "all notes" %>
+                  <% for note in Note.where(dynamic_id:@board.dynamic) %>
+                  <div class="hvr-float">
+                  <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+                  <div class="<%= note.color %>">
+                  <div class="textoo">
+                   <% if current_user.id == @board.dynamic.user_id %>
+                      <%= check_box_tag "notes[]", note.id %>
+                    <% end %>
+                  <div class="hhp"><%= note.numerodanota%></div>
+                  <hh4><%= note.text %></hh4> 
+                  </div></div>
+                  </div></div>
+                  <% end %>
+              <% end %>
+              <% if @board.name == "without board" %>
+                  <% for note in Note.where(board_id:(Board.where(dynamic_id: @board.dynamic,name:'all notes').last.id))%>
+                  <div class="hvr-float">
+                  <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+                  <div class="<%= note.color %>">
+                  <div class="textoo">
+                   <% if current_user.id == @board.dynamic.user_id %>
+                      <%= check_box_tag "notes[]", note.id %>
+                    <% end %>
+                  <div class="hhp"><%= note.numerodanota%></div>
+                  <hh4><%= note.text %></hh4> 
+                  </div></div>
+                  </div></div>
+                  <% end %>
+              <% end %>
 
-          <%end%>
+              <% if @board.name != "without board" and @board.name != "all notes"%>
+                  <% for note in @board.notes %>
+                  <div class="hvr-float">
+                  <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+                  <div class="<%= note.color %>">
+                  <div class="textoo">
+                    <% if current_user.id == @board.dynamic.user_id %>
+                      <%= check_box_tag "notes[]", note.id %>
+                    <% end %>
+                  <div class="hhp"><%= note.numerodanota%></div>
+                  <hh4><%= note.text %></hh4> 
+                  </div></div>
+                  </div></div>
+                  <% end %>
+              <% end %>
 
 
-      <% if @board.name=="default" and Time.now < @board.dynamic.final and @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.avatar_file_name!= nil and @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.name %>  
+      <%end%>
+
+      <% if @board.name=="all notes" and (@board.dynamic.final.to_time - 1.hours) > Time.now%>  
+        <% if @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.avatar_file_name!= nil and @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.name %>
           <%= link_to addNote_path(@board) , method: :get  do %>
           <div class="hvr-float">
           <div class="notaMenu wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">                
@@ -292,6 +330,16 @@
                 </div> <div class="hh2"> New Note</div> 
           </div></div>
           <% end %>
+        <% else %>
+          <%= link_to  edit_participant_path(@participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.id) , method: :get  do %>
+          <div class="hvr-float">
+          <div class="notaMenuA wow fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.6s">                
+                  <div class="hh1">
+                    <i class="fa fa-user-secret"></i>
+                </div> <div class="hh2"> Define Avatar<br> to start</div> 
+          </div></div>
+          <% end %>
+        <% end %>
       <% end %>
 
 

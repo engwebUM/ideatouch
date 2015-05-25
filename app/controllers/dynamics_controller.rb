@@ -61,9 +61,22 @@ class DynamicsController < ApplicationController
         format.json { render json: @dynamic.errors, status: :unprocessable_entity }
       end
     end
-    Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "default"
+      if @dynamic.name==""
+        @dynamic.name="undefined"
+        @dynamic.save
+      end
+      if @dynamic.descricao==""
+        @dynamic.descricao="undefined"
+        @dynamic.save
+      end
+      if @dynamic.final==nil
+        @dynamic.final = DateTime.now + 2.hour
+        @dynamic.save
+      end
+    Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "all notes"
+    Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "without board"
     Participant.create :dynamic_id => @dynamic.id , :email=>current_user.email
-    Notification.create :user_id => current_user.id , :text => "You have created dynamic #{@dynamic.name}", :estado => false
+    Notification.create :user_id => current_user.id , :text => "You created dynamic #{@dynamic.name}", :estado => false
   end
 
   # PATCH/PUT /dynamics/1
@@ -88,7 +101,7 @@ class DynamicsController < ApplicationController
       format.html { redirect_to dynamics_url }
       format.json { head :no_content }
     end
-    Notification.create :user_id => current_user.id , :text => "You have destroyed dynamic #{@dynamic.name}" , :estado => false
+    Notification.create :user_id => current_user.id , :text => "You destroyed dynamic #{@dynamic.name}" , :estado => false
   end
 
 
@@ -109,6 +122,6 @@ class DynamicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dynamic_params
       #params.require(:dynamic).permit(:name, :descricao)
-       params.require(:dynamic).permit(:name, :descricao, :user_id,:color,:final, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ], notes_attributes: [ :text ])
+       params.require(:dynamic).permit(:name, :descricao, :user_id,:color,:final,:numerodenotas, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ], notes_attributes: [ :text ])
     end
 end

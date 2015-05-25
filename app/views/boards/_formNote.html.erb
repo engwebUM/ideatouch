@@ -19,7 +19,6 @@
     <br>
   <div class="field">
     <%= select(:note,:color, [
-      ['Grey', "notaCinza2 lifted"],
       ['Turquoise', "notaAzul2 lifted"],
       ['Orange', "notaLaranja2 lifted"],
       ['Red', "notaRed2 lifted"],
@@ -30,6 +29,7 @@
       ['Green', "notaVerde2 lifted"],
     ])%>
   </div>
+  <%= f.hidden_field :numerodanota, value: @dynamics.where(id:@board.dynamic_id).last.numerodenotas+1 %>
   <%= f.hidden_field :board_id, value: @board.id %>
   <%= f.hidden_field :dynamic_id, value: @board.dynamic_id %>
 <br>

@@ -74,7 +74,15 @@ class NotesController < ApplicationController
       end
   end
 
-
+  def update_multiple
+    @board = params[:note][:board_id]
+    @notes = Note.find(params[:notes])
+    @notes.reject! do |note|
+      note.update_attributes(:board_id => @board )
+    end
+    redirect_to "/dynamics/#{Board.where(id:@board).last.dynamic_id}"
+  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -73,7 +73,8 @@ class DynamicsController < ApplicationController
         @dynamic.final = DateTime.now + 2.hour
         @dynamic.save
       end
-    Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "default"
+    Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "all notes"
+    Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "without board"
     Participant.create :dynamic_id => @dynamic.id , :email=>current_user.email
     Notification.create :user_id => current_user.id , :text => "You created dynamic #{@dynamic.name}", :estado => false
   end

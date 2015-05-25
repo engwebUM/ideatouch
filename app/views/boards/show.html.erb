@@ -191,6 +191,7 @@
 
                 <!--Move to Board-->
                 <% if current_user.id == @board.dynamic.user_id %>
+                <%= link_to "/boards/#{@board.id}/moveNotes", method: :get do %>
                 <div class="fora">
                 <div class="hvr-bob">
                 <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
@@ -198,10 +199,11 @@
                 </div></div>
                 <div id="hover-content">
                 <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
-                <div class="lateral2-perfil lifted">Move to Board</div></div>
+                <div class="lateral2-perfil lifted">Move Note</div></div>
                 </div>
                 </div>
                 <br><br><br>  
+                <% end %>
                 <% end %>
             
                 <!--Delete Note-->
@@ -245,7 +247,7 @@
 
                 <!--delete-->
                 <% if current_user.id == @board.dynamic.user_id %>
-                <% if @board.name!="default" %>  
+                <% if @board.name!="all notes" and @board.name!="without board"%>  
                 <%= link_to  @board, method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <div class="fora">
                 <div class="hvr-bob">
@@ -268,23 +270,51 @@
 
         <div id="box-3">
 
-          
-                <% for note in @board.notes %>
-                <div class="hvr-float">
-                <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
-                <div class="<%= note.color %>">
-                <%= check_box_tag "notes[]", note.id %>
-                <div class="hhp"><%= note.numerodanota%></div>
-                <hh4><%= note.text %></hh4> 
-                </div>
-              
-              </div></div>
-                <% end %>
+              <% if @board.name == "all notes" %>
+                  <% for note in Note.where(dynamic_id:@board.dynamic) %>
+                  <div class="hvr-float">
+                  <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+                  <div class="<%= note.color %>">
+                  <div class="textoo">
+                  <%= check_box_tag "notes[]", note.id %>
+                  <div class="hhp"><%= note.numerodanota%></div>
+                  <hh4><%= note.text %></hh4> 
+                  </div></div>
+                  </div></div>
+                  <% end %>
+              <% end %>
+              <% if @board.name == "without board" %>
+                  <% for note in Note.where(board_id:(Board.where(dynamic_id: @board.dynamic,name:'all notes').last.id))%>
+                  <div class="hvr-float">
+                  <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+                  <div class="<%= note.color %>">
+                  <div class="textoo">
+                  <%= check_box_tag "notes[]", note.id %>
+                  <div class="hhp"><%= note.numerodanota%></div>
+                  <hh4><%= note.text %></hh4> 
+                  </div></div>
+                  </div></div>
+                  <% end %>
+              <% end %>
 
-          <%end%>
+              <% if @board.name != "without board" and @board.name != "all notes"%>
+                  <% for note in @board.notes %>
+                  <div class="hvr-float">
+                  <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
+                  <div class="<%= note.color %>">
+                  <div class="textoo">
+                  <%= check_box_tag "notes[]", note.id %>
+                  <div class="hhp"><%= note.numerodanota%></div>
+                  <hh4><%= note.text %></hh4> 
+                  </div></div>
+                  </div></div>
+                  <% end %>
+              <% end %>
 
 
-      <% if @board.name=="default" and (@board.dynamic.final.to_time - 1.hours) > Time.now%>  
+      <%end%>
+
+      <% if @board.name=="all notes" and (@board.dynamic.final.to_time - 1.hours) > Time.now%>  
         <% if @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.avatar_file_name!= nil and @participants.where(email:current_user.email, dynamic_id:@board.dynamic.id).last.name %>
           <%= link_to addNote_path(@board) , method: :get  do %>
           <div class="hvr-float">

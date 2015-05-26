@@ -69,7 +69,7 @@ class NotesController < ApplicationController
     @i = Note.last
     Note.destroy(params[:notes])
       respond_to do |format|
-        format.html { redirect_to "/dynamics/#{@i.dynamic_id}" }
+        format.html { redirect_to (:back) }
         format.json { head :no_content }
       end
   end

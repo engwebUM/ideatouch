@@ -1,6 +1,7 @@
 class DynamicsController < ApplicationController
-  before_action :set_dynamic, only: [:show, :edit, :update, :destroy, :addBoard, :addParticipant, :info]
+  before_action :set_dynamic, only: [:show, :edit, :update, :destroy, :addBoard, :addParticipant, :info,:leave]
   before_action :require_login
+
 
   # GET /dynamics
   # GET /dynamics.json
@@ -13,6 +14,13 @@ class DynamicsController < ApplicationController
   def info 
     @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
     @participants = Participant.all
+  end 
+
+
+  def leave
+    Participant.where(email: current_user.email,dynamic_id:@dynamic.id).destroy_all
+    Notification.create :user_id => current_user.id , :text => "You left dynamic #{@dynamic.name}", :estado => false
+    redirect_to "/dynamics/"
   end 
 
 
@@ -44,8 +52,10 @@ class DynamicsController < ApplicationController
 
 
 
+
+
   # GET /dynamics/1/edit
- 
+
 
 
   # POST /dynamics

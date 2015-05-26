@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
   get '/boards/:id/moveNotes', to: 'boards#moveNotes', as: 'moveNotes'
 
+  get '/dynamics/:id/leave', to: 'dynamics#leave', as: 'leave'
+
 
   #get 'welcome/index'
   get 'box' => 'welcome#box'

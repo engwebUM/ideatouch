@@ -113,6 +113,23 @@
         <%end %>
 <br><br><br>
 
+    <% if current_user.id != @dynamic.user_id %>
+        <%= link_to leave_path , method: :get  do %>
+        <div class="fora">
+        <div class="hvr-bob">
+        <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
+        <i class="fa fa-reply"></i>
+        </div></div>
+        <div id="hover-content">
+        <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+        <div class="lateral2-perfil lifted">Leave Dynamic</div></div>
+        </div>
+        </div>
+        <%end %>
+        <br><br><br>
+    <%end %>
+
+
 <!--- Restriçoes de funcionalidades -->
 
   <% if current_user.id == @dynamic.user_id %>

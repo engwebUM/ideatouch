@@ -248,6 +248,9 @@ a:focus{
     margin-top: 10px;
 }
 
+.hh3{
+font-size:1.2em;   
+}
 
 .hh4{
 color: black;
@@ -280,11 +283,11 @@ font-size:1.2em;
     height: 60px;
     line-height:63px;
     text-shadow: 1px 1px #702827;
-    -o-transition:0.5s;
-    -ms-transition:0.5s;
-    -moz-transition:0.5s;
-    -webkit-transition:0.5s;  
-    transition:0.5s;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;  
+    transition:1.0s;
     font-weight: bold;
 }
 .topo-perfil:hover{
@@ -334,6 +337,7 @@ font-size:1.2em;
 
 .topo-perfil2{
     color:#46FDFF;
+    background-color: #4A71FF ; 
     text-align: center;
     float:right;
     font-size: 120%;
@@ -342,7 +346,6 @@ font-size:1.2em;
     line-height:63px;
     text-shadow: 1px 1px #072B2B;
     font-weight: bold;
-    background-color: #4A71FF ; 
 }
 
 
@@ -417,6 +420,7 @@ font-size:1.2em;
     position:absolute; 
     z-index:-2;
 }
+
 
 .cinza{
     text-shadow: 1px 1px #0C2C3A;
@@ -573,6 +577,8 @@ font-size:1.2em;
 }
 
 .lateral-perfil{
+    margin-left: 1px;
+    border: 1px solid #3D444E;
     border-radius: 6px;
     box-shadow: 2px 3px 3px #1C2231;
     display: inline-block;
@@ -589,11 +595,11 @@ font-size:1.2em;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    -o-transition:0.5s;
-    -ms-transition:0.5s;
-    -moz-transition:0.5s;
-    -webkit-transition:0.5s;  
-    transition:0.5s;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;  
+    transition:1.0s;
 }
 .lateral-perfil:before,
 .lateral-perfil:after {
@@ -601,11 +607,86 @@ font-size:1.2em;
     position:absolute; 
     z-index:-2;
 }
+.lateral-perfil:hover{
+    border: 1px solid #647386;
+}
 
 
+
+.lateral-perfil2{
+    margin-left: 1px;
+    border: 1px solid #3B5CD3;
+    border-radius: 6px;
+    box-shadow: 2px 3px 3px #1C2231;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size: 120%;
+    width: 60px; 
+    height: 60px;
+    line-height:60px;
+    color:#46FDFF;
+    background-color: #4A71FF ; 
+    text-shadow: 1px 1px #22272E;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;  
+    transition:1.0s;
+}
+.lateral-perfil2:before,
+.lateral-perfil2:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+.lateral-perfil2:hover{
+    border: 1px solid #46FDFF;
+}
+
+
+.lateral-perfil3{
+    margin-left: 1px;
+    border-radius: 6px;
+    border: 1px solid #3D444E;
+    box-shadow: 2px 3px 3px #1C2231;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size: 120%;
+    width: 60px; 
+    height: 60px;
+    line-height:60px;
+    color:white;
+    text-shadow: 1px 1px #22272E;
+    background-color: #3F4854 ; 
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -o-transition:1.0s;
+    -ms-transition:1.0s;
+    -moz-transition:1.0s;
+    -webkit-transition:1.0s;  
+    transition:1.0s;
+}
+.lateral-perfil3:before,
+.lateral-perfil3:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+.lateral-perfil3:hover{
+    border: 1px solid #E91700;
+}
 
 
 .lateral2-perfil{
+    margin-left: 3px;
     background-color: #FA6360 ; 
     text-shadow: 1px 1px #93211F;
     display: inline-block;
@@ -627,6 +708,32 @@ font-size:1.2em;
     position:absolute; 
     z-index:-2;
 }
+
+
+.lateral3-perfil{
+    margin-left: 3px;
+    background-color: #FA6360 ; 
+    text-shadow: 1px 1px #93211F;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    font-size:1.4em;
+    width: 120px; 
+    height: 60px;
+    line-height:60px;
+    color: white;
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.lateral3-perfil:before,
+.lateral3-perfil:after {
+    content:"";
+    position:absolute; 
+    z-index:-2;
+}
+
 
 
 
@@ -715,9 +822,6 @@ font-size:1.2em;
     float: left;
     width: 62px; 
     height: 65vh;
-}
-#box-2:hover{
-    width:185px
 }
 
 

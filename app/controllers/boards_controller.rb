@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :edit, :update, :destroy, :addNote,:moveNotes]
+  before_action :set_board, only: [:show, :edit, :update, :destroy, :addNote,:moveNotes,:moveNotes,:votation]
   before_action :require_login
 
   # GET /boards
@@ -22,6 +22,12 @@ class BoardsController < ApplicationController
     @participants = Participant.all
   end
 
+  def votation
+    @lim = Dynamic.where(id:@board.dynamic_id).last.votationnumber
+    @dynamics = Dynamic.all
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
+  end
 
 
   def moveNotes

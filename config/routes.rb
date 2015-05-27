@@ -4,11 +4,13 @@ Rails.application.routes.draw do
     collection do
       delete 'destroy_multiple'
       put 'update_multiple'
+      put 'vote_multiple'
     end
   end
 
 
 
+  resources :votes
 
   resources :participants
 
@@ -33,8 +35,10 @@ Rails.application.routes.draw do
   get '/boards/:id/addNote', to: 'boards#addNote', as: 'addNote'
 
   get '/boards/:id/moveNotes', to: 'boards#moveNotes', as: 'moveNotes'
+  get '/boards/:id/votation', to: 'boards#votation', as: 'votation'
 
   get '/dynamics/:id/leave', to: 'dynamics#leave', as: 'leave'
+  get '/dynamics/:id/activateVotation', to: 'dynamics#activateVotation', as: 'activateVotation'
 
 
   #get 'welcome/index'

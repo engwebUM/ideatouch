@@ -115,14 +115,15 @@
 
     <% if current_user.id != @dynamic.user_id %>
         <%= link_to leave_path , method: :get  do %>
+        <br><br><br>
         <div class="fora">
         <div class="hvr-bob">
-        <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
+        <div class="lateral-perfil3 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.3s">
         <i class="fa fa-reply"></i>
         </div></div>
         <div id="hover-content">
         <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
-        <div class="lateral2-perfil lifted">Leave Dynamic</div></div>
+        <div class="lateral3-perfil lifted">Leave Dynamic</div></div>
         </div>
         </div>
         <%end %>
@@ -132,11 +133,40 @@
 
 <!--- Restriçoes de funcionalidades -->
 
-  <% if current_user.id == @dynamic.user_id %>
-      <% if  (@dynamic.final.to_time - 1.hours) < Time.now %>
+      <% if current_user.id == @dynamic.user_id %>
+
+        <div class="fora">
+          <div class="hvr-bob">
+          <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s">
+            <i class="fa fa-pie-chart"></i>
+          </div></div>
+          <div id="hover-content">
+            <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+               <div class="lateral2-perfil lifted">Dynamic Statistics</div></div>
+          </div>
+        </div>
+<br><br><br>
+
+      <% if  (@dynamic.final.to_time - 1.hours) < Time.now and @dynamic.votation==false %>
+      <%= link_to activateVotation_path , method: :get  do %>
        <div class="fora">
         <div class="hvr-bob">
-          <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.4s">
+          <div class="lateral-perfil2 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+            <i class="fa fa-archive"></i>
+          </div></div>
+          <div id="hover-content">
+            <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
+               <div class="lateral2-perfil lifted">Activate votation</div></div>
+          </div>
+        </div>
+<br><br><br>
+      <%end %><%end %>
+
+
+      <% if  (@dynamic.final.to_time - 1.hours) < Time.now and @dynamic.votation==true %>
+       <div class="fora">
+        <div class="hvr-bob">
+          <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
             <i class="fa fa-archive"></i>
           </div></div>
           <div id="hover-content">
@@ -147,22 +177,8 @@
 <br><br><br>
       <%end %>
 
-        <div class="fora">
-          <div class="hvr-bob">
-          <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
-            <i class="fa fa-pie-chart"></i>
-          </div></div>
-          <div id="hover-content">
-            <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
-               <div class="lateral2-perfil lifted">Dynamic Statistics</div></div>
-          </div>
-        </div>
-<br><br><br>
 
-
-
-
-    
+      <% if (@dynamic.final.to_time - 1.hours) > Time.now %> 
         <%= link_to addParticipant_path , method: :get  do %>
         <div class="fora">
           <div class="hvr-bob">
@@ -176,6 +192,7 @@
         </div>
         <% end %>
 <br><br><br>
+      <% end %>
 
         <div class="fora">
           <div class="hvr-bob">
@@ -188,17 +205,19 @@
           </div>
         </div>
 <br><br><br>
+
         
          <%= link_to @dynamic, method: :delete, data: { confirm: 'Are you sure?' } do %>
+         <br><br><br>
          <div class="fora">
             <div class="hvr-bob">
-              <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
+              <div class="lateral-perfil3 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
                 <i class="fa fa-trash-o"></i>
               </div>
             </div>
             <div id="hover-content">
               <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
-                <div class="lateral2-perfil lifted">Delete Dynamic</div>
+                <div class="lateral3-perfil lifted">Delete Dynamic</div>
               </div>
             </div>
           </div>
@@ -276,7 +295,7 @@
     <script>
         $(window).resize(setDivVisibility);
     function setDivVisibility(){
-         if (($(window).width()) < '700'){  
+         if (($(window).width()) < '520'){  
          $('#topo2').css('height','100px');  
          } else {  
          $('#topo2').css('height','50px');  
@@ -287,12 +306,20 @@
     <script>
         $(window).load(setDivVisibility);
     function setDivVisibility(){
-         if (($(window).width()) < '700'){  
+         if (($(window).width()) < '520'){  
          $('#topo2').css('height','100px');  
          } else {  
          $('#topo2').css('height','50px');  
          } 
      }
+     </script>
+
+     <script>
+        $(".lateral-perfil").mouseover(function() {
+            $('#box-2').css('width','185px');  
+        }).mouseout(function() {
+            $('#box-2').css('width','62px');  
+        });
      </script>
 
 

@@ -75,12 +75,29 @@ class NotesController < ApplicationController
   end
 
   def update_multiple
-    @board = params[:note][:board_id]
+    if (params.has_key?(:note))
+      @board = params[:note][:board_id]
+      @notes = Note.find(params[:notes])
+      @notes.reject! do |note|
+        note.update_attributes(:board_id => @board )
+      end
+      redirect_to "/dynamics/#{Board.where(id:@board).last.dynamic_id}"
+    else
+      redirect_to (:back)
+    end
+  end
+
+
+  def vote_multiple
     @notes = Note.find(params[:notes])
     @notes.reject! do |note|
-      note.update_attributes(:board_id => @board )
+      Vote.create :participant_id => Participant.where(email:current_user.email,dynamic_id:note.dynamic_id).last.id , :dynamic_id => note.dynamic_id, :note_id => note.id
+      @p= Participant.where(email:current_user.email,dynamic_id:note.dynamic_id).last
     end
-    redirect_to "/dynamics/#{Board.where(id:@board).last.dynamic_id}"
+    @p.vote= true
+    @p.save
+    Notification.create :user_id => current_user.id , :text => "You voted on dynamic #{Dynamic.where(id:@p.dynamic_id).last.name}", :estado => false
+    redirect_to (:back)
   end
   
 

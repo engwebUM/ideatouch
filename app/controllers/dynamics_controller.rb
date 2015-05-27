@@ -1,5 +1,5 @@
 class DynamicsController < ApplicationController
-  before_action :set_dynamic, only: [:show, :edit, :update, :destroy, :addBoard, :addParticipant, :info,:leave]
+  before_action :set_dynamic, only: [:show, :edit, :update, :destroy, :addBoard, :addParticipant, :info,:leave,:activateVotation]
   before_action :require_login
 
 
@@ -21,6 +21,14 @@ class DynamicsController < ApplicationController
     Participant.where(email: current_user.email,dynamic_id:@dynamic.id).destroy_all
     Notification.create :user_id => current_user.id , :text => "You left dynamic #{@dynamic.name}", :estado => false
     redirect_to "/dynamics/"
+  end
+
+  def activateVotation
+    d=Dynamic.where(id:@dynamic.id).last
+    d.votation=true
+    d.save
+    Notification.create :user_id => current_user.id , :text => "You activated the votation in dynamic #{@dynamic.name}", :estado => false
+    redirect_to "/dynamics/#{@dynamic.id}"
   end 
 
 
@@ -49,9 +57,6 @@ class DynamicsController < ApplicationController
     @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
     @dynamic = Dynamic.new    
   end
-
-
-
 
 
   # GET /dynamics/1/edit
@@ -83,9 +88,13 @@ class DynamicsController < ApplicationController
         @dynamic.final = DateTime.now + 2.hour
         @dynamic.save
       end
+      if @dynamic.votationnumber==nil
+        @dynamic.votationnumber = 3
+        @dynamic.save
+      end
     Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "all notes"
     Board.create :dynamic_id => @dynamic.id , :color=>"boardCinza", :name=> "without board"
-    Participant.create :dynamic_id => @dynamic.id , :email=>current_user.email
+    Participant.create :dynamic_id => @dynamic.id , :email=>current_user.email, :vote => false
     Notification.create :user_id => current_user.id , :text => "You created dynamic #{@dynamic.name}", :estado => false
   end
 
@@ -132,6 +141,6 @@ class DynamicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dynamic_params
       #params.require(:dynamic).permit(:name, :descricao)
-       params.require(:dynamic).permit(:name, :descricao, :user_id,:color,:final,:numerodenotas, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ], notes_attributes: [ :text ])
+       params.require(:dynamic).permit(:name, :descricao, :user_id,:color,:final,:numerodenotas,:votation,:votationnumber, boards_attributes: [ :name, :descricao ],participants_attributes: [ :email ], notes_attributes: [ :text ])
     end
 end

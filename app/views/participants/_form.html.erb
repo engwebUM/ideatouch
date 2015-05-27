@@ -1,4 +1,5 @@
-<%= form_for @participant, :html => { :multipart => true } do |f| %>
+<div class="hh4">
+  <%= form_for @participant, :html => { :multipart => true } do |f| %>
   <% if @participant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@participant.errors.count, "error") %> prohibited this participant from being saved:</h2>
@@ -32,6 +33,7 @@
   <div class="actions">
     <%= button_to "Submit", participants_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %> 
   </div>
+</div>
 
       <br><br>
       <div class= "hh3">

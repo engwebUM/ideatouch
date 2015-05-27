@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521004207) do
+ActiveRecord::Schema.define(version: 20150527002153) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "name"
@@ -27,12 +27,14 @@ ActiveRecord::Schema.define(version: 20150521004207) do
   create_table "dynamics", force: :cascade do |t|
     t.string   "name"
     t.text     "descricao"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "user_id"
     t.string   "color"
     t.datetime "final"
     t.integer  "numerodenotas"
+    t.boolean  "votation"
+    t.integer  "votationnumber"
   end
 
   add_index "dynamics", ["user_id"], name: "index_dynamics_on_user_id"
@@ -71,6 +73,7 @@ ActiveRecord::Schema.define(version: 20150521004207) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "name"
+    t.boolean  "vote"
   end
 
   add_index "participants", ["dynamic_id"], name: "index_participants_on_dynamic_id"
@@ -87,6 +90,18 @@ ActiveRecord::Schema.define(version: 20150521004207) do
 
   add_index "users", ["email"], name: "index_users_on_email"
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+
+  create_table "votes", force: :cascade do |t|
+    t.integer  "participant_id"
+    t.integer  "dynamic_id"
+    t.integer  "note_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "votes", ["dynamic_id"], name: "index_votes_on_dynamic_id"
+  add_index "votes", ["note_id"], name: "index_votes_on_note_id"
+  add_index "votes", ["participant_id"], name: "index_votes_on_participant_id"
 
   create_table "whatis", force: :cascade do |t|
     t.string   "index"

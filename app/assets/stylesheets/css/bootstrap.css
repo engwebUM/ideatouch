@@ -3131,10 +3131,10 @@ fieldset[disabled] .btn-primary.active {
 .open > .dropdown-toggle.btn-success {
     box-shadow: 2px 3px 10px #1C242B;
   color: #ffffff;
-  border: 2px solid #F0D461;
-  border-right: 2px solid #D5B638;
-  border-top: 2px solid #D5B638;
-  background-color: #DFC041;
+  border: 2px solid #991F1D;
+  border-right: 2px solid #D72B28;
+  border-top: 2px solid #D72B28;
+  background-color: #F8302C;
 }
 .btn-success:active,
 .btn-success.active,
@@ -3159,11 +3159,13 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #F8302C;
+  border: 2px solid #991F1D;
+  border-bottom: 2px solid #D72B28;
+  border-top: 2px solid #D72B28;
 }
 .btn-success .badge {
-  color: #5cb85c;
+  color: #F8302C;
   background-color: #ffffff;
 }
 .btn-info {

@@ -1,3 +1,38 @@
+@font-face {
+    font-family: Garam;
+    src: url(./fonts/Adobe-Garamond-Pro_2012.woff);
+}
+
+@font-face {
+    font-family: FuturaFont;
+    src: url(./fonts/futura-normal.woff);
+}
+
+.futura{
+    font-family: FuturaFont;
+    font-style: italic;
+}
+
+.futura2{
+    font-family: FuturaFont;
+}
+
+.Garam{
+    font-family: Garam;
+    font-style: italic;
+}
+
+.serif{
+    display: inline-block;
+    font-family: serif;
+    font-style: italic;
+}
+
+.serif2{
+    font-family: serif;
+    font-style: italic;
+}
+
 body {
     background-color: #313841;
     overflow-x: hidden;
@@ -123,7 +158,7 @@ th{
     margin-left: 10%;
     width: 130px; 
     height: 60px; 
-    text-shadow: 1px 1px #702827;
+    text-shadow: 0px 1px #702827;
     text-align: center;
 }
 .topo-Logo:hover{
@@ -156,7 +191,7 @@ th{
 
 input:focus, textarea:focus {
     outline-color: #52B3D9;
-      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 
 }
 
@@ -235,8 +270,9 @@ a:focus{
   
 
 .hh2{
-    font-family: myFirstFont;
-    font-size:1.2em;   
+    font-family: serif;
+    font-style: italic;
+    font-size:1.0em;   
     text-align: center;
     margin-top: 10px;
 }
@@ -249,18 +285,24 @@ a:focus{
 }
 
 .hh3{
-font-size:1.2em;   
+font-size:1.1em;   
+}
+
+.hh33{
+font-size:0.5em;   
 }
 
 .hh4{
-color: black;
-font-size:1.2em;   
+    color: black;
+    font-size:1.2em;   
 }
 
 .hhp{
-    font-size:1.5em;   
+    font-family: serif;
+    font-style: italic;
+    font-size:1.2em;   
     text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 
@@ -282,7 +324,7 @@ font-size:1.2em;
     width: 56px; 
     height: 60px;
     line-height:63px;
-    text-shadow: 1px 1px #702827;
+    text-shadow: 0px 1px #702827;
     -o-transition:1.0s;
     -ms-transition:1.0s;
     -moz-transition:1.0s;
@@ -301,7 +343,7 @@ font-size:1.2em;
     width: 60px; 
     height: 60px;
     line-height:63px;
-    text-shadow: 1px 1px #702827;
+    text-shadow: 0px 1px #702827;
     font-weight: bold;
     margin-top: 0px;
     top: 0px;
@@ -344,7 +386,7 @@ font-size:1.2em;
     width: 56px; 
     height: 60px;
     line-height:63px;
-    text-shadow: 1px 1px #072B2B;
+    text-shadow: 0px 1px #072B2B;
     font-weight: bold;
 }
 
@@ -352,13 +394,14 @@ font-size:1.2em;
 
 .topo-nome{
     font-weight: bold;
-    text-align: center;
+    text-align: right;
+    margin-right: 10px;
     float:right;
-    font-size: 140%;
-    width: 140px; 
+    font-size: 110%;
+    width: 240px; 
     height: 50px;
     line-height:60px;
-    text-shadow: 1px 1px #702827;
+    text-shadow: 0px 1px #702827;
 }
 
 
@@ -391,8 +434,8 @@ font-size:1.2em;
 .letraRelogio{
     font-family: myFirstFont;
     line-height:55px;
-    font-size:1.0em;
-    text-shadow: 1px 1px #93211F;
+    font-size:0.85em;
+    text-shadow: 0px 1px #93211F;
     font-weight: bold;
 }
 
@@ -423,19 +466,19 @@ font-size:1.2em;
 
 
 .cinza{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     background-color: #95a5a6 ; 
 }
 .azul{
-    text-shadow: 1px 1px #145C48;
+    text-shadow: 0px 1px #145C48;
     background-color: #4CE2B8 ; 
 }
 .laranja{
-    text-shadow: 1px 1px #7C4E1D;
+    text-shadow: 0px 1px #7C4E1D;
     background-color: #FFAC52 ;    
 }
 .amarelo{
-    text-shadow: 1px 1px #756529;
+    text-shadow: 0px 1px #756529;
     background-color: #F8D450 ;    
 }
 
@@ -445,25 +488,25 @@ font-size:1.2em;
 
 
 .red{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     background-color: #e74c3c ; 
 }
 .azulClaro{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     background-color: #3498db ; 
 }
 .roxo{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     background-color: #9b59b6;
 }
 
 .castanho{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     background-color: #AE8652;
 }
 
 .verde{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     background-color: #2ecc71; 
 }
 
@@ -589,7 +632,7 @@ font-size:1.2em;
     height: 60px;
     line-height:60px;
     color:white;
-    text-shadow: 1px 1px #22272E;
+    text-shadow: 0px 1px #22272E;
     background-color: #3F4854 ; 
     position:relative;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -627,7 +670,7 @@ font-size:1.2em;
     line-height:60px;
     color:#46FDFF;
     background-color: #4A71FF ; 
-    text-shadow: 1px 1px #22272E;
+    text-shadow: 0px 1px #22272E;
     position:relative;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -662,7 +705,7 @@ font-size:1.2em;
     height: 60px;
     line-height:60px;
     color:white;
-    text-shadow: 1px 1px #22272E;
+    text-shadow: 0px 1px #22272E;
     background-color: #3F4854 ; 
     position:relative;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -686,13 +729,15 @@ font-size:1.2em;
 
 
 .lateral2-perfil{
+    font-family: serif;
+    font-style: italic;
+    font-size:1.2em;
     margin-left: 3px;
     background-color: #FA6360 ; 
-    text-shadow: 1px 1px #93211F;
+    text-shadow: 0px 1px #93211F;
     display: inline-block;
     float: left;
     text-align: center;
-    font-size:1.4em;
     width: 120px; 
     height: 60px;
     line-height:60px;
@@ -713,11 +758,13 @@ font-size:1.2em;
 .lateral3-perfil{
     margin-left: 3px;
     background-color: #FA6360 ; 
-    text-shadow: 1px 1px #93211F;
+    text-shadow: 0px 1px #93211F;
     display: inline-block;
     float: left;
     text-align: center;
-    font-size:1.4em;
+    font-family: serif;
+    font-style: italic;
+    font-size:1.2em;
     width: 120px; 
     height: 60px;
     line-height:60px;
@@ -902,20 +949,18 @@ font-size:1.2em;
     background:#313841;
     font-family: myFirstFont;
     border-radius:0px;
-    width: 80%; 
-    height: 75vh;
-    left: 10%;
+    width: 90%; 
+    height: 78vh;
+    left: 5%;
     right: 10%;
-    top: 10%;
+    top: 7%;
     bottom: 10%;
     color: white;
     text-align: center;
     vertical-align: top;
     margin-top: 5%;
-    border: 7px solid #2E343C;
-    border-top: 7px solid #384049;
-    border-bottom: 7px solid #384049;
-    box-shadow: 2px 3px 20px #1C242B;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px #1C242B;
 }
 
 
@@ -929,7 +974,7 @@ font-size:1.2em;
 
 /****************************dynamics ********/
 .dynamicAzul{
-    text-shadow: 1px 1px #145C48;
+    text-shadow: 0px 1px #145C48;
     position: relative;
     margin: 4px;
     border-radius:100px;
@@ -956,7 +1001,7 @@ font-size:1.2em;
 }
 
 .dynamicLaranja{ 
-    text-shadow: 1px 1px #7C4E1D;
+    text-shadow: 0px 1px #7C4E1D;
     margin: 4px;
     border-radius:100px;
     font-size:1.2em;
@@ -981,7 +1026,7 @@ font-size:1.2em;
 }
 
 .dynamicRed{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
     font-size:1.2em;
@@ -1005,7 +1050,7 @@ font-size:1.2em;
 }
 
 .dynamicAmarelo{
-    text-shadow: 1px 1px #756529; 
+    text-shadow: 0px 1px #756529; 
     margin: 4px;
     border-radius:100px;
     font-size:1.2em;
@@ -1030,7 +1075,7 @@ font-size:1.2em;
 }
 
 .dynamicCinza{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
     font-size:1.2em;
@@ -1055,7 +1100,7 @@ font-size:1.2em;
 }
 
 .dynamicAzulClaro{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
     font-size:1.2em;
@@ -1080,7 +1125,7 @@ font-size:1.2em;
 }
 
 .dynamicRoxo{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
     font-size:1.2em;
@@ -1106,7 +1151,7 @@ font-size:1.2em;
 }
 
 .dynamicCastanho{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
     font-size:1.2em;
@@ -1131,7 +1176,7 @@ font-size:1.2em;
 }
 
 .dynamicVerde{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:100px;
     font-size:1.2em;
@@ -1182,7 +1227,7 @@ font-size:1.2em;
 /****************************BOARDS ********/
 
 .boardAzul{
-    text-shadow: 1px 1px #145C48;
+    text-shadow: 0px 1px #145C48;
     position: relative;
     margin: 4px;
     border-radius:50px;
@@ -1209,7 +1254,7 @@ font-size:1.2em;
 }
 
 .boardLaranja{ 
-    text-shadow: 1px 1px #7C4E1D;
+    text-shadow: 0px 1px #7C4E1D;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1234,7 +1279,7 @@ font-size:1.2em;
 }
 
 .boardRed{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1258,7 +1303,7 @@ font-size:1.2em;
 }
 
 .boardAmarelo{ 
-    text-shadow: 1px 1px #756529;
+    text-shadow: 0px 1px #756529;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1282,7 +1327,7 @@ font-size:1.2em;
 }
 
 .boardCinza{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1307,7 +1352,7 @@ font-size:1.2em;
 }
 
 .boardAzulClaro{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1332,7 +1377,7 @@ font-size:1.2em;
 }
 
 .boardRoxo{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1358,7 +1403,7 @@ font-size:1.2em;
 }
 
 .boardCastanho{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1383,7 +1428,7 @@ font-size:1.2em;
 }
 
 .boardVerde{ 
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1432,7 +1477,7 @@ font-size:1.2em;
 
 
 .boardAll{ 
-    text-shadow: 1px 1px #93211F;
+    text-shadow: 0px 1px #93211F;
     margin: 4px;
     border-radius:50px;
     font-size:1.2em;
@@ -1460,15 +1505,17 @@ font-size:1.2em;
 /****************************NOTAS ********/
 
 .textoo{
+    font-family: serif;
+    font-style: italic;
     overflow: scroll;
     overflow-x: hidden;
     height:150px;
     width:150px;
-    font-size: 105%;
+    font-size: 95%;
 }
 
 .notaAzul2{
-    text-shadow: 1px 1px #145C48;
+    text-shadow: 0px 1px #145C48;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1490,7 +1537,7 @@ font-size:1.2em;
 }
 
 .notaLaranja2{
-    text-shadow: 1px 1px #7C4E1D;
+    text-shadow: 0px 1px #7C4E1D;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1515,7 +1562,7 @@ font-size:1.2em;
 
 
 .notaRed2{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1537,7 +1584,7 @@ font-size:1.2em;
 }
 
 .notaAmarelo2{
-    text-shadow: 1px 1px #756529;
+    text-shadow: 0px 1px #756529;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1560,7 +1607,7 @@ font-size:1.2em;
 
 
 .notaCinza2{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1582,7 +1629,7 @@ font-size:1.2em;
 }
 
 .notaAzulClaro3{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1604,7 +1651,7 @@ font-size:1.2em;
 }
 
 .notaRoxo2{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1627,7 +1674,7 @@ font-size:1.2em;
 
 
 .notaCastanho2{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1650,7 +1697,7 @@ font-size:1.2em;
 
 
 .notaVerde2{
-    text-shadow: 1px 1px #0C2C3A;
+    text-shadow: 0px 1px #0C2C3A;
     margin: 4px;
     border-radius:5px;
     display: inline-block;
@@ -1698,7 +1745,7 @@ font-size:1.2em;
 
 .notaMenuA{ 
     font-weight: bold;
-    text-shadow: 1px 1px #191E25;
+    text-shadow: 0px 1px #191E25;
     margin: 4px;
     border-radius:5px;
     font-size:15px;

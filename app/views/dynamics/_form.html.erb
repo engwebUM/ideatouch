@@ -27,14 +27,15 @@
 
   <div class="field">
     <br>
-    <div class="input-letter"><%= f.number_field :votationnumber,:placeholder=>"Number of voter",:style => 'text-align:center;background-image: url("");',:class=>'form-control' %></div>
+    <div class="input-letter"><%= f.number_field :votationnumber,:placeholder=>"Number of votes",:style => 'text-align:center;background-image: url("");',:class=>'form-control' %></div>
   </div>
 
 
   <br>
-    <div class="letrasInfo2">Define the time of the dynamic </div>
+    <div class="letrasInfo2">Define the time of the dynamic: </div>
     <div class="input-letter-arial"><%= datetime_local_field(:dynamic, :final) %></div>
   <br>
+  <div class="letrasInfo2">color: </div>
   <div class="field">
     <%= select(:dynamic,:color, [
       ['Turquoise', "dynamicAzul"],

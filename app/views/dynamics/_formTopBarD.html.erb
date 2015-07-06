@@ -52,9 +52,9 @@
 
       <div class="topo-nome wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="1.5s">
         <%if @participants.where(email:current_user.email, dynamic_id:@dynamic.id).last.name != nil %>
-          <%=@participants.where(email:current_user.email, dynamic_id:@dynamic.id).last.name%>
+          <div class="serif"><%=@participants.where(email:current_user.email, dynamic_id:@dynamic.id).last.name%></div>
         <% else %>
-            Edit your Avatar
+            <div class="serif">Edit your Avatar</div>
         <% end %>   
       </div>
 

@@ -28,6 +28,10 @@
     font-style: italic;
 }
 
+.userName{
+    font-size: 15px;
+}
+
 .serif2{
     font-family: serif;
     font-style: italic;
@@ -59,11 +63,8 @@ body {
     border-right: 2px solid #C4BBBB;
     border-left: 2px solid #C4BBBB;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px #152029;
 }
-.linha:hover{
-    box-shadow: 0px 1px 4px #152029;
-}
+
 
 input[type="datetime-local"] {
     border-radius: 3px;
@@ -85,12 +86,9 @@ input[type="datetime-local"] {
     border-right: 4px solid #C4BBBB;
     border-left: 4px solid #C4BBBB;
     border-radius: 6px;
-    box-shadow: 2px 2px 4px #152029;
 }
 
-.user:hover{
-    box-shadow: 0px 1px 4px #152029;
-}
+
 
 .user a{
     display: inline-block;

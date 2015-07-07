@@ -11,21 +11,44 @@
     </div>
   <% end %>
 
+  <br>
+
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :descricao %><br>
-    <%= f.text_area :descricao %>
+    <br><br>
+    <div class="input-letter"><%= f.text_field :name ,:placeholder=>"Name",:style => 'text-align:center;background-image: url("");',:class=>'form-control'  %></div>
   </div>
 
-  <%= f.hidden_field :dynamic_id, value: @board.dynamic_id %>
 
 
+
+    <br>
+  <div class="letrasInfo2">color: </div>
+  <div class="field">
+    <%= select(:board,:color, [
+      ['Red', "boardRed"],
+      ['Turquoise', "boardAzul"],
+      ['Orange', "boardLaranja"],
+      ['Yellow', "boardAmarelo"],
+      ['Blue', "boardAzulClaro"],
+      ['Purple', "boardRoxo"],
+      ['Brown', "boardCastanho"],
+      ['Green', "boardVerde"],
+    ])%>
+  </div>
+
+
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= button_to "Submit", dynamics_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %> 
   </div>
 
+
+      <br><br>
+      <div class= "hh3">
+      <%= link_to "/dynamics" , method: :get , :class => "hvr-icon-back" do %> 
+        Back to Dynamics
+      <% end %>
+      </div>
+      <br><br>
 
 <% end %>

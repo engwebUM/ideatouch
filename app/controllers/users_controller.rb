@@ -13,6 +13,23 @@ class UsersController < Clearance::UsersController
     render template: "users/new"
   end
 
+  def edit
+    @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      @user = nil
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if user_params != false
+      update_user(@user)
+    else
+      flash[:data] = ''
+      redirect_to dynamics_path
+    end
+  end
+
+
   def create
     @user = user_from_params
 
@@ -36,6 +53,15 @@ class UsersController < Clearance::UsersController
     clearance_configuration(email, password, nome)
   end
 
+  def update_user(user)
+    if user.update(user_params)
+      flash[:data] = ''
+      redirect_to dynamics_path
+    else
+      flash[:data] = 'Dados não alterados.'
+    end
+  end
+
   def set_user
     @user = User.find(params[:id])
   end
@@ -46,7 +72,23 @@ class UsersController < Clearance::UsersController
       user.password = password
       user.nome = nome
     end
-    
   end
+
+  def verify_pass
+    if params[:user][:pass] != params[:user][:password]
+      return false
+    else
+      return params.require(:user).permit(:nome, :email, :password)
+    end
+  end
+
+  def user_params
+    if !params[:user][:pass].empty? && !params[:user][:pass].nil?
+      return verify_pass
+    else
+      params.require(:user).permit(:nome, :email)
+    end
+  end
+
 end
 

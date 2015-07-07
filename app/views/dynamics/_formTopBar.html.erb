@@ -32,13 +32,15 @@
       <!-- -->
       <% end %>
 
+      <%= link_to "/users/#{current_user.id}/edit", method: :get  do %>
       <div class="topo-perfil wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.8s">
          <i class="fa fa-user"></i>
       </div>
+      <% end %>
 
 
       <div class="topo-nome wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.9s">
-         <%=current_user.nome%>
+         <div class="serif"><%=current_user.nome%></div>
       </div>
 
       </div>

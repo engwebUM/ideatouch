@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .center{
 	margin-left: auto;
 	margin-right: auto;	
@@ -33,7 +34,6 @@
 
 
 .boardRed2{ 
-    box-shadow: 2px 3px 30px #1C242B;
     border: 4px solid #B53E30;
     font-family: myFirstFont;
   	margin: 4px;
@@ -51,12 +51,11 @@
 .boardRed2:hover{background: linear-gradient(180deg, #e74c3c 50%,#D84A3A  1%,#DF4B3B  100%);}
 
 .notaAzulClaro2{
-    box-shadow: 2px 3px 20px #1C242B;
     border: 2px solid #2D83BC;
-	font-family: myFirstFont;
+	  font-family: myFirstFont;
     margin: 4px;
     margin-right: auto;
-	 margin-left: auto;
+	  margin-left: auto;
     border-radius:5px;
     font-size:15px;
     color:#ecf0f1;
@@ -72,7 +71,6 @@
 
 .dynamicAzul2{ 
     font-family: myFirstFont;
-    box-shadow: 2px 3px 20px #1C242B;
     margin: 4px;
     border-radius:100px;
     font-size:15px;
@@ -106,7 +104,7 @@
 }
 
 h3 {
-	font-family: myFirstFont;
+  font-family: myFirstFont;
 	text-align: center;
 	margin-bottom: 20px;
 	color: white;
@@ -139,18 +137,31 @@ p {
 }
 
 .phraseFont{
-	font-family: myFirstFont;
+	font-family: FuturaFont;
+  font-style: italic;
 	color: white;
 	text-align: center;
 	font-size: 21px;		
 }
 
+.subtittle{
+  margin-top: 10px;
+  font-family: serif;
+  color: white;
+  text-align: center;
+  font-size: 32px;    
+}
 
 .boxtext {
+  line-height: 45px;
+  font-family:serif;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  font-size: 25px;    
 	margin-top: auto;
 	margin-left: 25px;
 }
-
 
 .logotipo {
 	background-image: url(./img/logotipo.png);
@@ -159,6 +170,23 @@ p {
 	height: 60px;
 	margin: 10px;
 	background-size: 300px;
+}
+
+.joinus{
+  font-family: Garam;
+  line-height: 85px;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 48px;
+}
+.joinus2{
+  font-family: serif;
+  font-style: italic;
+  line-height: 60px;
+  color: white;
+  text-align: center;
+  font-size: 46px;
 }
 
 /*---------------------------------------------------------------------------------------*/
@@ -177,7 +205,13 @@ p {
 
 .whatistitle {
 	margin-top: 0%;
-	background-color: #F5D76E;
+	background-color: #95a5a6;
+  margin-top: 10px;
+  font-family: Garam;
+  line-height: 85px;
+  color: white;
+  text-align: center;
+  font-size: 48px;    
 }
 .whatistitle:before,
 .whatistitle:after {
@@ -201,15 +235,13 @@ p {
 
 .imageWhatIs {
 	margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
+  margin-right: auto;
+  margin-top: 0px;
 	background: url("./img/transferir.jpg") no-repeat ;
-  box-shadow: 2px 3px 10px #1C242B;
 	background-attachment: scroll;
 	background-size: 100% 110%;
 	height: 320px;
 }
-
 /*---------------------------------------------------------------------------------------*/
 .boxwhoisintendedto {
 	background-color: rgb(143, 158, 159);
@@ -220,10 +252,10 @@ p {
 }
 
 .imageWhoIsIntendedTo {
-    box-shadow: 2px 3px 20px #1C242B;
+  box-shadow: 2px 3px 20px #1C242B;
 	margin-left: auto;
-    margin-right: auto;
-    margin-top: -20px;
+  margin-right: auto;
+  margin-top: -20px;
 	background: url("./img/asdd.jpg") no-repeat;
 	background-size: 100% 140%;
 	height: 320px;
@@ -241,14 +273,19 @@ p {
 }
 
 .advantagesofplatformtitle {
+  margin-top: 10px;
+  font-family: Garam;
 	background-color: #3498db;
+  line-height: 85px;
+  color: white;
+  text-align: center;
+  font-size: 48px;    
 }
 
 .imageSession {
-  box-shadow: 2px 3px 10px #1C242B;
 	margin-left: auto;
-    margin-right: auto;
-    margin-top: -20px;
+  margin-right: auto;
+  margin-top: -15px;
 	background: url("./img/mapfs.jpg") no-repeat  ;
 	background-attachment: scroll;
 	background-size: 100% 180%;
@@ -270,6 +307,13 @@ p {
 
 .howitworkstitle {
 	background-color: #E96151 ;
+  margin-top: 0%;
+  margin-top: 10px;
+  font-family: Garam;
+  line-height: 85px;
+  color: white;
+  text-align: center;
+  font-size: 48px;   
 }
 
 .step {
@@ -281,8 +325,15 @@ p {
 	height: auto;
 	min-height: 430px;
 	margin-top: 8px;
-	border: 4px solid #CB5143;
-  box-shadow: 2px 3px 10px #1C242B;
+	border-left: 2px solid #CB5143;
+
+  line-height: 45px;
+  font-family:serif;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  font-size: 25px;    
+  margin-top: auto;
 }
 .step:before,
 .step:after {
@@ -299,10 +350,9 @@ p {
 }
 
 .minion {
-    box-shadow: 2px 3px 20px #1C242B;
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 	background-image: url(./img/avatars/as.png);
 	background-repeat: no-repeat;
 	height: 110px;
@@ -312,12 +362,12 @@ p {
 
 .logoicon {
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-repeat: no-repeat;
-	 background-size: 90%;
-	 height: 180px;
-	 width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+	background-size: 90%;
+	height: 180px;
+	width: 130px;
 	background-image: url("./img/161.png");
 }
 
@@ -363,7 +413,3 @@ p {
   width: 40px;
   height:40px;
 }
-
-
-
-

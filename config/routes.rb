@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   end
 
 
+  get '/users/:id/edit' ,to: 'users#edit', as:'userEdit'
+  post '/users/:id/edit' ,to: 'users#edit', as:'userEditp'
+  patch "users/:id" => "users#update", as: "user_update"
 
   resources :votes
 

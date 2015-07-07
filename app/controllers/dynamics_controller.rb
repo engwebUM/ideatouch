@@ -16,6 +16,12 @@ class DynamicsController < ApplicationController
     @participants = Participant.all
   end 
 
+  def edit
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participant = Participant.new
+    @participants = Participant.all
+  end
+
 
   def leave
     Participant.where(email: current_user.email,dynamic_id:@dynamic.id).destroy_all

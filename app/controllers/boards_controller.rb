@@ -45,6 +45,8 @@ class BoardsController < ApplicationController
 
   # GET /boards/1/edit
   def edit
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
   end
 
   # POST /boards

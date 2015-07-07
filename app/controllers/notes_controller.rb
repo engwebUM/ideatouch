@@ -20,6 +20,8 @@ class NotesController < ApplicationController
 
   # GET /notes/1/edit
   def edit
+    @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
+    @participants = Participant.all
   end
 
   # POST /notes
@@ -46,7 +48,7 @@ class NotesController < ApplicationController
   def update
     respond_to do |format|
       if @note.update(note_params)
-        format.html { redirect_to @note }
+        format.html { redirect_to "/dynamics/#{@note.dynamic_id}" }
         format.json { render :show, status: :ok, location: @note }
       else
         format.html { render :edit }

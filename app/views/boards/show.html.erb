@@ -73,7 +73,7 @@
           </div>
           <div class="letraNome"> 
             <%= link_to "/dynamics" , method: :get , :class => "hvr-icon-back" do %> 
-              <%= @board.dynamic.name %> 
+              <div class="serif"><%= @board.dynamic.name %> </div>
             <% end %>
           </div>
          </div></div></div>
@@ -127,7 +127,7 @@
             <div class="letraTitulo"> Board </div>
             <div class="letraNome"> 
               <%= link_to "/dynamics/#{@board.dynamic.id}" , method: :get , :class => "hvr-icon-back" do %> 
-              <%=  @board.name %> <% end %> 
+              <div class="serif"><%=  @board.name %> </div> <% end %>
             </div>
            </div></div></div>
         <% end %>
@@ -138,11 +138,11 @@
       <div class="wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
        <div class="caixa-relogio lifted" >
         <div class="letraRelogio ">
-            <% if  (@board.dynamic.final.to_time - 1.hours) > Time.now %>
-               <%= distance_of_time_in_words(Time.now, (@board.dynamic.final.to_time - 1.hours) , include_seconds: true) %> to the end
+            <div class="serif"><% if  (@board.dynamic.final.to_time - 1.hours) > Time.now %>
+               <%= distance_of_time_in_words(Time.now, (@board.dynamic.final.to_time - 1.hours) , include_seconds: true) %> to the end</div>
               <span class="glyphicon glyphicon-time" aria-hidden="true"></spam>
             <% else %> 
-              finished
+              <div class="serif">finished</div>
               <span class="glyphicon glyphicon-record" aria-hidden="true"></spam>
             <% end %> 
         </div>
@@ -194,21 +194,6 @@
       <% end %> 
       <% end %> <% end %> 
           
-                <!--edit to note-->
-                <% if current_user.id == @board.dynamic.user_id %>
-                <div class="fora">
-                <div class="hvr-bob">
-                <div class="lateral-perfil wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
-                <i class="fa fa-pencil"></i>
-                </div></div>
-                <div id="hover-content">
-                <div class="wow fadeInLeft" data-wow-duration="0.2s" data-wow-delay="0.2s">
-                <div class="lateral2-perfil lifted">Edit Note</div>
-                </div>
-                </div>
-                </div>
-                <br><br><br>
-                <% end %>
 
                 <!--Move to Board-->
                 <% if current_user.id == @board.dynamic.user_id and @board.name != "all notes" %>
@@ -249,8 +234,8 @@
 
                 <!--Edit-->
 
-                <% if current_user.id == @board.dynamic.user_id %>
-                <% if @board.name!="default" %>    
+                <% if current_user.id == @board.dynamic.user_id and @board.name != "all notes" and @board.name != "without board"%>
+                <%= link_to "/boards/#{@board.id}/edit", method: :get do %>
                 <div class="fora">
                 <div class="hvr-bob">
                 <div class="lateral-perfil wow fadeInUp" data-wow-duration="1.0s" data-wow-delay="1.0s">
@@ -298,11 +283,18 @@
                   <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
                   <div class="<%= note.color %>">
                   <div class="textoo">
-                   <% if current_user.id == @board.dynamic.user_id %>
+
+                  <% if current_user.id == @board.dynamic.user_id %>
                       <%= check_box_tag "notes[]", note.id %>
-                    <% end %>
+                  
+                  <%= link_to "/notes/#{note.id}/edit", method: :get do %>
+                    <div class="editt">
+                      <i class="fa fa-pencil"></i>
+                    </div>
+                  <% end %>
+                  <% end %>
                   <div class="hhp"><%= note.numerodanota%></div>
-                  <hh4><%= note.text %></hh4> 
+                  <hh4><%= note.text %></hh4>
                   </div></div>
                   </div></div>
                   <% end %>
@@ -313,9 +305,16 @@
                   <div class = "hvr-curl-top-left wow bounceIn" data-wow-duration="0.5s" data-wow-delay="0.5s" >
                   <div class="<%= note.color %>">
                   <div class="textoo">
+
                    <% if current_user.id == @board.dynamic.user_id %>
                       <%= check_box_tag "notes[]", note.id %>
-                    <% end %>
+                    
+                  <%= link_to "/notes/#{note.id}/edit", method: :get do %>
+                    <div class="editt">
+                      <i class="fa fa-pencil"></i>
+                    </div>
+                  <% end %>
+                  <% end %>
                   <div class="hhp"><%= note.numerodanota%></div>
                   <hh4><%= note.text %></hh4> 
                   </div></div>
@@ -331,7 +330,13 @@
                   <div class="textoo">
                     <% if current_user.id == @board.dynamic.user_id %>
                       <%= check_box_tag "notes[]", note.id %>
-                    <% end %>
+                    
+                      <%= link_to "/notes/#{note.id}/edit", method: :get do %>
+                        <div class="editt">
+                          <i class="fa fa-pencil"></i>
+                        </div>
+                      <% end %>
+                  <% end %>
                   <div class="hhp"><%= note.numerodanota%></div>
                   <hh4><%= note.text %></hh4> 
                   </div></div>

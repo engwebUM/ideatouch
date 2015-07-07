@@ -21,9 +21,40 @@
     <%= f.text_area :descricao %>
   </div>
 
+  <br>
+    <div class="letrasInfo2">Define the time of the dynamic: </div>
+    <div class="input-letter-arial"><%= datetime_local_field(:dynamic, :final) %></div>
+  <br>
+
+  <div class="letrasInfo2">color: </div>
+  <div class="field">
+    <%= select(:dynamic,:color, [
+      ['Turquoise', "dynamicAzul"],
+      ['Orange', "dynamicLaranja"],
+      ['Red', "dynamicRed"],
+      ['Yellow', "dynamicAmarelo"],
+      ['Blue', "dynamicAzulClaro"],
+      ['Purple', "dynamicRoxo"],
+      ['Brown', "dynamicCastanho"],
+      ['Green', "dynamicVerde"],
+    ])%>
+  </div>
+
+<br>
 
 
   <div class="actions">
-    <%= f.submit %>
+    <%= button_to "Submit", dynamics_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %> 
   </div>
+
+
+      <br><br>
+      <div class= "hh3">
+      <%= link_to "/dynamics" , method: :get , :class => "hvr-icon-back" do %> 
+        Back to Dynamics
+      <% end %>
+      </div>
+      <br><br>
+
+
 <% end %>

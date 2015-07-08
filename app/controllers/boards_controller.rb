@@ -29,13 +29,11 @@ class BoardsController < ApplicationController
     @participants = Participant.all
   end
 
-
   def moveNotes
     @dynamics = Dynamic.all
     @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
     @participants = Participant.all
   end
-
 
   # GET /boards/new
   def new

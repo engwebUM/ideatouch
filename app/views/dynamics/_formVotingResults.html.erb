@@ -4,41 +4,26 @@
       <h2><%= pluralize(@dynamic.errors.count, "error") %> prohibited this dynamic from being saved:</h2>
 
       <ul>
-      <% @dynamic.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @dynamic.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
   <br><br><br>
   <div class= "h3">
-  
     Total of participants: <%= @total_participants %>
     <br><br>
     Number of participants who have already voted: <%= @partVoted %>
-
     <br><br>
-
     <%= high_chart("my_id3", @char_vote)  %>
-
-
   </div>
-
-
-
-
-<br>
-
-
-      <br><br>
-      <div class= "hh3">
-      <%= link_to  "/dynamics/#{@dynamic.id}" , method: :get , :class => "hvr-icon-back" do %> 
-        Back to Dynamic
-      <% end %>
-      </div>
-      <br><br>
-
-
-
+  <br>
+  <br><br>
+  <div class= "hh3">
+    <%= link_to  "/dynamics/#{@dynamic.id}" , method: :get , :class => "hvr-icon-back" do %> 
+      Back to Dynamic
+    <% end %>
+  </div>
+  <br><br>
 <% end %>

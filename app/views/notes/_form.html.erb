@@ -4,19 +4,18 @@
       <h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
 
       <ul>
-      <% @note.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @note.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
 
   <div class="field">
     <br>
     <div class="input-letter"><%= f.text_area :text,:placeholder=>"Text",:style => 'text-align:center;background-image: url("");',:class=>'form-control'   %></div>
   </div>
-    <br>
+  <br>
   <div class="field">
     <%= select(:note,:color, [
       ['Turquoise', "notaAzul2 lifted"],
@@ -29,20 +28,15 @@
       ['Green', "notaVerde2 lifted"],
     ])%>
   </div>
-
   <br>
-
-    <div class="actions">
+  <div class="actions">
     <%= button_to "Submit", dynamics_path, method: :submit,:type =>type="button",:class=>'btn btn-success' %> 
   </div>
-
-      <br><br>
-      <div class= "hh3">
-      <%= link_to "/dynamics/#{@note.dynamic_id}" , method: :get , :class => "hvr-icon-back" do %> 
-        Back to Board
-      <% end %>
-      </div>
-      <br><br>
-
-  
+  <br><br>
+  <div class= "hh3">
+    <%= link_to "/dynamics/#{@note.dynamic_id}" , method: :get , :class => "hvr-icon-back" do %> 
+      Back to Board
+    <% end %>
+  </div>
+  <br><br>
 <% end %>

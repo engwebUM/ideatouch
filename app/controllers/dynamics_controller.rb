@@ -75,7 +75,6 @@ class DynamicsController < ApplicationController
     redirect_to "/dynamics/#{@dynamic.id}"
   end 
 
-
   # GET /dynamics/1
   # GET /dynamics/1.json
   def show
@@ -88,7 +87,6 @@ class DynamicsController < ApplicationController
     @notificationss =  Notification.where(user_id:current_user.id,estado:false).size
     @participants = Participant.all
   end
-
 
   def addParticipant
     @notificationss =  Notification.where(user_id:current_user.id,estado:false).size

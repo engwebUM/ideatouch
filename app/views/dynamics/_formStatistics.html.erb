@@ -11,9 +11,16 @@
     </div>
   <% end %>
 
-
-
-
+   <br><br><br>
+   <div class= "h3">
+      Total of notes: <%= @total_notes %>
+      <br><br>
+      Total of boards: <%= @total_boards %>
+      <br><br>
+      Total of participants: <%= @total_participants %>
+    </div>
+  <br><br><br>
+  <%= high_chart("my_id2", @char_note)  %>
 
 
 <br>
@@ -22,7 +29,7 @@
       <br><br>
       <div class= "hh3">
       <%= link_to  "/dynamics/#{@dynamic.id}" , method: :get , :class => "hvr-icon-back" do %> 
-        Back to Dynamics
+        Back to Dynamic
       <% end %>
       </div>
       <br><br>

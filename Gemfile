@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'lazy_high_charts'
 
 gem "paperclip", "~> 4.2"
 
@@ -14,14 +15,11 @@ end
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 
-
 #ideatouch
 gem "codeclimate-test-reporter", group: :test
 gem 'rubocop', require: false
 gem 'rspec-rails'
 gem 'clearance'
-
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

@@ -4,9 +4,9 @@
       <h2><%= pluralize(@notification.errors.count, "error") %> prohibited this notification from being saved:</h2>
 
       <ul>
-      <% @notification.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @notification.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>

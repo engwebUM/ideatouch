@@ -29,7 +29,6 @@ class UsersController < Clearance::UsersController
     end
   end
 
-
   def create
     @user = user_from_params
 
@@ -41,7 +40,6 @@ class UsersController < Clearance::UsersController
     end
     Notification.create :user_id => @user.id , :text => "Hi #{@user.nome}. Welcome to IDeaTouch. Be creative and enjoy it." , :estado => false
   end
-
 
   private
 

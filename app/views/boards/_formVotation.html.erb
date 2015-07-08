@@ -1,6 +1,8 @@
         
   <% if  Participant.where(email:current_user.email,dynamic_id:@board.dynamic_id).last.vote==false%>
-        <h1>Votation</h1>
+        <h1>Voting</h1>
+        <br>
+        Vote at most in <%= Dynamic.where(@board.dynamic_id).last.votationnumber %> notes
         <div class="linha"></div>
 
           <%= form_tag vote_multiple_notes_path, method: :put do %>
@@ -17,20 +19,12 @@
               </div></div>
               <% end %>
 
-
-
               <div class="linha"></div>
 
-
-          <%= fields_for :note do |f| %>
-
-
-
-           
+            <%= fields_for :note do |f| %>
 
 
             <% end %>
-
 
 
             <br><br>
@@ -45,7 +39,6 @@
 
      <h1>Your votes</h1>
         <div class="linha"></div>
-
             
               <% for note in Note.where(id:Vote.select(:note_id).where(dynamic_id:@board.dynamic_id, participant_id: Participant.where(email:current_user.email,dynamic_id:@board.dynamic_id).last.id       )) %>
               <div class="hvr-float">
@@ -59,11 +52,9 @@
               <% end %>
 
 
-
       <div class="linha"></div>
 
   <% end %>
-
 
                 <br><br>
               <div class= "hh3">

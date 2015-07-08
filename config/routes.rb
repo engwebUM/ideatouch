@@ -35,6 +35,8 @@ Rails.application.routes.draw do
   get '/dynamics/:id/info', to: 'dynamics#info', as: 'info'
   get '/dynamics/:id/addParticipant', to: 'dynamics#addParticipant', as: 'addParticipant'
   get '/dynamics/:id/addBoard', to: 'dynamics#addBoard', as: 'addBoard'
+  get '/dynamics/:id/statistics', to: 'dynamics#statistics', as: 'statistics'
+  get '/dynamics/:id/votingResults', to: 'dynamics#votingResults', as: 'votingResults'
   get '/boards/:id/addNote', to: 'boards#addNote', as: 'addNote'
 
   get '/boards/:id/moveNotes', to: 'boards#moveNotes', as: 'moveNotes'
